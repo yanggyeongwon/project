@@ -1,7 +1,14 @@
-body{width: 100%;}
-.menu{text-align: center;width: 100%;height: 150px;background: linear-gradient(to bottom,#25211e 0,rgba(37,33,30,0) 100%);background: -webkit-linear-gradient(top,#25211e 0,rgba(37,33,30,0) 100%);transition: all .2s ease-out;position: relative; overflow: hidden;z-index: 5}
 
-#ul_id{width: 100%;position: fixed; margin-top:65px}
+
+body{width: 100%;height: 100%;}
+section{position: relative; overflow: hidden;}
+.menu{position: fixed;text-align: center;width: 100%;height: 150px;background: linear-gradient(to bottom,#25211e 0,rgba(37,33,30,0) 100%);background: -webkit-linear-gradient(top,#25211e 0,rgba(37,33,30,0) 100%);transition: all .2s ease-out;z-index: 5}
+.menu_color{background: #1b1b1b;}
+
+#logo{width: 100%;height: 50px;}
+#logo img{width: 10%; }
+
+#ul_id{width: 100%; margin-top:65px}
 #ul_id li{width:15%;display: inline-block;cursor: pointer;padding: 10px 0;}
 #ul_id li:hover{animation: a_hover 1s forwards;}
 #ul_id li:hover a{color:#000; font-weight:bold}
@@ -9,8 +16,10 @@ body{width: 100%;}
     0%{}
     100%{background-color:#fff}
 }
-.menu_color{background: #1b1b1b;}
-#images{position:absolute; top: 0%;left: 0; width: 100%;overflow: hidden;height: 90%;}
+
+#main_image{width: 100%; height: 850px;position: relative;overflow: hidden;}
+#images{position:absolute; top: 0%;left: 0; width: 100%;height: 100%;}
 #images img{width: 100%;}
-#logo{width: 100%;height: 50px;}
-#logo img{width: 10%; }
+
+
+#main2_image{width:100%; height: 950px;}
