@@ -34,4 +34,11 @@ section{position: relative; overflow: hidden;}
 
 .nav-up {top: -100px;}
 
-footer{width: 100%;height: 300px;background-color: #25211e;}
+footer{width: 100%;height: 400px;background-color: #25211e;}
+footer li{margin: 5px;}
+#footer_img{text-align:center;}
+#footer_text{width: 100%;}
+.text1{width: 100%;text-align: center;}
+#texts2, #texts3{width: 100%; text-align: left;}
+.text1 li{display: inline;}
+
