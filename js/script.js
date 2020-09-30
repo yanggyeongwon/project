@@ -3,10 +3,9 @@ $(()=>{
     mainpage_effect();
 
     function mainpage_effect(){
-        
         $("#images img:gt(0)").hide();
         setInterval(function() { 
-        $('#images img:first').fadeOut(1000).next().fadeIn(1000).end().appendTo('#images');
+            $('#images img:first').fadeOut(1000).next().fadeIn(1000).end().appendTo('#images');
         },3000);
     }
    
