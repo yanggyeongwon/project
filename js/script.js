@@ -10,6 +10,7 @@ $(()=>{
         $("#mypage span").hide()
     })
 
+    
     function mainpage_effect(){
         $("#images img:gt(0)").hide();
         setInterval(function() { 
@@ -24,13 +25,25 @@ $(()=>{
     })
 
     $(".images_show").hover(function(){
-        console.log("사진 오버")
         $(this).toggleClass("images_scale")
     })
+    $(".images_show p").hide();
+    
+    $(".images_show").on({
+        mouseenter: function() {
+            const images_index = $(".images_show").index(this);
+            $(".images_show p").eq(images_index).show();
+        },
+        mouseleave: function() {
+            $(".images_show p").hide()
+        }
+    })
+
+
 
     let user_scroll;
     let scroll_top = 0;
-    let start_scroll = 3;
+    let start_scroll = 2;
     const nav_height = $(".menu").outerHeight();
 
     $(window).scroll(function(e){
