@@ -2,6 +2,14 @@ $(()=>{
 
     mainpage_effect();
 
+    $("#mypage span").hide();
+    $("#mypage").hover(function(){
+        $("#mypage span").show()
+    })
+    $("#mypage").mouseleave(function(){
+        $("#mypage span").hide()
+    })
+
     function mainpage_effect(){
         $("#images img:gt(0)").hide();
         setInterval(function() { 
@@ -41,15 +49,14 @@ $(()=>{
 
         if(Math.abs(scroll_top - st) <= start_scroll)
             return;
-        
-        
         if(st > scroll_top && st > nav_height){
-            $(".menu").removeClass('nav-down').addClass('nav-up');
+            $(".menu").stop().animate({top: -100})
         }else{
             if(st + $(window).height() < $(document).height()){
-                $(".menu").removeClass('nav-up').addClass('nav-down');
+                $(".menu").stop().animate({top: 0})
             }
         }
         scroll_top = st;
     }
+    
 })
