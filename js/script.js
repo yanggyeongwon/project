@@ -2,14 +2,32 @@ $(()=>{
 
     mainpage_effect();
 
-    $("#mypage span").hide();
-    $("#mypage").hover(function(){
-        $("#mypage span").show()
-    })
-    $("#mypage").mouseleave(function(){
-        $("#mypage span").hide()
-    })
+    $(document).ready(function(){
+        $(window).scroll(function(){
+          if($(this).scrollTop() > 200 ){
+            $(".totop_arrow1").fadeIn();
+          }else{
+            $(".totop_arrow1").fadeOut();
+          }
+        });
+        $(".totop_arrow1").click(function(){
+          $("html, body").animate({
+              scrollTop : 0
+          },400);
+          return false;
+        });
+      });
 
+    $("#mypage span").hide();
+
+    $("#mypage").on({
+        mouseenter: function() {
+            $("#mypage span").show();
+        },
+        mouseleave: function() {
+            $("#mypage span").hide()
+        }
+    })
     
     function mainpage_effect(){
         $("#images img:gt(0)").hide();
@@ -27,8 +45,8 @@ $(()=>{
     $(".images_show").hover(function(){
         $(this).toggleClass("images_scale")
     })
+
     $(".images_show p").hide();
-    
     $(".images_show").on({
         mouseenter: function() {
             const images_index = $(".images_show").index(this);
@@ -38,9 +56,15 @@ $(()=>{
             $(".images_show p").hide()
         }
     })
+    $("#filter").click(function(){
+        console.log("filter");
+        $(".product_list_btn_hover").toggleClass("active")
+        $("#product_list_btn").slideToggle();
+
+    })
 
 
-
+    //메뉴 스크롤 이벤트
     let user_scroll;
     let scroll_top = 0;
     let start_scroll = 2;
@@ -48,7 +72,6 @@ $(()=>{
 
     $(window).scroll(function(e){
         user_scroll = true;
-
     })
     setInterval(function(){
         if(user_scroll){
