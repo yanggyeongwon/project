@@ -35,9 +35,9 @@ button {background: 0;border: 0;padding: 0;cursor: pointer}
 
 .join       { position: absolute;right: 0; top: 50px;z-index: 999;}
 .join span  {margin: 0 10px;color: #fff;font-family: 'Raleway', sans-serif;}
-.join img   {vertical-align: middle;}
-#mypage span{font-size: 0.5rem;position: absolute;top: -20px;left: -5px;}
-
+.join img   {vertical-align: middle;width: 4%;}
+#mypage span{font-size: 0.5rem;position: absolute;top: -20px;left: 38%;}
+#basket span{font-size: 0.5rem;position: absolute; top: -20px; left: 34%;}
 
 #ul_id      {width: 100%; margin-top:45px}
 #ul_id li   {width:15%;display: inline-block;cursor: pointer;padding: 10px 0;font-family: 'Raleway', sans-serif;}

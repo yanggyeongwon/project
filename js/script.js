@@ -19,13 +19,22 @@ $(()=>{
       });
 
     $("#mypage span").hide();
-
     $("#mypage").on({
         mouseenter: function() {
             $("#mypage span").show();
         },
         mouseleave: function() {
             $("#mypage span").hide()
+        }
+    })
+    
+    $("#basket span").hide();
+    $("#basket").on({
+        mouseenter: function() {
+            $("#basket span").show();
+        },
+        mouseleave: function() {
+            $("#basket span").hide()
         }
     })
     
