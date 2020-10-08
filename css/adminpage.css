@@ -2,20 +2,40 @@
 /* font-family: 'Nanum Myeongjo', serif; 한글*/
 /* font-family: 'Raleway', sans-serif; 영어*/
 /* font-family: 'Inconsolata', monospace; 타이틀 영어 */
-
+/*리스트는 최대 5개까지 보임*/
 body{width: 70%; margin: 0 auto;}
-header{width: 15%;height: 900px; background-color: aqua;float: left;}
-a{color:#000}
+header{width: 15%;height: 937px; background-color:#25211e;float: left;}
+
 p{font-family: 'Nanum Myeongjo', serif}
-#menu{padding: 20px;}
-#left_side li{font-family: 'Nanum Myeongjo', serif;font-weight: 300;padding: 20px 0;background-color: blueviolet;margin: 5px 0;text-align: center;font-size: 1.1rem;}
+.left_side li, .left_side_logo li{font-family: 'Nanum Myeongjo', serif;font-weight: 300;padding: 20px;margin: 5px 0;text-align: center;font-size: 1.1rem;}
+.left_side li:hover  {animation: li_hover 1s forwards;color: #000;}
+.left_side li:hover a{color: #000;font-weight: bold;}
+@keyframes li_hover{
+    0%{}
+    100%{background-color: #fff;}
+}
+#first_top{border: 1px solid #000;height: 337px;width: 80%;float: left;box-sizing: border-box;position: relative;}
 
-#first_top{border: 1px solid #000;height: 250px;width: 80%;float: left;box-sizing: border-box;}
-#Order_History{position: relative;}
+.more_btn   {position: absolute;bottom: 5px;right: 15px;z-index: 3;}
+.more_btn a {color: #000;}
+.order{height: 300px;position: relative;overflow: hidden;}
+.order p        {font-size: 1.5rem; position: relative;margin: 10px;}
+.order_list     {width: 90%;display: flex;font-family: 'Nanum Myeongjo', serif;flex-wrap: nowrap;justify-content:space-between;margin: 0 auto;}
+.order_list li  {padding: 10px 30px;}
 
-.more_btn{position: absolute;bottom: 5px;right: 15px;}
-.order p{font-size: 1.5rem; position: relative;margin: 10px;}
-#orderId p::before{
+#shipping_border, #analytics,#QA_border, #notice{position: relative;width: 40%;height: 300px;border: 1px solid #000;box-sizing: border-box;float: left;}
+
+.result_list        {margin-top: 10px;font-size: 0.8rem;}
+
+#shipping_list li   { float: left;padding: 48px;}
+#shipping_list li:nth-of-type(1) p{margin-top: 5px;}
+#shipping_list li:nth-of-type(2) p{margin-top: 20px;}
+
+#shipping_list p     {text-align: center;}
+
+#shipping_list_num li{float:left; margin: 0 15%;position: relative;cursor: pointer;}
+
+.order p::before{
     content: '';
     position: absolute;
     top: 50%;
@@ -24,15 +44,7 @@ p{font-family: 'Nanum Myeongjo', serif}
     width: 80%;
     background-color: #000;
 }
-.order_list{width: 70%;display: flex;background-color:rgb(204, 205, 255);font-family: 'Nanum Myeongjo', serif;flex-wrap: nowrap;
-    justify-content: center;margin: 0 auto;}
-.order_list li{padding: 10px 30px;}
-#result_list{text-align: center;margin-top: 10px;}
-
-#Shipping_border, #analytics,#QA_border, #notice{position: relative;width: 40%;height: 300px;border: 1px solid #000;box-sizing: border-box;float: left;}
-
-#orderQA{margin: 20px 0;}
-#orderQA p::before{
+#QA_bar p::before{
     content: '';
     position: absolute;
     top: 50%;
@@ -41,7 +53,21 @@ p{font-family: 'Nanum Myeongjo', serif}
     width: 50%;
     background-color: #000;
 }
-
-#orderQA_list_se{margin-top: 10px;}
-#orderQA_list_se li {padding: 0 10px;}
-#orderQA_list li{padding: 0 25px;}
+#notice_bar p::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    height: 1px;
+    width: 50%;
+    background-color: #000;
+}
+#shipping_list_num li:hover::before{
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    height: 2px;
+    width: 20px;
+    background-color: #000;
+}
