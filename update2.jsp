@@ -121,15 +121,7 @@
 					</p>
 					<p>
 						<label>비밀번호</label>
-						<input class="w3-input" id="old_pw" name="old_pw" type="password" >
-					</p>
-					<p>
-						<label>비밀번호 확인</label>
-						<input class="w3-input" type="password" id="pw2" type="password">
-					</p>
-					<p>
-						<label>휴대폰번호</label> 
-						<input class="w3-input" type="text" id="id" name="id" readonly value="${ member.id }-0-0">
+						<input class="w3-input" id="pw" name="pw" type="password" value="${member.pw }">
 					</p>
 					<p>
 						<label>주소</label> 					
