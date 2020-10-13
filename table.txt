@@ -79,11 +79,10 @@ create table notice(
   nnum number primary key,
   nenquiry varchar2(50) not null,
   nwriter varchar2(20) not null,
-  ndate varchar2(20) not null,
-  naddr varchar2(30) not null
+  ndate varchar2(20) not null
 );
 
-insert into notice values(nseq.nextval,'문의내용50자','작성자','날짜','주소');
+insert into notice values(nseq.nextval,'문의내용50자','작성자','날짜');
 
 
 select * from notice;
@@ -108,3 +107,6 @@ create table productinq(
 insert into productinq values(piseq.nextval,'문의내용50자','작성자','날짜');
 
 select * from productinq;
+
+
+
