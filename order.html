@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/main_style.css">
+    <link rel="stylesheet" href="css/order_style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200&display=swap" rel="stylesheet">
+    <title>구매페이지입니다.</title>
+</head>
+<body> 
+    <div class="Buy_Top_Box">
+        <div class="Buy_Top_Box1">
+            <div class="Buy_Top_Box2">
+                <form>
+             <h2>주문서작성</h2>
+                <p>상품의 옵션 및 수량 변경은 상품상세 또는 장바구니에서 가능합니다.</p>
+                <p>배송상품 주문내역</p>
+                <ul id="Buy_Top_title">
+                     <li><input type="checkbox" name="img_check"></li>
+                     <li>이미지</li>
+                     <li>상품정보</li>
+                     <li>판매가</li>
+                     <li>수량</li>
+                     <li>포인트</li>
+                     <li>배송구분</li> 
+                     <li>배송비</li> 
+                     <li>합계</li> 
+                </ul>
+                <ul id="Buy_Top_menu">
+                    <li><input type="checkbox" name="img_check_list"></li>
+                    <li></li>
+                    <li>메이플 오버핏 가디건</li>
+                    <li>33000</li>
+                    <li>2</li>
+                    <li></li>
+                    <li>기본배송</li>
+                    <li>[무료]</li>
+                    <li>66000</li>
+                </ul>
+                <ul id ="Buy_Top_price">
+                    <li>[기본배송]</li>
+                    <li>상품구매금액 66,000+배송비0(무료) = 합계 66000 </li>
+                </ul>
+                <p>상품의 옵션 및 수량 변경은 상품상세 또는 장바구니에서 가능합니다.</p>
+                <ul>
+                    선택상품을<a href="#">삭제하기</a>
+                </ul>
+                </form>
+            </div>
+         <form>
+            <div class="Buy_Mid_Box1">
+                <p>주문 정보</p>
+                    <ul class="flexshow">
+                        <li class="star">주문하시는 분</li>
+                        <li class="star li_height" style="padding-top: 30px;">주소</li>
+                        <li class="star">핸드폰</li> 
+                        <li class="star">이메일</li>
+                    </ul>
+                    <ul class="addr">
+                        <li><input type="text" name="j_name"></li>
+                        <li><input type="text" name="j_address1"><input style="margin-left: 10px;" type="button" name="add_btn" value="우편번호"></li>
+                        <li>
+                            <input type="text" name="j_address2" size="50">기본주소<br>
+                            <input type="text" name="j_address3" size="50" class="margin_input">나머지주소
+                        </li>
+                        <li>
+                            <select name="j_phone1">
+                                <option value="010">010</option>
+                                <option value="011">011</option>
+                            </select>
+                            <input type="text" name="j_phone2" size="4" maxlength="4">
+                            <input type="text" name="j_phone3" size="4" maxlength="4">
+                        </li>
+                        <li><input type="text" name="email1">@<input type="text" name="email2"></li>
+                    </ul>
+            </div>
+        </form>
+        <form>
+            <div class="Buy_Mid_Box1">
+                <p>배송 정보</p>
+                    <ul class="flexshow">
+                        <li class="star">배송지선택</li>
+                        <li class="star">주문하시는 분</li>
+                        <li class="star li_height" style="padding-top: 30px;">주소</li>
+                        <li class="star" style="margin-top: -15px;">핸드폰</li> 
+                        <li class="star">배송메세지</li> 
+                    </ul>
+                    <ul class="addr">
+                        <li>
+                            <input type="radio" name="o_check" value="주문자 정보와 동일" checked>주문자 정보와 동일
+                            <input type="radio" name="o_check" value="새로운 배송지">새로운 배송지
+                        </li>
+                        <li><input type="text" name="j_name"></li>
+                        <li><input type="text" name="j_address1"><input style="margin-left: 10px;" type="button" name="readd_btn" value="우편번호"></li>
+                        <li style="margin-top: -2px;">
+                            <input type="text" name="j_address2" size="50">기본주소<br>
+                            <input type="text" name="j_address3" size="50" style="margin-top: 10px;">나머지주소
+                        </li>
+                        <li>
+                            <select name="j_phone1">
+                                <option value="010">010</option>
+                                <option value="011">011</option>
+                            </select>
+                            <input type="text" name="j_phone2" size="4" maxlength="4">
+                            <input type="text" name="j_phone3" size="4" maxlength="4">
+                        </li>
+                        <li>
+                            <textarea maxlength="255" cols="70" name="message">호로로로롤</textarea>
+                        </li>
+                    </ul>
+            </div>
+        </form>
+                <p>결제 예정 금액</p>
+                    <div class="Buy_Bottom_Box1">
+                        <ul class="margin-top20">
+                            <li style="padding: 130px;">총 주문 금액<input style="margin-left: 10px;" type="button" name="n_btn" value="내역보기"></li>
+                            <li style="padding: 130px;">총 할인 + 부가결제 금액</li>
+                            <li style="padding: 130px;">총 결제예정 금액</li>
+                        </ul>
+                        <ul style="margin-top: 20px;">
+                            <li style="padding: 160px;">31,500</li>
+                            <li style="padding: 250px;">31,500</li>
+                            <li style="padding: 120px;">31,500</li>
+                        </ul>
+                        <ul style="margin-top: 30px;">
+                            <li style="padding : 100px;">총 할인금액</li>
+                            <li style="padding : 100px;">0</li>
+                        </ul>
+                        <ul style="margin-top: 30px;">
+                            <li style="padding : 100px;">총 부가결제금액</li>
+                            <li style="padding : 68px;">0</li>
+                        </ul>
+                    </div>
+                    <p>결제수단</p>
+                    <div class="div_pay_area">
+                        <div class="div_method">
+                            <ul class="margin-top20">
+                                <li style="padding: 10px;">
+                                    <input type="radio" name="oredr_method" value="무통장 입금" checked="checked">무통장 입금
+                                    <input type="radio" name="oredr_method" value="카드 결제">카드 결제
+                                    <input type="radio" name="oredr_method" value="휴대폰 결제">휴대폰 결제
+                                    <input type="radio" name="oredr_method" value="계좌이체">계좌이체
+                                 </li>
+                            </ul>
+                        </div>
+                        <div class="div_total">
+                            <ul class="margin-top20">
+                                <li>
+                                    무통장 입금 최종결제 금액
+                                </li>
+                            </ul>
+                            <ul class="margin-top20">
+                                <li>
+                                    31,500원
+                                </li>
+                            </ul>
+                            <ul class="margin-top20">
+                                <li>
+                                    <input type="checkbox" name="pay_check">결제정보를 확인하였으며, 구매진행에 동의합니다.
+                                </li>
+                            </ul>
+                            <ul class="margin-top20">
+                                <input type="button" name="order_btn" value="결제하기">
+                            </ul>
+                        </div>
+                        <div class="div_option">
+                            <!-- 무통장입금결제 -->
+                            <ul class="margin-top10">
+                                <li style="padding: 55px;">입금자명</li>
+                                <li style="padding: 52px;">입금은행</li>
+                            </ul>
+                            <ul class="margin-top10">
+                                <li style="padding: 35px;"><input type="text" name="moo_name" size="10"></li>
+                                <li style="padding: 47px;">
+                                    <select name="b_bank">
+                                        <option value="국민은행">국민은행</option>
+                                        <option value="신한은행">신한은행</option>
+                                        <option value="우리은행">우리은행</option>
+                                        <option value="기업은행">기업은행</option>
+                                    </select>
+                                </li>
+                            </ul>
+                            <ul class="m_top20_left20">
+                              <li>최소 결제 가능 금액은 결제금액에서 배송비를 제외한 금액입니다.</li>
+                            </ul>
+                            <!-- 카드결제 -->
+                            <ul class="m_top20_left20">
+                                <li>최소 결제 가능 금액은 결제금액에서 배송비를 제외한 금액입니다.</li>
+                            </ul>
+                            <ul class="m_top20_left20">
+                                <li>소액 결제의 경우 PG사 정책에 따라 결제 금액 제한이 있을 수 있습니다.</li>
+                            </ul>
+                            <!-- 휴대폰결제 -->
+                            <ul class="m_top20_left20">
+                                <li>소액 결제의 경우 PG사 정책에 따라 결제 금액 제한이 있을 수 있습니다.</li>
+                            </ul>
+                            <!-- 실시간 계좌이체 -->
+                            <ul class="m_top20_left20">
+                                <li style="padding: 35px;">예금주명</li>
+                                <li style="padding: 35px;"><input type="text" name="sil_name" size="10"></li>
+                            </ul>
+                        </div>
+                    </div>
+         </form>
+        </div>
+    </div>
+    
+</body>
+</html>

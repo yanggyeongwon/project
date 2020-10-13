@@ -1,0 +1,74 @@
+
+body   {width: 100%;height: 100%;background-color: aliceblue;}
+button {background: 0;border: 0;padding: 0;cursor: pointer}
+
+p, h2{text-align: center;}
+p{background-color: rgb(233, 222, 222);border-top: 1px solid rgb(97, 67, 67);border-bottom: 1px solid rgb(97,67,67);padding: 10px 0;position: relative;padding-left: 15px;text-align: left;}
+p::after{
+    content: '!';
+    position: absolute;
+    left: 0;
+    top: 30%;
+}
+h2{position: relative;margin: 20px 0;}
+h2::before{
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    background-color:#000;
+    height: 2px;
+    width: 80px;
+}
+li{display: inline;}
+
+
+.Buy_Top_Box1{ border : 1px solid #000; width: 70%; margin: 0 auto;}
+
+
+.flexshow{width: 10%;
+    background: #2121;
+    text-align: center;
+    float: left;
+}
+.flexshow li{
+    float: left;
+    width: 100%;
+    font-size: 0.9rem;
+    padding: 10px 0;
+}
+#Buy_Top_title{display: flex;}
+#Buy_Top_title li{padding: 10px 30px;}
+
+#Buy_Top_menu{display: flex;}
+#Buy_Top_menu li{padding: 10px 30px;}
+
+#Buy_Top_price{display: flex;}
+#Buy_Top_price li{padding : 30px 150px;}
+.addr{width: 50%;float: left;}
+.star{position: relative;}
+.star::before{
+    content: '*';
+    position: absolute;
+    top: 25%;
+    left: 0;
+    color: red;
+}
+.Buy_Mid_Box1{height: 300px;}
+.Buy_Mid_Box2{height: 300px;}
+.Buy_Bottom_Box1{height : 200px;}
+.div_pay_area{height: 300px;}
+
+
+.div_total{width:40%; float:right; margin-top: -37px}
+.div_option{width:60%; float:left;}
+
+.addr li{padding: 10px;}
+.margin_input{margin-left: 10px;margin-top: 8px;}
+.li_height{height:70px ; padding-top: 30px;}
+a{ color: #000;}
+.addr li:nth-of-type(1), .addr li:nth-of-type(2),.addr li:nth-of-type(4),.addr li:nth-of-type(6){display: block;}
+.addr li:nth-of-type(4){margin-top: 10px;}
+
+.margin-top20{margin-top: 20px;}
+.margin-top10{margin-top: 10px;}
+.m_top20_left20{margin-top: 20px; margin-left: 20px;}
