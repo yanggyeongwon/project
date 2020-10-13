@@ -33,14 +33,17 @@ drop table orderdetails;
 
 create table orderdetails(
   onum number primary key,
-  opname varchar2(30) not null,
-  oorder varchar2(20) not null,
-  opreceive varchar2(20) not null,
+  opname varchar2(30) not null, --주문자 닉네임
+  oorder varchar2(20) not null,--주문자 이름
+  opreceive varchar2(20) not null,--수령자
   oprice number not null,
   opcharge number not null,
   opdate varchar2(20) not null,
   oinvoice varchar2(20) not null
 );
+
+insert into orderdetails values(odseq.nextval, '닉네임', '주문자', '수령자', 30000, 2500 ,sysdate, '송장번호');
+
 //상품테이블
 
 drop sequence pseq;
