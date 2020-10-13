@@ -14,6 +14,11 @@
 	<mvc:annotation-driven/>	
 	
 	<context:component-scan base-package="member"/>	
+	<context:component-scan base-package="notice"/>	
+	<context:component-scan base-package="orderdetails"/>	
+	<context:component-scan base-package="productinq"/>	
+	<context:component-scan base-package="product"/>	
+	
 	
 	<bean id="internalResourceViewResolver"
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
