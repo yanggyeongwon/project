@@ -21,6 +21,7 @@
     <title>Document</title>
 </head>
 <body>
+<<<<<<< HEAD
     <header>
         <div id="menu">
             <ul class="left_side_logo">
@@ -37,6 +38,9 @@
         </div>
         <p>version 1.10.0.1</p>
     </header>
+=======
+    <%@ include file="../admin_header.jsp" %>
+>>>>>>> 02c3b7c1de5d8eb9d4a48955567c853b59eeac55
     <div id="admin_page">
         <div id="first_top">
             <div class="more_btn">
