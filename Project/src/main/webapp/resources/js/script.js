@@ -2,6 +2,7 @@ $(()=>{
 
     mainpage_effect();
 
+
     $(document).ready(function(){
         $(window).scroll(function(){
           if($(this).scrollTop() > 200 ){
@@ -18,6 +19,12 @@ $(()=>{
         });
       });
 
+	$('.bottom_product').on({
+		click : function(){
+			location.href="product.prd";
+		}
+	});
+	
     $("#mypage span").hide();
     $("#mypage").on({
         mouseenter: function() {
@@ -142,5 +149,6 @@ $(()=>{
             }]
         }
     }
-});
 })
+	
+});
