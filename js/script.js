@@ -17,7 +17,6 @@ $(()=>{
           return false;
         });
       });
-
     $("#mypage span").hide();
     $("#mypage").on({
         mouseenter: function() {

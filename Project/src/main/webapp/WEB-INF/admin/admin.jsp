@@ -9,6 +9,7 @@
     <script src="<c:url value="/resources/js/jquery-3.5.1.min.js" />"></script>
     <script src="<c:url value="/resources/js/Chart.bundle.min.js"/>"></script>
     <script src="<c:url value="/resources/js/script.js" />"></script>
+    <script src="<c:url value="/resources/js/chart.js" />"></script>    
     <link rel="stylesheet" href="<c:url value="/resources/css/common.css" />">
     <link rel="stylesheet" href="<c:url value="/resources/css/main_style.css" />">
     <link rel="stylesheet" href="<c:url value="/resources/css/best.css"/>">
@@ -60,7 +61,7 @@
                 <a href="#">MORE</a>
             </div>
             <div class="order" id="QA_bar">
-                <p>Q & A 상품문의</p>
+                <p>Q &amp;  A 상품문의</p>
                 <ul class="order_list">
                     <li>번호</li>
                     <li>문의내용</li>
