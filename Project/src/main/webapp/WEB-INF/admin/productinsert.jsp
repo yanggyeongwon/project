@@ -19,11 +19,42 @@
     
     <title>상품등록페이지입니다.</title>
  <script type="text/javascript">
-       
+		 function uploadImgPreview() {
+		 	// @breif 업로드 파일 읽기
+		 	let fileList = document.getElementById( "upImgFiles" ).files;
+				// @breif 업로드 파일 읽기
+				function readAndPreview( fileList ) {
+					// @breif 이미지 확장자 검사
+					if ( /\.(jpe?g|png|gif)$/i.test( fileList.name ) ) {
+						let reader = new FileReader();
+						reader.addEventListener( "load", function() {
+							let image = new Image();
+							image.width = "50";
+							image.height = "50";
+							image.title = fileList.name;
+							image.src = this.result;
+							// @details 이미지 확장자 검사
+							
+							document.getElementById( "thumbnailImgs" ).appendChild( image );
+						
+
+							
+						}, false );
+						// @details readAsDataURL( )을 통해 파일의 URL을 읽어온다.
+						if( fileList ) {
+							reader.readAsDataURL( fileList );
+						}
+					}
+				}
+		 	if( fileList ) {
+		             // @details readAndPreview() 함수를 forEach문을통한 반복 수행
+				[].forEach.call( fileList, readAndPreview );
+		     }
+		 }
 
 
     </script>
-</head>
+<!-- </head> -->
 <body>
 
      <%@ include file="../admin_header.jsp" %>
@@ -36,13 +67,17 @@
 	            	 	<div id="left_box">
 	                        <div class="top_box">
 	                            <div id="image_view">
-	                                <p>
-	                                    <img id="blah" src="#" alt="이미지를 등록하세요">
-	                                <p>
+
+	                            </div>
+							    
+	                            <div id="image_sun_view">
+	                            	<div id="thumbnailImgs">
+	                            	
+	                            	</div>
 	                            </div>
 	                            <div class="input_box">
 		                            <ul id="input_img_btn">
-		                                <li><input type="file" id="upload" multiple></li><!-- accept='image/jpg, impge/png, image/jpeg, image/gif, impge/PNG' -->
+		                                <li><input type="file" id="upImgFiles" onChange="uploadImgPreview();" accept="image/*" multiple></li><!-- accept='image/jpg, impge/png, image/jpeg, image/gif, impge/PNG' -->
 		                            </ul>
 		                        </div>
 	                        </div>

@@ -112,21 +112,36 @@ $(()=>{
         scroll_top = st;
     }
 
-    $("#upload").on('change', function(){
-        readURL(this);
-    });
 
-    function readURL(input) {
-        if (input.files && input.files[0]) {
-        var reader = new FileReader();
 
-        reader.onload = function (e) {
-                $('#blah').attr('src', e.target.result);
-            }
+	/*let sel_files = [];
+	
+	$(document).ready(function(){
+		$("#upload").on("change", readURL);
+	})
 
-          reader.readAsDataURL(input.files[0]);
-        }
-    }
+    function readURL(e) {
+		let files = e.target.files;
+		let filesArr = Array.prototype.slice.call(files);
+		
+		filesArr.forEach(function(f){
+			
+			sel_files.push(f);
+			
+			let reader = new FileReader();
+			reader.onload = function(e){
+			let img_li = $("#image_sun_od_sun li").index(this);
+			console.log(img_li);
+			let img_html = "<img src=\""+e.target.result+"\" alt='no'/>";
+				$("#image_sun_of_sun li").append(img_html);
+			}
+			
+			reader.readAsDataURL(f);
+		})
+        
+    }*/
+		
+
 
 
 
