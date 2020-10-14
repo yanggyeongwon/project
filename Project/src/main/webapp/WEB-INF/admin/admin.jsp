@@ -21,22 +21,7 @@
     <title>Document</title>
 </head>
 <body>
-    <header>
-        <div id="menu">
-            <ul class="left_side_logo">
-                <li><img src="<c:url value="/resources/images/logo3.png" />" alt="no"/></li>
-            </ul>
-            <ul class="left_side"> 
-                <li><a href="#">상품 등록</a></li>
-                <li><a href="#">상품 수정</a></li>
-                <li><a href="#">상품 조회</a></li>
-                <li><a href="#">회원 관리</a></li>
-                <li><a href="#">배송 관리</a></li>
-                <li><a href="#">홈페이지 바로가기</a></li>
-            </ul>
-        </div>
-        <p>version 1.10.0.1</p>
-    </header>
+    <%@ include file="../admin_header.jsp" %>
     <div id="admin_page">
         <div id="first_top">
             <div class="more_btn">
