@@ -30,7 +30,7 @@
                 <li><a href="productinsert.ad">상품 등록</a></li>
                 <li><a href="productupdate.ad">상품 수정</a></li>
                 <li><a href="productselect.ad">상품 조회</a></li>
-                <li><a href="#">회원 관리</a></li>
+                <li><a href="productcustomer.ad">회원 관리</a></li>
                 <li><a href="#">배송 관리</a></li>
                 <li><a href="#">홈페이지 바로가기</a></li>
             </ul>
