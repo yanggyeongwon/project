@@ -1,12 +1,15 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+     <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/main_style.css">
-    <link rel="stylesheet" href="css/admin_product_select.css">
-    <link rel="stylesheet" href="css/adminpage.css">
+    <link rel="stylesheet" href="<c:url value="/resources/css/common.css"/>">
+    <link rel="stylesheet" href="<c:url value="/resources/css/main_style.css"/>">
+    <link rel="stylesheet" href="<c:url value="/resources/css/admin_product_select.css"/>">
+    <link rel="stylesheet" href="<c:url value="/resources/css/adminpage.css"/>">
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200&display=swap" rel="stylesheet">
@@ -16,12 +19,12 @@
     <header>
         <div id="menu">
             <ul class="left_side_logo">
-                <li><img src="images/logo3.png" alt="no"></li>
+                <li><img src="<c:url value="/resources/images/logo3.png" />" alt="no"/></li>
             </ul>
             <ul class="left_side"> 
-                <li><a href="#">상품 등록</a></li>
-                <li><a href="#">상품 수정</a></li>
-                <li><a href="#">상품 조회</a></li>
+                <li><a href="productinsert.ad">상품 등록</a></li>
+                <li><a href="productupdate.ad">상품 수정</a></li>
+                <li><a href="productselect.ad">상품 조회</a></li>
                 <li><a href="#">회원 관리</a></li>
                 <li><a href="#">배송 관리</a></li>
                 <li><a href="#">홈페이지 바로가기</a></li>

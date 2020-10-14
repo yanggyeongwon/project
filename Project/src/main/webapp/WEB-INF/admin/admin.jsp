@@ -21,7 +21,6 @@
     <title>Document</title>
 </head>
 <body>
-<<<<<<< HEAD
     <header>
         <div id="menu">
             <ul class="left_side_logo">
@@ -29,8 +28,8 @@
             </ul>
             <ul class="left_side"> 
                 <li><a href="productinsert.ad">상품 등록</a></li>
-                <li><a href="#">상품 수정</a></li>
-                <li><a href="#">상품 조회</a></li>
+                <li><a href="productupdate.ad">상품 수정</a></li>
+                <li><a href="productselect.ad">상품 조회</a></li>
                 <li><a href="#">회원 관리</a></li>
                 <li><a href="#">배송 관리</a></li>
                 <li><a href="#">홈페이지 바로가기</a></li>
@@ -38,9 +37,7 @@
         </div>
         <p>version 1.10.0.1</p>
     </header>
-=======
     <%@ include file="../admin_header.jsp" %>
->>>>>>> 02c3b7c1de5d8eb9d4a48955567c853b59eeac55
     <div id="admin_page">
         <div id="first_top">
             <div class="more_btn">
