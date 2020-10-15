@@ -1,12 +1,12 @@
-package admin.adminPage;
+package product.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-public class productupdate {
+public class ProductupdateController {
 	
-	final String command = "productupdate.ad";
+	final String command = "productupdate.prd";
 	final String getPage = "productupdate";
 	
 	@RequestMapping(command)

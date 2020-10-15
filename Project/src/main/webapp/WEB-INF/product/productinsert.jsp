@@ -84,7 +84,7 @@
 
         <div id="first_box">
         	<p id="p_title">상품 등록</p>
-               <form:form commandName="product" method="post" action="productinsert.ad" enctype="multipart/form-data">
+               <form:form commandName="product" method="post" action="productinsert.prd" enctype="multipart/form-data">
 	            <div id="second_box">
 	            	 	<div id="left_box">
 	                        <div class="top_box">

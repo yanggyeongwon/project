@@ -1,4 +1,4 @@
-package member.model;
+package product.model;
 
 public class Product {
 
