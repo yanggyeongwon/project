@@ -37,7 +37,6 @@
         </div>
         <p>version 1.10.0.1</p>
     </header>
-    <%@ include file="../admin_header.jsp" %>
     <div id="admin_page">
         <div id="first_top">
             <div class="more_btn">
