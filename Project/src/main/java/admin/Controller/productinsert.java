@@ -1,4 +1,4 @@
-package admin.adminPage;
+package admin.Controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
