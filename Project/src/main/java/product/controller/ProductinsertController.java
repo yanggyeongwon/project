@@ -2,7 +2,9 @@ package product.controller;
 
 
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.Iterator;
 import java.util.List;
 
 import javax.servlet.ServletContext;
@@ -49,40 +51,63 @@ public class ProductinsertController {
 	}
 	
 	@RequestMapping(value = command, method = RequestMethod.POST)
-	public ModelAndView doAction(Product product, MultipartHttpServletRequest Multipartrequest) throws IllegalStateException, IOException {
-
+	public ModelAndView doAction(Product product) throws IllegalStateException, IOException {
+		/*,MultipartHttpServletRequest Multipartrequest*/
 		
 		System.out.println("post방식");
+		
 		dao.GetInsertProduct(product);
-		
 		ModelAndView mav = new ModelAndView();
-
-		
 		
 		/*
-		 * MultipartFile multi = product.getUpload(); File file = new
-		 * File(uploadPath+product.getPimage()); System.out.println(file);
+		 * if(result.hasErrors()) { mav.setViewName(getPage); return mav; }
 		 */
+		MultipartFile multi = product.getUpload();
+		MultipartFile multi1 = product.getUpload1();
+		MultipartFile multi2 = product.getUpload2();
+		MultipartFile multi3 = product.getUpload3();
 		
-		List<MultipartFile> fileList = Multipartrequest.getFiles("file");
-
 		servletContext.getRealPath("/");
+
 		String uploadPath = servletContext.getRealPath("/resources")+"/";
+
 		
-		for(MultipartFile mf : fileList) {
-			String originFileName = mf.getOriginalFilename();
-			long fileSize = mf.getSize();
-			
-			System.out.println("originFileName: "+originFileName);
-			System.out.println("fileSize: "+fileSize);
-			String safeFile = uploadPath + System.currentTimeMillis() + originFileName;
-			
-			mf.transferTo(new File(safeFile));
-		}
+		File file = new File(uploadPath+product.getPimage());
+		File file1 = new File(uploadPath+product.getPimage1());
+		File file2 = new File(uploadPath+product.getPimage2());
+		File file3 = new File(uploadPath+product.getPimage3());
+		System.out.println(file);
+		
+		multi.transferTo(file);
+		multi1.transferTo(file1);
+		multi2.transferTo(file2);
+		multi3.transferTo(file3);
 		
 		mav.setViewName(getPage);
-		
-		
+		/*
+		 * ModelAndView mav = new ModelAndView();
+		 * 
+		 * servletContext.getRealPath("/"); String path =
+		 * servletContext.getRealPath("/resources")+"/"; String fileName = "";
+		 * 
+		 * File dir = new File(path); if(!dir.isDirectory()) { dir.mkdir(); }
+		 * Iterator<String> files = Multipartrequest.getFileNames(); MultipartFile mf =
+		 * Multipartrequest.getFile(files.next());
+		 * 
+		 * if(mf == null || mf.getSize() <= 0) { System.out.println("파일용량 xx");
+		 * mav.setViewName(getPage); return mav; }
+		 * 
+		 * List<MultipartFile> fileList = Multipartrequest.getFiles("upload");
+		 * 
+		 * for(MultipartFile filePart : fileList) {
+		 * 
+		 * fileName = filePart.getOriginalFilename(); System.out.println("실제 파일이름 : "+
+		 * fileName); long fileSize = filePart.getSize();
+		 * System.out.println("실제 파일사이즈 : "+fileSize); if(!fileName.equals("")) {
+		 * FileOutputStream fs = new FileOutputStream(path+fileName);
+		 * fs.write(filePart.getBytes()); fs.close(); } } mav.setViewName(getPage);
+		 * 
+		 */
 		return mav;
 		
 	}

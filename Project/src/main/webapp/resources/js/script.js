@@ -112,13 +112,5 @@ $(()=>{
         scroll_top = st;
     }
 
-	
-	var formData = new FormData($(''))
-
-	
-		
-
-
-
 
 });

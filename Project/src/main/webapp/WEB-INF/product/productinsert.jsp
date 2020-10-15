@@ -36,8 +36,6 @@
 							// @details 이미지 확장자 검사
 							
 							document.getElementById( "thumbnailImgs" ).appendChild( image );
-
-							
 						}, false );
 						// @details readAsDataURL( )을 통해 파일의 URL을 읽어온다.
 						if( fileList ) {
@@ -50,11 +48,104 @@
 				[].forEach.call( fileList, readAndPreview );
 		     }
 		 }
+		 function uploadImgPreview1() {
+			 	// @breif 업로드 파일 읽기
+			 	let fileList = document.getElementById( "upImgFiles1" ).files;
+					// @breif 업로드 파일 읽기
+					function readAndPreview( fileList ) {
+						// @breif 이미지 확장자 검사
+						if ( /\.(jpe?g|png|gif)$/i.test( fileList.name ) ) {
+							let reader = new FileReader();
+							reader.addEventListener( "load", function() {
+								let image = new Image();
+								image.width = "50";
+								image.height = "50";
+								image.title = fileList.name;
+								image.src = this.result;
+								// @details 이미지 확장자 검사
+								
+								document.getElementById( "thumbnailImgs" ).appendChild( image );
+							}, false );
+							// @details readAsDataURL( )을 통해 파일의 URL을 읽어온다.
+							if( fileList ) {
+								reader.readAsDataURL( fileList );
+							}
+						}
+					}
+			 	if( fileList ) {
+			             // @details readAndPreview() 함수를 forEach문을통한 반복 수행
+					[].forEach.call( fileList, readAndPreview );
+			     }
+			 }
+			 
+		 function uploadImgPreview2() {
+			 	// @breif 업로드 파일 읽기
+			 	let fileList = document.getElementById( "upImgFiles2" ).files;
+					// @breif 업로드 파일 읽기
+					function readAndPreview( fileList ) {
+						// @breif 이미지 확장자 검사
+						if ( /\.(jpe?g|png|gif)$/i.test( fileList.name ) ) {
+							let reader = new FileReader();
+							reader.addEventListener( "load", function() {
+								let image = new Image();
+								image.width = "50";
+								image.height = "50";
+								image.title = fileList.name;
+								image.src = this.result;
+								// @details 이미지 확장자 검사
+								
+								document.getElementById( "thumbnailImgs" ).appendChild( image );
+							}, false );
+							// @details readAsDataURL( )을 통해 파일의 URL을 읽어온다.
+							if( fileList ) {
+								reader.readAsDataURL( fileList );
+							}
+						}
+					}
+			 	if( fileList ) {
+			             // @details readAndPreview() 함수를 forEach문을통한 반복 수행
+					[].forEach.call( fileList, readAndPreview );
+			     }
+			 }
+			 
+		 function uploadImgPreview3() {
+			 	// @breif 업로드 파일 읽기
+			 	let fileList = document.getElementById( "upImgFiles3" ).files;
+					// @breif 업로드 파일 읽기
+					function readAndPreview( fileList ) {
+						// @breif 이미지 확장자 검사
+						if ( /\.(jpe?g|png|gif)$/i.test( fileList.name ) ) {
+							let reader = new FileReader();
+							reader.addEventListener( "load", function() {
+								let image = new Image();
+								image.width = "50";
+								image.height = "50";
+								image.title = fileList.name;
+								image.src = this.result;
+								// @details 이미지 확장자 검사
+								
+								document.getElementById( "thumbnailImgs" ).appendChild( image );
+							}, false );
+							// @details readAsDataURL( )을 통해 파일의 URL을 읽어온다.
+							if( fileList ) {
+								reader.readAsDataURL( fileList );
+							}
+						}
+					}
+			 	if( fileList ) {
+			             // @details readAndPreview() 함수를 forEach문을통한 반복 수행
+					[].forEach.call( fileList, readAndPreview );
+			     }
+			 }
+			 
 		 
 		 let sel_files = [];
 			
 			$(document).ready(function(){
 				$("#upImgFiles").on("change", readURL);
+				$("#upImgFiles1").on("change", readURL);
+				$("#upImgFiles2").on("change", readURL);
+				$("#upImgFiles3").on("change", readURL);
 			})
 
 		    function readURL(e) {
@@ -84,7 +175,7 @@
 
         <div id="first_box">
         	<p id="p_title">상품 등록</p>
-               <form:form commandName="product" method="post" action="productinsert.prd" enctype="multipart/form-data"><!--  -->
+               <form:form id="fileForm" commandName="product" method="post" action="productinsert.prd" enctype="multipart/form-data"><!--  -->
 	            <div id="second_box">
 	            	 	<div id="left_box">
 	                        <div class="top_box">
@@ -99,7 +190,11 @@
 	                            </div>
 	                            <div class="input_box">
 		                            <ul id="input_img_btn">
-		                                <li><input type="file" name="upload" id="upImgFiles" onChange="uploadImgPreview();" accept="image/*" multiple></li><!-- accept='image/jpg, impge/png, image/jpeg, image/gif, impge/PNG' -->
+		                                <li><input type="file" name="upload" id="upImgFiles" onChange="uploadImgPreview();" accept="image/*" multiple>
+		                                <input type="file" name="upload1" id="upImgFiles1" onChange="uploadImgPreview1();" accept="image/*" multiple>
+		                                <input type="file" name="upload2" id="upImgFiles2" onChange="uploadImgPreview2();" accept="image/*" multiple>
+		                                <input type="file" name="upload3" id="upImgFiles3" onChange="uploadImgPreview3();" accept="image/*" multiple>                            
+		                                </li><!-- accept='image/jpg, impge/png, image/jpeg, image/gif, impge/PNG' -->
 		                            </ul>
 		                        </div>
 	                        </div>
