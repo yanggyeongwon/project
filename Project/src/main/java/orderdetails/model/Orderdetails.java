@@ -1,4 +1,4 @@
-package member.model;
+package orderdetails.model;
 
 public class Orderdetails {
 

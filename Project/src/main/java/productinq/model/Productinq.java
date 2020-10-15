@@ -1,4 +1,4 @@
-package member.model;
+package productinq.model;
 
 public class Productinq {
 

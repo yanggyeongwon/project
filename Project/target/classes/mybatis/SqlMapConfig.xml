@@ -5,10 +5,10 @@
 <configuration>
 	<typeAliases>
 		<typeAlias type="member.model.Member" alias="MyMember"/>
-		<typeAlias type="member.model.Notice" alias="MyNotice"/>
-		<typeAlias type="member.model.Orderdetails" alias="MyOrderdetails"/>
-		<typeAlias type="member.model.Product" alias="MyProduct"/>
-		<typeAlias type="member.model.Productinq" alias="MyProductinq"/>
+		<typeAlias type="notice.model.Notice" alias="MyNotice"/>
+		<typeAlias type="orderdetails.model.Orderdetails" alias="MyOrderdetails"/>
+		<typeAlias type="product.model.Product" alias="MyProduct"/>
+		<typeAlias type="productinq.model.Productinq" alias="MyProductinq"/>
 		
 	</typeAliases>
 	<mappers>

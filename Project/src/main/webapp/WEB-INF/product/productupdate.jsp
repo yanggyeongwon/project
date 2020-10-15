@@ -17,7 +17,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200&display=swap" rel="stylesheet">
     
-    <title>상품등록페이지입니다.</title>
+    <title>상품수정페이지입니다.</title>
  <script type="text/javascript">
 		 function uploadImgPreview() {
 		 	// @breif 업로드 파일 읽기
@@ -78,17 +78,13 @@
     </script>
 <!-- </head> -->
 <body>
-<<<<<<< HEAD
-    <%@ include file="../admin_header.jsp" %>
-=======
 
      <%@ include file="../admin_header.jsp" %>
->>>>>>> 097f67fa7e897a6bf8c86769f4b305a61a6e8e66
     <div class="admin_page">
 
         <div id="first_box">
-        	<p id="p_title">상품 등록</p>
-               <form:form commandName="product" method="post" action="productinsert.ad" enctype="multipart/form-data">
+        	<p id="p_title">상품 수정</p>
+               <form:form commandName="product" method="post" action="productupdate.prd" enctype="multipart/form-data">
 	            <div id="second_box">
 	            	 	<div id="left_box">
 	                        <div class="top_box">
