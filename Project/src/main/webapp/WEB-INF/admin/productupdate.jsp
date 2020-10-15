@@ -49,20 +49,20 @@
                             </ul>
                             <ul class="flex_ul">
                                 <li class="margin-l10r10"><p>색상</p></li>
-                                <button class="margin-left11" id="color_white"></button>
-                                <button class="margin-left11" id="color_black"></button>
-                                <button class="margin-left11" id="color_blue"></button>
-                                <button class="margin-left11" id="color_gray"></button>
-                                <button class="margin-left11" id="color_beige"></button>
-                                <button class="margin-left11" id="color_red"></button>
+	                            <li><a class="color_white"></a></li>
+                                <li><a class="color_black"></a></li>
+                                <li><a class="color_blue"></a></li>
+                                <li><a class="color_gray"></a></li>
+                                <li><a class="color_beige"></a></li>
+                                <li><a class="color_red"></a></li>
                             </ul>
                             <ul id="flex_ck">
                                 <li><p>사이즈</p></li>
-                                <ll style="margin-left: 50px;"><p>S</p></ll>
-                                <ll style="margin-left: 14px;"><p>M</p></ll>
-                                <ll style="margin-left: 14px;"><p>L</p></ll>
-                                <ll style="margin-left: 14px;"><p>XL</p></ll>
-                                <ll style="margin-left: 10px;"><p>F</p></ll>
+                                <li style="margin-left: 50px;"><p>S</p></li>
+                                <li style="margin-left: 14px;"><p>M</p></li>
+                                <li style="margin-left: 14px;"><p>L</p></li>
+                                <li style="margin-left: 14px;"><p>XL</p></li>
+                                <li style="margin-left: 10px;"><p>F</p></li>
                             </ul>
                             <ul id="flex_ck1">
                                 <li class="margin-left7"><input type="checkbox" name="input_psize_s" value=""></li>

@@ -9,6 +9,7 @@
     <script src="<c:url value="/resources/js/jquery-3.5.1.min.js" />"></script>
     <script src="<c:url value="/resources/js/Chart.bundle.min.js"/>"></script>
     <script src="<c:url value="/resources/js/script.js" />"></script>
+    <script src="<c:url value="/resources/js/chart.js" />"></script>    
     <link rel="stylesheet" href="<c:url value="/resources/css/common.css" />">
     <link rel="stylesheet" href="<c:url value="/resources/css/main_style.css" />">
     <link rel="stylesheet" href="<c:url value="/resources/css/best.css"/>">
@@ -21,6 +22,7 @@
     <title>Document</title>
 </head>
 <body>
+<<<<<<< HEAD
     <header>
         <div id="menu">
             <ul class="left_side_logo">
@@ -37,6 +39,9 @@
         </div>
         <p>version 1.10.0.1</p>
     </header>
+=======
+    <%@ include file="../admin_header.jsp" %>
+>>>>>>> 097f67fa7e897a6bf8c86769f4b305a61a6e8e66
     <div id="admin_page">
         <div id="first_top">
             <div class="more_btn">
@@ -75,7 +80,7 @@
                 <a href="#">MORE</a>
             </div>
             <div class="order" id="QA_bar">
-                <p>Q & A 상품문의</p>
+                <p>Q &amp;  A 상품문의</p>
                 <ul class="order_list">
                     <li>번호</li>
                     <li>문의내용</li>
