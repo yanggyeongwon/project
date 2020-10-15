@@ -14,7 +14,6 @@
             </ul>
             <ul class="left_side"> 
                 <li><a href="productinsert.prd">상품 등록</a></li>
-                <li><a href="productupdate.prd">상품 수정</a></li>
                 <li><a href="#">상품 조회</a></li>
                 <li><a href="#">회원 관리</a></li>
                 <li><a href="#">배송 관리</a></li>

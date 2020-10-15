@@ -84,7 +84,7 @@
 
         <div id="first_box">
         	<p id="p_title">상품 등록</p>
-               <form:form commandName="product" method="post" action="productinsert.prd" enctype="multipart/form-data">
+               <form:form commandName="product" method="post" action="productinsert.prd" enctype="multipart/form-data"><!--  -->
 	            <div id="second_box">
 	            	 	<div id="left_box">
 	                        <div class="top_box">
@@ -99,7 +99,7 @@
 	                            </div>
 	                            <div class="input_box">
 		                            <ul id="input_img_btn">
-		                                <li><input type="file" id="upImgFiles" onChange="uploadImgPreview();" accept="image/*" multiple></li><!-- accept='image/jpg, impge/png, image/jpeg, image/gif, impge/PNG' -->
+		                                <li><input type="file" name="upload" id="upImgFiles" onChange="uploadImgPreview();" accept="image/*" multiple></li><!-- accept='image/jpg, impge/png, image/jpeg, image/gif, impge/PNG' -->
 		                            </ul>
 		                        </div>
 	                        </div>
@@ -109,20 +109,20 @@
 	                        <div id="text_box">
 	                            <ul class="flex_ul">
 	                                <li class="margin-l10r10"><p>상품명</p></li>
-	                                <li style="margin-left: 40px;"><input type="text" size="10" name="input_pname" value=""></li>
+	                                <li style="margin-left: 40px;"><input type="text" size="10" name="pname" value="여자다"></li>
 	                            </ul>
 	                            <ul class="flex_ul">
 	                                <li class="margin-l10r10"><p>상품번호</p></li>
-	                                <li style="margin-left: 26px;"><input type="text" size="10" name="input_pnum" value=""></li>
+	                                <li style="margin-left: 26px;"><input type="text" size="10" name="pbest" value="1"></li>
 	                            </ul>
 	                            <ul class="flex_ul">
 	                                <li class="margin-l10r10"><p>색상</p></li>
-	                                <li class="ch_red" ><input type="checkbox" name="input_pcolor_r" value=""></li>
-	                                <li class="ch_blu" ><input type="checkbox" name="input_pcolor_b" value=""></li>
-	                                <li class="ch_yeo" ><input type="checkbox" name="input_pcolor_y" value=""></li>
-	                                <li class="ch_gre" ><input type="checkbox" name="input_pcolor_g" value=""></li>
-	                                <li class="ch_whi" ><input type="checkbox" name="input_pcolor_w" value=""></li>
-	                                <li class="ch_bla" ><input type="checkbox" name="input_pcolor_bl" value=""></li>
+	                                <li class="ch_red" ><input type="checkbox" name="pcolor" value="red"></li>
+	                                <li class="ch_blu" ><input type="checkbox" name="pcolor" value="blue"></li>
+	                                <li class="ch_yeo" ><input type="checkbox" name="pcolor" value="yellow"></li>
+	                                <li class="ch_gre" ><input type="checkbox" name="pcolor" value="green"></li>
+	                                <li class="ch_whi" ><input type="checkbox" name="pcolor" value="white"></li>
+	                                <li class="ch_bla" ><input type="checkbox" name="pcolor" value="black"></li>
 	                            </ul>
 	                            <ul id="flex_ck">
 	                                <li><p>사이즈</p></li>
@@ -133,29 +133,29 @@
 	                                <li style="margin-left: 10px;"><p>F</p></li>
 	                            </ul>
 	                            <ul id="flex_ck1">
-	                                <li class="margin-left7"><input type="checkbox" name="input_psize_s" value=""></li>
-	                                <li class="margin-left7"><input type="checkbox" name="input_psize_m" value=""></li>
-	                                <li class="margin-left7"><input type="checkbox" name="input_psize_l" value=""></li>
-	                                <li class="margin-left7"><input type="checkbox" name="input_psize_xl" value=""></li>
-	                                <li class="margin-left7"><input type="checkbox" name="input_psize_f" value=""></li>
+	                                <li class="margin-left7"><input type="checkbox" name="psize" value="s"></li>
+	                                <li class="margin-left7"><input type="checkbox" name="psize" value="m"></li>
+	                                <li class="margin-left7"><input type="checkbox" name="psize" value="l"></li>
+	                                <li class="margin-left7"><input type="checkbox" name="psize" value="xl"></li>
+	                                <li class="margin-left7"><input type="checkbox" name="psize" value="free"></li>
 	                            </ul>
 	                            <ul class="flex_ul">
 	                                <li class="margin-l10r10"><p>가격</p></li>
-	                                <li style="margin-left: 54px;"><input type="text" size="10" name="input_pprice" value=""></li>
+	                                <li style="margin-left: 54px;"><input type="text" size="10" name="pprice" value="20000"></li>
 	                            </ul>
 	                            <ul class="flex_ul">
 	                                <li class="margin-l10r10"><p>포인트</p></li>
-	                                <li style="margin-left: 40px;"><input type="text" size="10" name="input_ppoint" value=""></li>
+	                                <li style="margin-left: 40px;"><input type="text" size="10" name="ppoint" value="200"></li>
 	                            </ul>
 	                        </div>
+	                        <input type="hidden" name="pdate" value="2020-10-15">
 	                        <div class="input_box">
 	                            <ul id="input_p_btn">
 	                                <li><input type="submit" name="input_img_btn" value="상품등록"></li>
-	                                <li id="p_btn_margin"><input type="button" name="input_img_btn" value="등록취소"></li>
+	                                <li id="p_btn_margin"><input type="button" name="pdate" value="등록취소"></li>
 	                            </ul>
 	                        </div>
 	                    </div>
-	               
 	            </div>
             </form:form>
         </div>

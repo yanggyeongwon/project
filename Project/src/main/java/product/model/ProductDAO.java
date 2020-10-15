@@ -12,8 +12,11 @@ public class ProductDAO {
 	@Autowired
 	SqlSessionTemplate sqlSessionTemplate;
 
-	public void GetInsertProduct() {
+	public void GetInsertProduct(Product product) {
 		// TODO Auto-generated method stub
+	
+		
+		sqlSessionTemplate.insert(namespace+".GetInsertProduct", product);
 		
 	}
 }

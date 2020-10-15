@@ -29,7 +29,6 @@
 			<li><a href="shoes.prd">SHOES</a></li>
 			<li><a href="acc.prd">ACC</a></li>
 		</ul>
-
 	</div>
 </body>
 </html>

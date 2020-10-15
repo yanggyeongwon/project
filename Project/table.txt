@@ -61,10 +61,12 @@ create table product(
   pcolor varchar2(20) not null,
   psize varchar2(10) not null,
   pprice number not null,
-  ppoint number not null
+  ppoint number not null,
+  pimage varchar2(30) not null,
+  pdate varchar2(20) not null
 );
 
-insert into product values(pseq.nextval,1,'호두과자','색깔','사이즈',30000,2500);
+insert into product values(pseq.nextval,1,'호두과자','색깔','사이즈',30000,2500,'best.jpg',sysdate);
 
 
 select * from product;
