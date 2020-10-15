@@ -36,7 +36,6 @@
 							// @details 이미지 확장자 검사
 							
 							document.getElementById( "thumbnailImgs" ).appendChild( image );
-						
 
 							
 						}, false );
@@ -51,7 +50,30 @@
 				[].forEach.call( fileList, readAndPreview );
 		     }
 		 }
+		 
+		 let sel_files = [];
+			
+			$(document).ready(function(){
+				$("#upImgFiles").on("change", readURL);
+			})
 
+		    function readURL(e) {
+			console.log("들어옴")
+				let files = e.target.files;
+				let filesArr = Array.prototype.slice.call(files);
+				
+				filesArr.forEach(function(f){
+					
+					sel_files = f;
+					
+					let reader = new FileReader();
+					reader.onload = function(e){
+						$("#img").attr('src', e.target.result)
+					}
+					reader.readAsDataURL(f);
+				})
+		        
+		    }
 
     </script>
 <!-- </head> -->
@@ -62,12 +84,12 @@
 
         <div id="first_box">
         	<p id="p_title">상품 등록</p>
-               <form:form commandName="product" method="post" action="insert.prd" enctype="multipart/form-data">
+               <form:form commandName="product" method="post" action="productinsert.ad" enctype="multipart/form-data">
 	            <div id="second_box">
 	            	 	<div id="left_box">
 	                        <div class="top_box">
 	                            <div id="image_view">
-
+									<img id="img" src="#" height="100%">
 	                            </div>
 							    
 	                            <div id="image_sun_view">
