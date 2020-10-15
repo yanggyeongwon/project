@@ -13,7 +13,7 @@ create table member(
   mnum number primary key,
   mname varchar2(20) not null,
   mid varchar2(20) not null,
-  mpw number not null,
+  mpw varchar2(20) not null,
   memail varchar2(30) not null
 );
 

@@ -17,7 +17,7 @@
                 <li><a href="#">상품 조회</a></li>
                 <li><a href="#">회원 관리</a></li>
                 <li><a href="#">배송 관리</a></li>
-                <li><a href="#">홈페이지 바로가기</a></li>
+                <li><a href="index.me">홈페이지 바로가기</a></li>
             </ul>
         </div>
         <p>version 1.10.0.1</p>
