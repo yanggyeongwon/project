@@ -24,6 +24,7 @@
                 var fullRoadAddr = data.roadAddress; // 도로명 주소 변수
                 var extraRoadAddr = ''; // 도로명 조합형 주소 변수
                 var sido = data.sido;
+                
                 var sigungu = data.sigungu;
 
                 // 법정동명이 있을 경우 추가한다. (법정리는 제외)
