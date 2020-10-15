@@ -78,14 +78,8 @@
     </script>
 <!-- </head> -->
 <body>
-<<<<<<< HEAD
-    <%@ include file="../admin_header.jsp" %>
-=======
-
      <%@ include file="../admin_header.jsp" %>
->>>>>>> 097f67fa7e897a6bf8c86769f4b305a61a6e8e66
     <div class="admin_page">
-
         <div id="first_box">
         	<p id="p_title">상품 등록</p>
                <form:form commandName="product" method="post" action="productinsert.prd" enctype="multipart/form-data">

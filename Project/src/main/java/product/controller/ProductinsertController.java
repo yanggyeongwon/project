@@ -1,8 +1,4 @@
-<<<<<<< HEAD:Project/src/main/java/admin/Controller/productinsert.java
-package admin.Controller;
-=======
 package product.controller;
->>>>>>> dd9d5e8d63cf1ebc1f7a009bb60e305d52bb16db:Project/src/main/java/product/controller/ProductinsertController.java
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

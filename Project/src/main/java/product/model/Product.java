@@ -4,11 +4,19 @@ public class Product {
 	private int pnum;
 	private int pbest;
 	private String pname;
+	private String pcolor;
 	private String psize;
 	private int pprice;
 	private int ppoint;
+	private String pimage;
+	private String pdate;
 	
-	
+	public String getPcolor() {
+		return pcolor;
+	}
+	public void setPcolor(String pcolor) {
+		this.pcolor = pcolor;
+	}
 	public int getPnum() {
 		return pnum;
 	}
@@ -44,6 +52,18 @@ public class Product {
 	}
 	public void setPpoint(int ppoint) {
 		this.ppoint = ppoint;
+	}
+	public String getPimage() {
+		return pimage;
+	}
+	public void setPimage(String pimage) {
+		this.pimage = pimage;
+	}
+	public String getPdate() {
+		return pdate;
+	}
+	public void setPdate(String pdate) {
+		this.pdate = pdate;
 	}
 	
 	

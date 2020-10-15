@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-     <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+    <%@ include file="../common.jsp" %>
+     
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,21 +24,25 @@
                 <p id="p_title">상품 조회</p>
                <div id="third_box">
                     <div id="top_box">
-                        <ul id="select_top">
-                            <li><p>상품명</p></li>
-                            <li><input type="text" size="10" name="select_pname"></li>
-                            <li><p>상품번호</p></li>
-                            <li><input type="text" size="10" name="select_pname"></li>
-                            <li><p>등록날짜</p></li>
-                            <li><input type="date" size="10" name="select_pname">~</li>
-                            <li><input type="date" size="10" name="select_pname"></li>
-                            <li><input type="submit" size="10" name="select_pname" value="조회"></li>
-                        </ul>
+                        <form action="productselect.prd" method="get">
+                        	<ul id="select_top">
+                            	<li>
+                            		<select name="whatColumn">
+                            			<option value="pname">상품명
+                            			<option value="pbest">상품번호
+                            			<option value="pdate">등록날짜
+                            		</select>
+                            	</li>
+                            	<li><input type="text" size="10" name="keyword"></li>
+                            	<li><input type="submit" value="조회"></li>
+                       		 </ul>
+                        </form>
                     </div>
                     <div id="bottom_box">
                         <table>
                             <tr id="select_bottom">
                                 <td><p>번호</p></td>
+                                <td><p>이미지</p></td>
                                 <td><p>상품명</p></td>
                                 <td><p>상품번호</p></td>
                                 <td><p>등록날짜</p></td>
@@ -45,16 +50,22 @@
                                 <td><p>수정</p></td>
                                 <td><p>삭제</p></td>
                             </tr>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
+                            <c:forEach items="${lists }" var="product">
+                            <tr id="select_data">
+                                <td><p>${product.pnum }<p></td>
+                                <td><p>${product.pimage }<p></td>
+                                <td><p>${product.pname }<p></td>
+                                <td><p>${product.pbest }<p></td>
+                                <td><p>${product.pdate }<p></td>
+                                <td><p>${product.pprice }<p></td>
+                                <td><p><a href="productupdate.prd?pnum=${product.pnum }">수정</a><p></td>
+                                <td><p><a href="productdelete.prd?pnum=${product.pnum }">삭제</a><p></td>
                             </tr>
+                            </c:forEach>
                         </table>
+                        <div class="page_a">
+							${pageInfo.pagingHtml } 
+                        </div>
                     </div>
                </div>
             </div>

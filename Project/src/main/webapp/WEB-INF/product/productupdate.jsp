@@ -81,7 +81,6 @@
 
      <%@ include file="../admin_header.jsp" %>
     <div class="admin_page">
-
         <div id="first_box">
         	<p id="p_title">상품 수정</p>
                <form:form commandName="product" method="post" action="productupdate.prd" enctype="multipart/form-data">

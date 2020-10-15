@@ -13,13 +13,15 @@ create table member(
   mnum number primary key,
   mname varchar2(20) not null,
   mid varchar2(20) not null,
-  mpw number not null,
+  mpw varchar2(20) not null,
   memail varchar2(30) not null
 );
 
 insert into member values(mseq.nextval,'경원','ruddnjs25',1234,'ruddnjs25@naver.com');
-
+insert into member values(mseq.nextval,'범규','qjarb',1234,'bumgyukim@naver.com');
 select * from member;
+
+commit;
 
 //주문내역 테이블
 
@@ -44,6 +46,8 @@ create table orderdetails(
 
 insert into orderdetails values(odseq.nextval, '닉네임', '주문자', '수령자', 30000, 2500 ,sysdate, '송장번호');
 
+commit;
+
 //상품테이블
 
 drop sequence pseq;
@@ -61,13 +65,18 @@ create table product(
   pcolor varchar2(20) not null,
   psize varchar2(10) not null,
   pprice number not null,
-  ppoint number not null
+  ppoint number not null,
+  pimage varchar2(30) not null,
+  pdate varchar2(30) not null
 );
 
-insert into product values(pseq.nextval,1,'호두과자','색깔','사이즈',30000,2500);
+insert into product values(pseq.nextval,1,'호두과자','색깔','사이즈',30000,2500,'best.jpg',sysdate);
+insert into product values(pseq.nextval,0,'칙촉','빨간','사이즈',20000,1500,'best.jpg',sysdate);
 
 
 select * from product;
+
+commit;
 
 //공지사항
 
@@ -91,6 +100,8 @@ insert into notice values(nseq.nextval,'문의내용50자','작성자','날짜')
 
 select * from notice;
 
+commit;
+
 //상품문의
 
 drop sequence piseq;
@@ -112,5 +123,5 @@ insert into productinq values(piseq.nextval,'문의내용50자','작성자','날
 
 select * from productinq;
 
-
+commit;
 

@@ -45,3 +45,37 @@
     margin: 0 auto;
     position: relative;
 }
+
+#select_top{
+    display : flex;
+    margin-top : 20px;
+}
+
+#select_top li{
+    margin-left :11px;
+}
+
+#select_bottom{
+    display: flex;
+}
+#select_bottom td{
+    margin-top : 20px;
+    margin-left : 48px;
+}
+
+#select_data{
+	display:flex;
+}
+
+#select_data td{
+    margin-top : 20px;
+    margin-left : 55px;
+}
+
+.page_a a{
+	color: black;
+}
+
+#select_data a{
+	color: black;
+}

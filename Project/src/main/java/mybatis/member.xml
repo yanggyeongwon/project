@@ -2,5 +2,36 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="member.model.Member">
-
+	<select id="getTotalCount"  resultType="int">
+		select count(*) from member
+		<if test="whatColumn=='mnum'">
+			where mnum like #{keyword}
+		</if>
+		
+		<if test="whatColumn=='mname'">
+			where mname like #{keyword}
+		</if>
+		<if test="whatColumn=='mid'">
+			where mid like #{keyword}
+		</if>
+	</select>
+	
+	<select id="getSelectMember" resultType="MyMember">
+		select * from member
+		<if test="whatColumn=='mnum'">
+			where mnum like #{keyword}
+		</if>
+		
+		<if test="whatColumn=='mname'">
+			where mname like #{keyword}
+		</if>
+		<if test="whatColumn=='mid'">
+			where mid like #{keyword}
+		</if>
+		order by mnum desc
+	</select>
+	
+	<delete id="deleteMember">
+		delete from member where mnum=#{mnum}
+	</delete>
 </mapper>
