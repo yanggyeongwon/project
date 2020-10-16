@@ -1,0 +1,103 @@
+//회원 테이블
+drop sequence mseq;
+create sequence mseq
+increment by 1
+start with 1
+nocycle;
+drop table member;
+create table member(
+  mnum number primary key,
+  mname varchar2(20) not null,
+  mid varchar2(20) not null,
+  mpw varchar2(20) not null,
+  memail varchar2(30) not null
+);
+insert into member values(mseq.nextval,'경원','ruddnjs25',1234,'ruddnjs25@naver.com');
+insert into member values(mseq.nextval,'범규','qjarb',12,'ruddnjs25@naver.com');
+select * from member;
+
+commit;
+//주문내역 테이블
+drop sequence odseq;
+create sequence odseq
+increment by 1
+start with 1
+nocycle;
+drop table orderdetails;
+create table orderdetails(
+  onum number primary key,
+  opname varchar2(30) not null, --주문자 닉네임
+  oorder varchar2(20) not null,--주문자 이름
+  opreceive varchar2(20) not null,--수령자
+  oprice number not null,
+  opcharge number not null,
+  opdate varchar2(20) not null,
+  oinvoice varchar2(20) not null
+);
+insert into orderdetails values(odseq.nextval, '닉네임', '주문자', '수령자', 30000, 2500 ,sysdate, '송장번호');
+
+select * from orderdetails
+
+commit;
+
+//상품테이블
+drop sequence pseq;
+create sequence pseq
+increment by 1
+start with 1
+nocycle;
+drop table product;
+create table product(
+  pnum number primary key,
+  pbest number not null,
+  pname varchar2(20) not null,
+  pcolor varchar2(20) not null,
+  psize varchar2(10) not null,
+  pprice number not null,
+  ppoint number not null,
+  pimage varchar2(30) not null,
+  pimage1 varchar2(30) not null,
+  pimage2 varchar2(30) not null,
+  pimage3 varchar2(30) not null,
+  pdate date
+);
+insert into product values(pseq.nextval,1,'호두과자','색깔','사이즈',30000,2500,'best.jpg','best1.jpg','best2.jpg','best3.jpg',sysdate);
+select * from product;
+
+commit;
+
+//공지사항
+drop sequence nseq;
+create sequence nseq
+increment by 1
+start with 1
+nocycle;
+drop table notice;
+create table notice(
+  nnum number primary key,
+  nenquiry varchar2(50) not null,
+  nwriter varchar2(20) not null,
+  ndate varchar2(20) not null
+);
+insert into notice values(nseq.nextval,'문의내용50자','작성자','날짜');
+select * from notice;
+
+commit;
+
+//상품문의
+drop sequence piseq;
+create sequence piseq
+increment by 1
+start with 1
+nocycle;
+drop table productinq;
+create table productinq(
+  pinum number primary key,
+  pienquiry varchar2(50) not null,
+  piwriter varchar2(20) not null,
+  pidate varchar2(20) not null
+);
+insert into productinq values(piseq.nextval,'문의내용50자','작성자','날짜');
+select * from productinq;
+
+commit;
