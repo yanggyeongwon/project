@@ -1,7 +1,5 @@
 package product.model;
 
-
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -12,9 +10,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import utility.Paging;
-
-
-
 
 @Component("MyProduct")
 public class ProductDAO {
