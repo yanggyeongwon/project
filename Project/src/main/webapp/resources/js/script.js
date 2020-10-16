@@ -17,7 +17,21 @@ $(()=>{
           },400);
           return false;
         });
-      });
+
+ 		let fileTarget = $('#input_img_btn .upload-hidden');
+		
+		    fileTarget.on('change', function(){
+		        if(window.FileReader){
+		            var filename = $(this)[0].files[0].name;
+		        } else {
+		            var filename = $(this).val().split('/').pop().split('\\').pop();
+		        }
+		
+		        $(this).siblings('.upload-name').val(filename);
+		    });
+
+		
+     });
 
 	$('.bottom_product').on({
 		click : function(){
@@ -111,6 +125,5 @@ $(()=>{
         }
         scroll_top = st;
     }
-
 
 });

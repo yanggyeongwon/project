@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="<c:url value="/resources/css/main_style.css"/>">
     <link rel="stylesheet" href="<c:url value="/resources/css/admin_product_insert.css"/>">
     <link rel="stylesheet" href="<c:url value="/resources/css/adminpage.css"/>">
+    <link rel="stylesheet" href="<c:url value="/resources/css/productinsert.css"/>">
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200&display=swap" rel="stylesheet">
@@ -31,15 +32,18 @@
 							let image = new Image();
 							image.width = "50";
 							image.height = "50";
-							image.title = fileList.name;
+
 							image.src = this.result;
 							// @details 이미지 확장자 검사
 							
-							document.getElementById( "thumbnailImgs" ).appendChild( image );
+							$("#thumbnailImgs").append(image);
+							$("#thumbnailImgs img").wrap("<a class='at' onclick='removeElement(this)')></a>");
+							//let add = $("<a href='#'>"+image+"</a>");
 						}, false );
 						// @details readAsDataURL( )을 통해 파일의 URL을 읽어온다.
 						if( fileList ) {
 							reader.readAsDataURL( fileList );
+							
 						}
 					}
 				}
@@ -60,15 +64,17 @@
 								let image = new Image();
 								image.width = "50";
 								image.height = "50";
-								image.title = fileList.name;
+
 								image.src = this.result;
 								// @details 이미지 확장자 검사
 								
-								document.getElementById( "thumbnailImgs" ).appendChild( image );
+								$("#thumbnailImgs1").append(image);
+								$("#thumbnailImgs1 img").wrap("<a class='at1' onclick='removeElement(this)')></a>");
 							}, false );
 							// @details readAsDataURL( )을 통해 파일의 URL을 읽어온다.
 							if( fileList ) {
 								reader.readAsDataURL( fileList );
+							
 							}
 						}
 					}
@@ -90,15 +96,17 @@
 								let image = new Image();
 								image.width = "50";
 								image.height = "50";
-								image.title = fileList.name;
+
 								image.src = this.result;
 								// @details 이미지 확장자 검사
 								
-								document.getElementById( "thumbnailImgs" ).appendChild( image );
+								$("#thumbnailImgs2").append(image);
+								$("#thumbnailImgs2 img").wrap("<a class='at2' onclick='removeElement(this)')></a>");
 							}, false );
 							// @details readAsDataURL( )을 통해 파일의 URL을 읽어온다.
 							if( fileList ) {
 								reader.readAsDataURL( fileList );
+								
 							}
 						}
 					}
@@ -120,15 +128,18 @@
 								let image = new Image();
 								image.width = "50";
 								image.height = "50";
-								image.title = fileList.name;
+
 								image.src = this.result;
 								// @details 이미지 확장자 검사
 								
-								document.getElementById( "thumbnailImgs" ).appendChild( image );
+								
+								$("#thumbnailImgs3").append(image);
+								$("#thumbnailImgs3 img").wrap("<a class='at3' onclick='removeElement(this)')></a>");	
 							}, false );
 							// @details readAsDataURL( )을 통해 파일의 URL을 읽어온다.
 							if( fileList ) {
 								reader.readAsDataURL( fileList );
+								
 							}
 						}
 					}
@@ -165,7 +176,24 @@
 				})
 		        
 		    }
-
+			function removeElement(atag){
+				$("#upImgFiles").val("");
+				$(atag).remove();
+				$("#img").attr("src", '');
+				$(".upload-hidden").val('')
+				
+				
+				let a_class = $(atag).attr('class');
+				if(a_class == 'at'){
+					$("#upload_name").val('썸네일 사진')
+				}else if(a_class == "at1"){
+					$("#upload_name1").val('썸네일 서브 사진')
+				}else if(a_class == "at2"){
+					$("#upload_name2").val('썸네일 서브 사진')
+				}else if(a_class == "at3"){
+					$("#upload_name3").val('상세피이지 사진')
+				}
+			}
     </script>
 <!-- </head> -->
 <body>
@@ -180,22 +208,51 @@
 	            	 	<div id="left_box">
 	                        <div class="top_box">
 	                            <div id="image_view">
-									<img id="img" src="#" height="100%">
+									<img id="img" src="" height="100%" onerror="this.src='<c:url value="/resources/images/unimage.jpg"/>'" />
 	                            </div>
 							    
 	                            <div id="image_sun_view">
 	                            	<div id="thumbnailImgs">
 	                            	
 	                            	</div>
+	                            	<div id="thumbnailImgs1">
+	                            	
+	                            	</div>
+	                            	<div id="thumbnailImgs2">
+	                            	
+	                            	</div>
+	                            	<div id="thumbnailImgs3">
+	                            	
+	                            	</div>
 	                            </div>
 	                            <div class="input_box">
 		                            <ul id="input_img_btn">
-		                                <li><input type="file" name="upload" id="upImgFiles" onChange="uploadImgPreview();" accept="image/*" multiple>
-		                                <input type="file" name="upload1" id="upImgFiles1" onChange="uploadImgPreview1();" accept="image/*" multiple>
-		                                <input type="file" name="upload2" id="upImgFiles2" onChange="uploadImgPreview2();" accept="image/*" multiple>
-		                                <input type="file" name="upload3" id="upImgFiles3" onChange="uploadImgPreview3();" accept="image/*" multiple>                            
-		                                </li><!-- accept='image/jpg, impge/png, image/jpeg, image/gif, impge/PNG' -->
-		                            </ul>
+		                                <li>
+		                                <input class="upload-name" id="upload_name" value="썸네일 사진" disabled="disabled">   
+		                              	<input type="file" class="upload-hidden" name="upload" id="upImgFiles" onChange="uploadImgPreview();" accept="image/*" multiple>
+		                                <label for="upImgFiles">업로드</label> 
+										</li>
+									</ul>
+									<ul id="input_img_btn">
+										<li>
+		                                <input class="upload-name" id="upload_name1" value="썸네일 서브 사진" disabled="disabled"> 
+		                                <input type="file" class="upload-hidden"  name="upload1" id="upImgFiles1" onChange="uploadImgPreview1();" accept="image/*" multiple>
+		                                <label for="upImgFiles1">업로드</label> 
+									</ul>
+									<ul id="input_img_btn">
+										<li>
+		                                <input class="upload-name" id="upload_name2" value="썸네일 서브 사진" disabled="disabled"> 
+		                                <input type="file" class="upload-hidden"  name="upload2" id="upImgFiles2" onChange="uploadImgPreview2();" accept="image/*" multiple>
+		                                <label for="upImgFiles2">업로드</label>
+									</ul>
+									<ul id="input_img_btn">
+										<li>
+		                                <input class="upload-name" id="upload_name3" value="상세페이지 사진" disabled="disabled"> 
+		                                <input type="file" class="upload-hidden"  name="upload3" id="upImgFiles3" onChange="uploadImgPreview3();" accept="image/*" multiple>
+		                                <label for="upImgFiles3">업로드</label>  
+		                                </li>
+		                            </ul>           
+		                                <!-- accept='image/jpg, impge/png, image/jpeg, image/gif, impge/PNG' -->
 		                        </div>
 	                        </div>
 	                        
