@@ -6,4 +6,32 @@
 		insert into product(pnum, pbest, pname, pcolor, psize, pprice, ppoint, pimage, pimage1, pimage2, pimage3, pdate) 
 		values(pseq.nextval,#{pbest},#{pname},#{pcolor},#{psize},#{pprice},#{ppoint},#{pimage},#{pimage1},#{pimage2},#{pimage3},sysdate)
 	</insert>
+	<select id="getTotalCount"  resultType="int">
+		select count(*) from product
+		 <if test="whatColumn=='pname'">
+			where pname like #{keyword}
+		</if>
+		
+		<if test="whatColumn=='pbest'">
+			where pbest like #{keyword}
+		</if>
+		<if test="whatColumn=='pdate'">
+			where pdate like #{keyword}
+		</if> 
+	</select>
+	
+	<select id="getSelectProduct" resultType="MyProduct">
+		select * from product
+		 <if test="whatColumn=='pname'">
+			where pname like #{keyword}
+		</if>
+		
+		<if test="whatColumn=='pbest'">
+			where pbest like #{keyword}
+		</if>
+		<if test="whatColumn=='pdate'">
+			where pdate like #{keyword}
+		</if>
+		order by pnum desc
+	</select>
 </mapper>
