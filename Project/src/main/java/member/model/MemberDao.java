@@ -36,6 +36,13 @@ public class MemberDao {
 		sqlSessionTemplate.delete(namespace + ".deleteMember" , mnum);
 		
 	}
+
+	public Member getData(int mnum) {
+		Member member = null;
+		member = sqlSessionTemplate.selectOne(namespace + ".getMember" , mnum);
+		return member;
+	}
+
 	
 	
 }

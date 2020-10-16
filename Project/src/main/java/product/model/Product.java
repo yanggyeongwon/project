@@ -1,5 +1,7 @@
 package product.model;
 
+import org.springframework.web.multipart.MultipartFile;
+
 public class Product {
 	private int pnum;
 	private int pbest;
@@ -10,6 +12,30 @@ public class Product {
 	private int ppoint;
 	private String pimage;
 	private String pdate;
+	private String uploadOld;
+	
+	public String getUploadOld() {
+		return uploadOld;
+	}
+	public void setUploadOld(String uploadOld) {
+		this.uploadOld = uploadOld;
+	}
+	
+	private MultipartFile upload;
+	
+	public MultipartFile getUpload() {
+		return upload;
+	}
+	public void setUpload(MultipartFile upload) {
+		this.upload = upload;
+		System.out.println("upload : " + upload); // coke.jpg(X) 
+		if(upload != null) {
+			System.out.println(upload.getName()); // upload
+			System.out.println(upload.getOriginalFilename()); // coke.jpg
+			this.pimage = upload.getOriginalFilename();
+		}
+	}
+	
 	
 	public String getPcolor() {
 		return pcolor;

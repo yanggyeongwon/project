@@ -39,5 +39,9 @@
 	<delete id="deleteProduct">
 		delete from product where pnum=#{pnum}
 	</delete>
+	
+	<update id="updateProduct">
+		update product set pbest=#{pbest}, pname=#{pname}, pcolor=#{pcolor}, psize=#{psize}, pprice=#{pprice}, ppoint=#{ppoint}, pimage=#{pimage}, pdate=#{pdate} where pnum=#{pnum}
+	</update>
 </mapper>
 

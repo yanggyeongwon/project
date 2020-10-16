@@ -13,21 +13,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200&display=swap" rel="stylesheet">
-    <title>회원조회페이지입니다.</title>
+    <title>회원관리페이지입니다.</title>
 </head>
 <body>
     <%@ include file="../admin_header.jsp" %>
     <div class="admin_page">
         <div id="first_box">
             <div id="second_box">
-                <p id="p_title">회원 조회</p>
+                <p id="p_title">회원 관리</p>
                <div id="third_box">
                     <div id="top_box">
                         <form action="memberselect.me" method="get">
                         	<ul id="select_top">
                             	<li>
                             		<select name="whatColumn">
-                            			<option value="mnum">회원번호
+                            			<option value="mnum">번호
                             			<option value="mname">회원명
                             			<option value="mid">회원ID
                             		</select>
@@ -45,7 +45,7 @@
                                 <td><p>회원ID</p></td>
                                 <td><p>회원PW</p></td>
                                 <td><p>회원E-Mail</p></td>
-                                <td><p>수정</p></td>
+                                <td><p>보기</p></td>
                                 <td><p>삭제</p></td>
                             </tr>
                             <c:forEach items="${lists }" var="member">
@@ -55,7 +55,7 @@
                                 <td><p>${member.mid }<p></td>
                                 <td><p>${member.mpw }<p></td>
                                 <td><p>${member.memail}<p></td>
-                                <td><p><a href="memberupdate.me?mnum=${member.mnum }">수정</a><p></td>
+                                <td><p><a href="memberdetail.me?mnum=${member.mnum }">보기</a><p></td>
                                 <td><p><a href="memberdelete.me?mnum=${member.mnum }">삭제</a><p></td>
                             </tr>
                             </c:forEach>

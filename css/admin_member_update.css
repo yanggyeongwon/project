@@ -1,0 +1,44 @@
+button{
+    border: solid 2px #e4e4e4;
+}
+
+#p_title{
+    font-size: 1.5rem;
+    position: relative;
+    margin: 10px;
+}
+
+#first_box{
+    border: 1px solid #000;
+    height: 935px;
+    width: 80%;
+    float: left;
+    box-sizing: border-box;
+    position: relative;
+}
+
+#second_box{
+    border : 1px solid #000;
+    height : 800px;
+    width : 85%;
+    margin: 0 auto;
+    margin-top: 5%;
+
+}
+
+#third_box{
+    border : 1px solid #000;
+    height : 700px;
+    width : 80%;
+    margin: 0 auto;
+    margin-top: 2%;
+}
+
+#third_box ul{
+    display: flex;
+    margin-top: 50px;
+}
+
+#third_box li{
+    margin-left : 30px;
+}

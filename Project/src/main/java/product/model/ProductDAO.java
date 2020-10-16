@@ -42,5 +42,9 @@ public class ProductDAO {
 		sqlSessionTemplate.delete(namespace + ".deleteProduct" , pnum);
 		
 	}
+	public void updateProduct(Product product) {
+		sqlSessionTemplate.update(namespace + ".updateProduct",product);
+		
+	}
 
 }
