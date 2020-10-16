@@ -12,12 +12,10 @@ public class Product {
 	private String psize;
 	private int pprice;
 	private int ppoint;
-	
 	private String pimage;
 	private String pimage1;
 	private String pimage2;
 	private String pimage3;
-	
 	private Date pdate;
 	
 	
