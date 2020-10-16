@@ -2,6 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="product.model.Product">
+<<<<<<< HEAD
 
 	<select id="getTotalCount"  resultType="int">
 		select count(*) from product
@@ -45,3 +46,10 @@
 	</update>
 </mapper>
 
+=======
+	<insert id="GetInsertProduct">
+		insert into product(pnum, pbest, pname, pcolor, psize, pprice, ppoint, pimage, pimage1, pimage2, pimage3, pdate) 
+		values(pseq.nextval,#{pbest},#{pname},#{pcolor},#{psize},#{pprice},#{ppoint},#{pimage},#{pimage1},#{pimage2},#{pimage3},sysdate)
+	</insert>
+</mapper>
+>>>>>>> 0ad2fba87049dec127770725d3c63f08137e9f4f

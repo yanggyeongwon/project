@@ -14,10 +14,15 @@
             </ul>
             <ul class="left_side"> 
                 <li><a href="productinsert.prd">상품 등록</a></li>
+<<<<<<< HEAD
                 <li><a href="productselect.prd">상품 조회</a></li>
                 <li><a href="memberselect.me">회원 관리</a></li>
+=======
+                <li><a href="#">상품 조회</a></li>
+                <li><a href="#">회원 관리</a></li>
+>>>>>>> 0ad2fba87049dec127770725d3c63f08137e9f4f
                 <li><a href="#">배송 관리</a></li>
-                <li><a href="#">홈페이지 바로가기</a></li>
+                <li><a href="index.me">홈페이지 바로가기</a></li>
             </ul>
         </div>
         <p>version 1.10.0.1</p>

@@ -67,11 +67,21 @@ create table product(
   pprice number not null,
   ppoint number not null,
   pimage varchar2(30) not null,
+<<<<<<< HEAD
   pdate varchar2(30) not null
 );
 
 insert into product values(pseq.nextval,1,'호두과자','색깔','사이즈',30000,2500,'best.jpg',sysdate);
 insert into product values(pseq.nextval,0,'칙촉','빨간','사이즈',20000,1500,'best.jpg',sysdate);
+=======
+  pimage1 varchar2(30) not null,
+  pimage2 varchar2(30) not null,
+  pimage3 varchar2(30) not null,
+  pdate varchar2(20) not null
+);
+
+insert into product values(pseq.nextval,1,'호두과자','색깔','사이즈',30000,2500,'best.jpg','best1.jpg','best2.jpg','best3.jpg',sysdate);
+>>>>>>> 0ad2fba87049dec127770725d3c63f08137e9f4f
 
 
 select * from product;
