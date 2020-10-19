@@ -16,6 +16,8 @@ public class Product {
 	private String pimage1;
 	private String pimage2;
 	private String pimage3;
+	private int pcount;
+	
 	private Date pdate;
 	
 	
@@ -118,6 +120,12 @@ public class Product {
 	
 	
 	
+	public int getPcount() {
+		return pcount;
+	}
+	public void setPcount(int pcount) {
+		this.pcount = pcount;
+	}
 	public String getPimage1() {
 		return pimage1;
 	}

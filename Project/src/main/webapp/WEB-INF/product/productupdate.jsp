@@ -303,6 +303,10 @@
 	                                <li class="margin-l10r10"><p>포인트</p></li>
 	                                <li style="margin-left: 40px;"><input type="text" size="10" name="ppoint" value="${product.ppoint }"></li>
 	                            </ul>
+	                            <ul class="flex_ul">
+	                                <li class="margin-l10r10"><p>수량</p></li>
+	                                <li style="margin-left: 40px;"><input type="text" size="10" name="pcount" value="150"></li>
+	                            </ul>
 	                        </div>
 	                        <div class="input_box">
 	                            <ul id="input_p_btn">

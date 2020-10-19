@@ -66,10 +66,11 @@ create table product(
   pimage1 varchar2(30) not null,
   pimage2 varchar2(30) not null,
   pimage3 varchar2(30) not null,
+  pcount number not null,
   pdate date
 );
 
-insert into product values(pseq.nextval,1,'호두과자','색깔','사이즈',30000,2500,'best.jpg','best1.jpg','best2.jpg','best3.jpg',sysdate);
+insert into product values(pseq.nextval,1,'호두과자','색깔','사이즈',30000,2500,'best.jpg','best1.jpg','best2.jpg','best3.jpg', 150,sysdate);
 
 
 select * from product;
