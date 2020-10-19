@@ -58,7 +58,7 @@
         </div>
         <div id="QA_border">
             <div class="more_btn">
-                <a href="#">MORE</a>
+                <a href="list.bd">MORE</a>
             </div>
             <div class="order" id="QA_bar">
                 <p>Q &amp;  A 상품문의</p>

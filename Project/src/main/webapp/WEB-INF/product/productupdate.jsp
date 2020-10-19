@@ -186,7 +186,7 @@
 			
 			let a_class = $(atag).attr('class');
 			if(a_class == 'at'){
-				$("#upload_name").val('썸네일 사진')
+				$("#upload_name").val('썸네일 사 진')
 			}else if(a_class == "at1"){
 				$("#upload_name1").val('썸네일 서브 사진')
 			}else if(a_class == "at2"){
@@ -245,7 +245,7 @@
 									<ul id="input_img_btn">
 										<li>
 		                                <input class="upload-name" id="upload_name2" value="${product.pimage2 }" disabled="disabled"> 
-		                                <input type="file" class="upload-hidden"  name="upload2" id="upImgFiles2" onChange="uploadImgPreview2();" accept="image/*" multiple>
+		                                <input type="file" class="upload-hidden" name="upload2" id="upImgFiles2" onChange="uploadImgPreview2();" accept="image/*" multiple>
 		                                <label for="upImgFiles2">업로드</label>
 									</ul>
 									<ul id="input_img_btn">
@@ -270,6 +270,14 @@
 	                                <li class="margin-l10r10"><p>상품번호</p></li>
 	                                <li style="margin-left: 26px;"><input type="text" size="10" name="best" value="${product.pbest }"></li>
 	                            </ul>
+	                            <div class="cate">
+	                           		<p>* 1 : BEST</p>
+	                                <p>* 2 : TOP</p>
+	                                <p>* 3 : BOTTOM</p>
+	                                <p>* 4 : OUTER</p>
+	                                <p>* 5 : SHOSE</p>
+	                                <p>* 6 : ACC</p>
+	                            </div>
 	                            <ul class="flex_ul">
 	                                <li class="margin-l10r10"><p>색상</p></li>
 	                                <li class="ch_red" ><input type="checkbox" name="pcolor" value="red" <c:if test="${fn:contains(product.pcolor,'red' )}">checked</c:if>></li>

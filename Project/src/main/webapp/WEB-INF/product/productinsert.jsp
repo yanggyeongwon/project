@@ -291,6 +291,14 @@
 	                                <li class="margin-l10r10"><p>상품번호</p></li>
 	                                <li style="margin-left: 26px;"><input type="text" size="10" name="pbest" value="1"></li>
 	                            </ul>
+	                            <div class="cate">
+	                           		<p>* 1 : BEST</p>
+	                                <p>* 2 : TOP</p>
+	                                <p>* 3 : BOTTOM</p>
+	                                <p>* 4 : OUTER</p>
+	                                <p>* 5 : SHOSE</p>
+	                                <p>* 6 : ACC</p>
+	                            </div>
 	                            <ul class="flex_ul">
 	                                <li class="margin-l10r10"><p>색상</p></li>
 	                                <li class="ch_red" ><input type="checkbox" name="pcolor" value="red"></li>

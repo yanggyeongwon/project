@@ -106,7 +106,7 @@
 }
 #text_box{
     border : 1px solid #000;
-    height : 450px;
+	padding : 25px 5px;
     width : 90%;
     float: left;
     position: relative;
@@ -121,7 +121,11 @@
     margin-left: 50px;
     position: relative;
 }
-
+.cate{
+	padding: 5px 100px;
+	font-family: 'Raleway', sans-serif;
+	font-size:0.7em;
+}
 #p_btn_margin{
     margin-left : 25px;
 }

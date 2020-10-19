@@ -17,6 +17,9 @@
                 <li><a href="productselect.prd">상품 조회</a></li>
                 <li><a href="#">회원 관리</a></li>
                 <li><a href="#">배송 관리</a></li>
+                <li><a href="#">Q &amp; A 상품문의</a></li>
+                <li><a href="#">상품 주문 내역</a></li>
+                <li><a href="#">공지 사항</a></li>
                 <li><a href="index.me">홈페이지 바로가기</a></li>
             </ul>
         </div>
