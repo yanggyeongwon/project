@@ -34,4 +34,10 @@
 		</if>
 		order by pnum desc
 	</select>
+	<select id="getData" resultType="MyProduct">
+		select * from product where pnum = #{pnum}
+	</select>
+	<update id="updateProduct">
+		update product set pimage=#{pimage}, pimage1=#{pimage1}, pimage2=#{pimage2}, pimage3=#{pimage3}, pname=#{pname}, pbest=#{pbest}, pcolor=#{pcolor}, psize=#{psize}, pprice=#{pprice}, ppoint=#{ppoint} where pnum=#{pnum}
+	</update>
 </mapper>

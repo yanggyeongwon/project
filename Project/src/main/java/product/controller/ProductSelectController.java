@@ -41,7 +41,7 @@ public class ProductSelectController {
 		System.out.println("map : " + map);
 		
 		int totalCount = dao.getTotalCount(map);
-		String url = request.getContextPath() + command;
+		String url = request.getContextPath() + "/"+command;
 		Paging pageInfo = new Paging(pageNumber,pageSize,totalCount,url,whatColumn,keyword);
 		
 		List<Product> lists = dao.getSelectProduct(pageInfo , map);

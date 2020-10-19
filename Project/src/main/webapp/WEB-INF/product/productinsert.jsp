@@ -36,7 +36,13 @@
 							image.src = this.result;
 							// @details 이미지 확장자 검사
 							
-							$("#thumbnailImgs").append(image);
+							if($("#thumbnailImgs").children().is('a')){
+								console.log("is들어옴")
+								$("#thumbnailImgs").replaceWith(image);
+							}else{
+								console.log("append들어옴")
+								$("#thumbnailImgs").append(image);
+							}
 							$("#thumbnailImgs img").wrap("<a class='at' onclick='removeElement(this)')></a>");
 							//let add = $("<a href='#'>"+image+"</a>");
 						}, false );
@@ -68,7 +74,13 @@
 								image.src = this.result;
 								// @details 이미지 확장자 검사
 								
-								$("#thumbnailImgs1").append(image);
+								if($("#thumbnailImgs1").children().is('a')){
+									console.log("is들어옴")
+									$("#thumbnailImgs1").replaceWith(image);
+								}else{
+									console.log("append들어옴")
+									$("#thumbnailImgs1").append(image);
+								}
 								$("#thumbnailImgs1 img").wrap("<a class='at1' onclick='removeElement(this)')></a>");
 							}, false );
 							// @details readAsDataURL( )을 통해 파일의 URL을 읽어온다.
@@ -100,7 +112,13 @@
 								image.src = this.result;
 								// @details 이미지 확장자 검사
 								
-								$("#thumbnailImgs2").append(image);
+								if($("#thumbnailImgs2").children().is('a')){
+									console.log("is들어옴")
+									$("#thumbnailImgs2").replaceWith(image);
+								}else{
+									console.log("append들어옴")
+									$("#thumbnailImgs2").append(image);
+								}
 								$("#thumbnailImgs2 img").wrap("<a class='at2' onclick='removeElement(this)')></a>");
 							}, false );
 							// @details readAsDataURL( )을 통해 파일의 URL을 읽어온다.
@@ -133,7 +151,13 @@
 								// @details 이미지 확장자 검사
 								
 								
-								$("#thumbnailImgs3").append(image);
+								if($("#thumbnailImgs3").children().is('a')){
+									console.log("is들어옴")
+									$("#thumbnailImgs3").replaceWith(image);
+								}else{
+									console.log("append들어옴")
+									$("#thumbnailImgs3").append(image);
+								}
 								$("#thumbnailImgs3 img").wrap("<a class='at3' onclick='removeElement(this)')></a>");	
 							}, false );
 							// @details readAsDataURL( )을 통해 파일의 URL을 읽어온다.

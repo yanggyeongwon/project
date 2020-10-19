@@ -37,6 +37,25 @@ public class ProductDAO {
 		return lists;
 	}
 
+	public Product getData(int pnum) {
+		// TODO Auto-generated method stub
+		 
+		Product product = sqlSessionTemplate.selectOne(namespace+".getData", pnum);
+		
+		return product;
+	}
+
+	public void deleteProduct(int pnum) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void updateProduct(Product product) {
+		// TODO Auto-generated method stub
+		sqlSessionTemplate.update(namespace+".updateProduct", product);
+		
+	}
+
 
 
 }
