@@ -47,6 +47,7 @@ public class ProductDAO {
 
 	public void deleteProduct(int pnum) {
 		// TODO Auto-generated method stub
+		sqlSessionTemplate.delete(namespace+".deleteProduct", pnum);
 		
 	}
 

@@ -5,6 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<link rel="stylesheet" href="<c:url value="/resources/css/adminpage.css"/>">
 </head>
 <body>
 <header>
@@ -17,9 +18,10 @@
                 <li><a href="productselect.prd">상품 조회</a></li>
                 <li><a href="#">회원 관리</a></li>
                 <li><a href="#">배송 관리</a></li>
-                <li><a href="#">Q &amp; A 상품문의</a></li>
+                <li><a href="list.bd">Q &amp; A 상품문의</a></li>
                 <li><a href="#">상품 주문 내역</a></li>
                 <li><a href="#">공지 사항</a></li>
+                <li><a href="#">후기 관리</a></li>
                 <li><a href="index.me">홈페이지 바로가기</a></li>
             </ul>
         </div>

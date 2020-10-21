@@ -12,7 +12,7 @@ import product.model.ProductDAO;
 
 @Controller
 public class ProductDeleteController {
-	final String command = "/productdelete.prd";
+	final String command = "productdelete.prd";
 	final String gotoPage = "redirect:/productselect.prd";
 	
 	@Autowired

@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="<c:url value="/resources/css/common.css" />">
     <link rel="stylesheet" href="<c:url value="/resources/css/main_style.css" />">
     <link rel="stylesheet" href="<c:url value="/resources/css/best.css"/>">
-    <link rel="stylesheet" href="<c:url value="/resources/css/adminpage.css"/>">
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200&display=swap" rel="stylesheet">
@@ -94,7 +93,7 @@
                     <li><img src="<c:url value="/resources/images/shipping3.PNG"/>" alt="no"><p>배송완료</p></li>
                 </ul>
                 <ul id="shipping_list_num">
-                    <li>22</li>
+                    <li>33</li>
                     <li>24</li>
                     <li>66</li>
                 </ul>

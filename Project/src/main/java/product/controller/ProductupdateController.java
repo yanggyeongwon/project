@@ -36,7 +36,16 @@ public class ProductupdateController {
 	}
 	@RequestMapping(value=command, method=RequestMethod.POST)
 	public ModelAndView doAction(Product product) {
-		
+		/*if(product.getPimage().isEmpty()) {
+			file = new File(uploadPath + "/" + product.getUploadOld());
+			System.out.println("getpimage있음");
+		}else {
+			System.out.println("getpimage없음");
+			file = new File(uploadPath + "/" + product.getPimage());
+			File delFile = new File(uploadPath + "/" + product.getUploadOld());
+			delFile.delete();
+		}*/
+
 		ModelAndView mav = new ModelAndView();
 		String uploadPath = servletContext.getRealPath("/resources");
 		

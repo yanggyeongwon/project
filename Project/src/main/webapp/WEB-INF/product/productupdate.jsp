@@ -216,41 +216,45 @@
 							  
 	                            <div id="image_sun_view">
 	                            	<div id="thumbnailImgs">
-	                            		<img src="<%=url %>/resources/images/${product.pimage}" alt="no" width="50" height="50">
+	                            		<img src="<%=url %>/resources/${product.pimage}" alt="no" width="50" height="50">
 	                            	</div>
 	                            	<div id="thumbnailImgs1">
-	                            		<img src="<%=url %>/resources/images/${product.pimage1}" alt="no" width="50" height="50">
+	                            		<img src="<%=url %>/resources/${product.pimage1}" alt="no" width="50" height="50">
 	                            	</div>
 	                            	<div id="thumbnailImgs2">
-	                            		<img src="<%=url %>/resources/images/${product.pimage2}" alt="no" width="50" height="50">
+	                            		<img src="<%=url %>/resources/${product.pimage2}" alt="no" width="50" height="50">
 	                            	</div>
 	                            	<div id="thumbnailImgs3">
-	                            		<img src="<%=url %>/resources/images/${product.pimage3}" alt="no" width="50" height="50">
+	                            		<img src="<%=url %>/resources/${product.pimage3}" alt="no" width="50" height="50">
 	                            	</div>
 	                            </div>
 	                            <div class="input_box">
 		                            <ul id="input_img_btn">
 		                                <li>
 		                                <input class="upload-name" id="upload_name" value="${product.pimage }" disabled="disabled">   
-		                              	<input type="file" class="upload-hidden" name="upload" id="upImgFiles" onChange="uploadImgPreview();" accept="image/*" multiple>
+		                                <input name="uploadOld" value="${product.pimage }">
+		                              	<input type="file" class="upload-hidden" name="upload" id="upImgFiles" value="" onChange="uploadImgPreview();" accept="image/*" multiple>
 		                                <label for="upImgFiles">업로드</label> 
 										</li>
 									</ul>
 									<ul id="input_img_btn">
 										<li>
 		                                <input class="upload-name" id="upload_name1" value="${product.pimage1 }" disabled="disabled"> 
+		                                <input name="uploadOld1" value="${product.pimage1 }">
 		                                <input type="file" class="upload-hidden"  name="upload1" id="upImgFiles1" onChange="uploadImgPreview1();" accept="image/*" multiple>
 		                                <label for="upImgFiles1">업로드</label> 
 									</ul>
 									<ul id="input_img_btn">
 										<li>
 		                                <input class="upload-name" id="upload_name2" value="${product.pimage2 }" disabled="disabled"> 
+		                               <input name="uploadOld2" value="${product.pimage2 }">
 		                                <input type="file" class="upload-hidden" name="upload2" id="upImgFiles2" onChange="uploadImgPreview2();" accept="image/*" multiple>
 		                                <label for="upImgFiles2">업로드</label>
 									</ul>
 									<ul id="input_img_btn">
 										<li>
 		                                <input class="upload-name" id="upload_name3" value="${product.pimage3 }" disabled="disabled"> 
+		                                <input name="uploadOld3" value="${product.pimage3 }">
 		                                <input type="file" class="upload-hidden"  name="upload3" id="upImgFiles3" onChange="uploadImgPreview3();" accept="image/*" multiple>
 		                                <label for="upImgFiles3">업로드</label>  
 		                                </li>
