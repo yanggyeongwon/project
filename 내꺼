@@ -31,10 +31,14 @@ create table orderdetails(
   opreceive varchar2(20) not null,--수령자
   oprice number not null,
   opcharge number not null,
-  opdate varchar2(20) not null,
-  oinvoice varchar2(20) not null
+  opdate date,
+  oinvoice varchar2(20) not null,
+  state number
 );
-insert into orderdetails values(odseq.nextval, '닉네임', '주문자', '수령자', 30000, 2500 ,sysdate, '송장번호');
+
+
+insert into orderdetails values(odseq.nextval, '닉네임', '주문자', '수령자', 30000, 2500 ,sysdate, '송장번호',1);
+insert into orderdetails values(odseq.nextval, '닉네임', '주문자', '수령자', 30000, 2500 ,'2020-10-15', '송장번호',1);
 
 select * from orderdetails
 
@@ -62,6 +66,9 @@ create table product(
   pdate date
 );
 insert into product values(pseq.nextval,1,'호두과자','색깔','사이즈',30000,2500,'best.jpg','best1.jpg','best2.jpg','best3.jpg',sysdate);
+
+
+
 select * from product;
 
 commit;

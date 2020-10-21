@@ -7,21 +7,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="<c:url value="/resources/css/common.css"/>">
-<link rel="stylesheet"
-	href="<c:url value="/resources/css/main_style.css"/>">
-<link rel="stylesheet"
-	href="<c:url value="/resources/css/admin_member_detail.css"/>">
-<link rel="stylesheet"
-	href="<c:url value="/resources/css/adminpage.css"/>">
-<link
-	href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap"
-	rel="stylesheet">
-<link
-	href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap"
-	rel="stylesheet">
-<link
-	href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200&display=swap"
-	rel="stylesheet">
+<link rel="stylesheet" href="<c:url value="/resources/css/main_style.css"/>">
+<link rel="stylesheet" href="<c:url value="/resources/css/admin_member_detail.css"/>">
+<link rel="stylesheet" href="<c:url value="/resources/css/adminpage.css"/>">
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200&display=swap" rel="stylesheet">
 <title>회원상세페이지입니다.</title>
 </head>
 <body>

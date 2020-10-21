@@ -33,7 +33,13 @@ public class ProductdeleteController {
 		String uploadPath = servletContext.getRealPath("/resources");
 		
 		File delFile = new File(uploadPath + File.separator + product.getPimage());
+		File delFile1 = new File(uploadPath + File.separator + product.getPimage1());
+		File delFile2 = new File(uploadPath + File.separator + product.getPimage2());
+		File delFile3 = new File(uploadPath + File.separator + product.getPimage3());
 		delFile.delete();
+		delFile1.delete();
+		delFile2.delete();
+		delFile3.delete();
 		
 		dao.deleteProduct(pnum);
 		

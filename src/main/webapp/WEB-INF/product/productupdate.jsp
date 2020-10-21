@@ -150,7 +150,7 @@
 	                        </div>
 	                        <div class="input_box">
 	                            <ul id="input_p_btn">
-	                                <li><input type="submit" name="input_img_btn" value="상품등록"></li>
+	                                <li><input type="submit" name="input_img_btn" value="상품수정"></li>
 	                                <li id="p_btn_margin"><input type="button" name="input_img_btn" value="등록취소"></li>
 	                            </ul>
 	                        </div>

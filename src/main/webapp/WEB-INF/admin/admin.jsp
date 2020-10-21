@@ -31,7 +31,7 @@
                 <li><a href="productinsert.prd">상품 등록</a></li>
                 <li><a href="productselect.prd">상품 조회</a></li>
                 <li><a href="memberselect.me">회원 관리</a></li>
-                <li><a href="#">배송 관리</a></li>
+                <li><a href="deliverystate1.ord">배송 관리</a></li>
                 <li><a href="index.me">홈페이지 바로가기</a></li>
             </ul>
         </div>
@@ -108,9 +108,9 @@
                     <li><img src="<c:url value="/resources/images/shipping3.PNG"/>" alt="no"><p>배송완료</p></li>
                 </ul>
                 <ul id="shipping_list_num">
-                    <li>22</li>
-                    <li>24</li>
-                    <li>66</li>
+                    <li>${cnt}</li>
+                    <li>${cnt2}</li>
+                    <li>${cnt3}</li>
                 </ul>
 
             </div>
