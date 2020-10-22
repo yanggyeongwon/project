@@ -40,9 +40,10 @@ create table orderdetails(
   opcharge number not null,
   opdate varchar2(20) not null,
   oinvoice varchar2(20) not null
+  state number
 );
 
-insert into orderdetails values(odseq.nextval, '닉네임', '주문자', '수령자', 30000, 2500 ,sysdate, '송장번호');
+insert into orderdetails values(odseq.nextval, '닉네임', '주문자', '수령자', 30000, 2500 ,sysdate, '송장번호',1);
 
 //상품테이블
 
@@ -59,7 +60,8 @@ create table product(
   pbest number not null,
   pname varchar2(20) not null,
   pcolor varchar2(20) not null,
-  psize varchar2(10) not null,
+  psize varchar2(20),
+  pssize varchar2(20),
   pprice number not null,
   ppoint number not null,
   pimage varchar2(30) not null,

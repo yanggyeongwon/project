@@ -57,6 +57,13 @@ public class ProductDAO {
 		
 	}
 
+	public List<Product> selectMain() {
+		// TODO Auto-generated method stub
+		List<Product> lists = new ArrayList<Product>();
+		lists = sqlSessionTemplate.selectList(namespace+".selectMain");
+		return lists;
+	}
+
 
 
 }

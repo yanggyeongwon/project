@@ -1,10 +1,26 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	
 <mapper namespace="product.model.Product">
 	<insert id="GetInsertProduct">
-		insert into product(pnum, pbest, pname, pcolor, psize, pprice, ppoint, pimage, pimage1, pimage2, pimage3, pcount ,pdate) 
-		values(pseq.nextval,#{pbest},#{pname},#{pcolor},#{psize},#{pprice},#{ppoint},#{pimage},#{pimage1},#{pimage2},#{pimage3},#{pcount},sysdate)
+		insert into 
+		<if test="pbest==0"><!--  0번은 의류베스트 -->
+			product(pnum, pbest, pname, pcolor, psize, pprice, ppoint, pimage, pimage1, pimage2, pimage3, pcount ,pdate) 
+			values(pseq.nextval,#{pbest},#{pname},#{pcolor},#{psize},#{pprice},#{ppoint},#{pimage},#{pimage1},#{pimage2},#{pimage3},#{pcount},sysdate)
+		</if>
+		<if test="pbest==2 or pbest==3 or pbest==4"><!--  2번 3번 4번은 의류 -->
+			product(pnum, pbest, pname, pcolor, psize, pprice, ppoint, pimage, pimage1, pimage2, pimage3, pcount ,pdate) 
+			values(pseq.nextval,#{pbest},#{pname},#{pcolor},#{psize},#{pprice},#{ppoint},#{pimage},#{pimage1},#{pimage2},#{pimage3},#{pcount},sysdate)
+		</if>
+		<if test="pbest==5 or pbest==1"><!--  1번 5번은 신발 또는 신발베스트 -->
+			product(pnum, pbest, pname, pcolor, pssize, pprice, ppoint, pimage, pimage1, pimage2, pimage3, pcount ,pdate) 
+			values(pseq.nextval,#{pbest},#{pname},#{pcolor},#{pssize},#{pprice},#{ppoint},#{pimage},#{pimage1},#{pimage2},#{pimage3},#{pcount},sysdate)
+		</if>
+		<if test="pbest==6"><!-- 6번은 acc-->
+			product(pnum, pbest, pname, pcolor, pprice, ppoint, pimage, pimage1, pimage2, pimage3, pcount ,pdate) 
+			values(pseq.nextval,#{pbest},#{pname},#{pcolor},#{pprice},#{ppoint},#{pimage},#{pimage1},#{pimage2},#{pimage3},#{pcount},sysdate)
+		</if>
 	</insert>
 	<select id="getTotalCount"  resultType="int">
 		select count(*) from product
@@ -41,6 +57,9 @@
 		delete product where pnum = #{pnum}
 	</delete>
 	<update id="updateProduct">
-		update product set pimage=#{pimage}, pimage1=#{pimage1}, pimage2=#{pimage2}, pimage3=#{pimage3}, pname=#{pname}, pbest=#{pbest}, pcolor=#{pcolor}, psize=#{psize}, pprice=#{pprice}, ppoint=#{ppoint}, pcount=#{pcount} where pnum=#{pnum}
+		update product set pimage=#{pimage}, pimage1=#{pimage1}, pimage2=#{pimage2}, pimage3=#{pimage3}, pname=#{pname}, pbest=#{pbest}, pcolor=#{pcolor}, psize=#{psize}, pssize=#{pssize}, pprice=#{pprice}, ppoint=#{ppoint}, pcount=#{pcount} where pnum=#{pnum}
 	</update>
+	<select id="selectMain">
+		select * from product where pbest = 1 and pbest = 0 order by desc
+	</select>
 </mapper>

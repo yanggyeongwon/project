@@ -10,6 +10,7 @@ public class Product {
 	private String pname;
 	private String pcolor;
 	private String psize;
+	private String pssize;
 	private int pprice;
 	private int ppoint;
 	private String pimage;
@@ -128,6 +129,12 @@ public class Product {
 	
 	
 	
+	public String getPssize() {
+		return pssize;
+	}
+	public void setPssize(String pssize) {
+		this.pssize = pssize;
+	}
 	public int getPcount() {
 		return pcount;
 	}
