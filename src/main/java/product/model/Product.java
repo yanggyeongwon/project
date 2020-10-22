@@ -1,20 +1,20 @@
 package product.model;
 import java.sql.Date;
 import org.springframework.web.multipart.MultipartFile;
-
-
 public class Product {
 	private int pnum;
 	private int pbest;
 	private String pname;
 	private String pcolor;
 	private String psize;
+	private String pssize;
 	private int pprice;
 	private int ppoint;
 	private String pimage;
 	private String pimage1;
 	private String pimage2;
 	private String pimage3;
+	private int pcount;
 	private Date pdate;
 	private MultipartFile upload;
 	private String uploadOld;
@@ -24,7 +24,6 @@ public class Product {
 	private String uploadOld2;
 	private MultipartFile upload3;
 	private String uploadOld3;
-	
 	public String getUploadOld() {
 		return uploadOld;
 	}
@@ -41,6 +40,8 @@ public class Product {
 			System.out.println("upload.getName: "+upload.getName());
 			System.out.println("getOriginalFilename: "+upload.getOriginalFilename());
 			this.pimage = upload.getOriginalFilename();
+		}else {
+			this.pimage = uploadOld;
 		}
 	}
 	public String getUploadOld1() {
@@ -55,10 +56,12 @@ public class Product {
 	public void setUpload1(MultipartFile upload1) {
 		this.upload1 = upload1;
 		System.out.println("upload1:"+upload1);
-		if(upload != null) {
+		if(upload1 != null) {
 			System.out.println("upload1.getName: "+upload1.getName());
-			System.out.println("getOriginalFilename: "+upload1.getOriginalFilename());
+			System.out.println("getOriginalFilename1: "+upload1.getOriginalFilename());
 			this.pimage1 = upload1.getOriginalFilename();
+		}else {
+			this.pimage1 = uploadOld1;
 		}
 	}
 	public String getUploadOld2() {
@@ -73,10 +76,12 @@ public class Product {
 	public void setUpload2(MultipartFile upload2) {
 		this.upload2 = upload2;
 		System.out.println("upload2:"+upload2);
-		if(upload != null) {
+		if(upload2 != null) {
 			System.out.println("upload2.getName: "+upload2.getName());
-			System.out.println("getOriginalFilename: "+upload2.getOriginalFilename());
+			System.out.println("getOriginalFilename2: "+upload2.getOriginalFilename());
 			this.pimage2 = upload2.getOriginalFilename();
+		}else {
+			this.pimage2 = uploadOld2;
 		}
 	}
 	public String getUploadOld3() {
@@ -91,11 +96,25 @@ public class Product {
 	public void setUpload3(MultipartFile upload3) {
 		this.upload3 = upload3;
 		System.out.println("upload3:"+upload3);
-		if(upload != null) {
+		if(upload3 != null) {
 			System.out.println("upload3.getName: "+upload3.getName());
-			System.out.println("getOriginalFilename: "+upload3.getOriginalFilename());
+			System.out.println("getOriginalFilename3: "+upload3.getOriginalFilename());
 			this.pimage3 = upload3.getOriginalFilename();
+		}else {
+			this.pimage3 = uploadOld3;
 		}
+	}
+	public String getPssize() {
+		return pssize;
+	}
+	public void setPssize(String pssize) {
+		this.pssize = pssize;
+	}
+	public int getPcount() {
+		return pcount;
+	}
+	public void setPcount(int pcount) {
+		this.pcount = pcount;
 	}
 	public String getPimage1() {
 		return pimage1;

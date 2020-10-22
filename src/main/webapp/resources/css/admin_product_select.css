@@ -46,27 +46,17 @@
 #select_top li{
     margin-left :11px;
 }
-
 .page_a{
 	margin-top : 20px;
 	text-align: center;
 }
-
 .page_a a{
 	color: black;
 }
 #select_data a{
 	color: black;
 }
+
 table { border:1px solid #000; width:100%}
 table p {text-align:center}
 tr,td {border-bottom:1px solid #000; padding: 10px}
-
-
-
-
-
-
-
-
-

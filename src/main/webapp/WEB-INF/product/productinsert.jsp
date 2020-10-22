@@ -36,7 +36,13 @@
 							image.src = this.result;
 							// @details 이미지 확장자 검사
 							
-							$("#thumbnailImgs").append(image);
+							if($("#thumbnailImgs").children().is('a')){
+								console.log("is들어옴")
+								$("#thumbnailImgs").replaceWith(image);
+							}else{
+								console.log("append들어옴")
+								$("#thumbnailImgs").append(image);
+							}
 							$("#thumbnailImgs img").wrap("<a class='at' onclick='removeElement(this)')></a>");
 							//let add = $("<a href='#'>"+image+"</a>");
 						}, false );
@@ -68,7 +74,13 @@
 								image.src = this.result;
 								// @details 이미지 확장자 검사
 								
-								$("#thumbnailImgs1").append(image);
+								if($("#thumbnailImgs1").children().is('a')){
+									console.log("is들어옴")
+									$("#thumbnailImgs1").replaceWith(image);
+								}else{
+									console.log("append들어옴")
+									$("#thumbnailImgs1").append(image);
+								}
 								$("#thumbnailImgs1 img").wrap("<a class='at1' onclick='removeElement(this)')></a>");
 							}, false );
 							// @details readAsDataURL( )을 통해 파일의 URL을 읽어온다.
@@ -100,7 +112,13 @@
 								image.src = this.result;
 								// @details 이미지 확장자 검사
 								
-								$("#thumbnailImgs2").append(image);
+								if($("#thumbnailImgs2").children().is('a')){
+									console.log("is들어옴")
+									$("#thumbnailImgs2").replaceWith(image);
+								}else{
+									console.log("append들어옴")
+									$("#thumbnailImgs2").append(image);
+								}
 								$("#thumbnailImgs2 img").wrap("<a class='at2' onclick='removeElement(this)')></a>");
 							}, false );
 							// @details readAsDataURL( )을 통해 파일의 URL을 읽어온다.
@@ -133,7 +151,13 @@
 								// @details 이미지 확장자 검사
 								
 								
-								$("#thumbnailImgs3").append(image);
+								if($("#thumbnailImgs3").children().is('a')){
+									console.log("is들어옴")
+									$("#thumbnailImgs3").replaceWith(image);
+								}else{
+									console.log("append들어옴")
+									$("#thumbnailImgs3").append(image);
+								}
 								$("#thumbnailImgs3 img").wrap("<a class='at3' onclick='removeElement(this)')></a>");	
 							}, false );
 							// @details readAsDataURL( )을 통해 파일의 URL을 읽어온다.
@@ -197,8 +221,10 @@
     </script>
 <!-- </head> -->
 <body>
+
      <%@ include file="../admin_header.jsp" %>
     <div class="admin_page">
+
         <div id="first_box">
         	<p id="p_title">상품 등록</p>
                <form:form id="fileForm" commandName="product" method="post" action="productinsert.prd" enctype="multipart/form-data"><!--  -->
@@ -265,6 +291,15 @@
 	                                <li class="margin-l10r10"><p>상품번호</p></li>
 	                                <li style="margin-left: 26px;"><input type="text" size="10" name="pbest" value="1"></li>
 	                            </ul>
+	                            <div class="cate">
+	                            	<p>* 0 : BEST-의류</p>
+	                           		<p>* 1 : BEST-신발</p>
+	                                <p>* 2 : TOP</p>
+	                                <p>* 3 : BOTTOM</p>
+	                                <p>* 4 : OUTER</p>
+	                                <p>* 5 : SHOSE</p>
+	                                <p>* 6 : ACC</p>
+	                            </div>
 	                            <ul class="flex_ul">
 	                                <li class="margin-l10r10"><p>색상</p></li>
 	                                <li class="ch_red" ><input type="checkbox" name="pcolor" value="red"></li>
@@ -275,7 +310,7 @@
 	                                <li class="ch_bla" ><input type="checkbox" name="pcolor" value="black"></li>
 	                            </ul>
 	                            <ul id="flex_ck">
-	                                <li><p>사이즈</p></li>
+	                                <li><p>옷 사이즈</p></li>
 	                                <li style="margin-left: 50px;"><p>S</p></li>
 	                                <li style="margin-left: 14px;"><p>M</p></li>
 	                                <li style="margin-left: 14px;"><p>L</p></li>
@@ -289,6 +324,21 @@
 	                                <li class="margin-left7"><input type="checkbox" name="psize" value="xl"></li>
 	                                <li class="margin-left7"><input type="checkbox" name="psize" value="free"></li>
 	                            </ul>
+	                            <ul id="flex_ck">
+	                                <li><p>신발사이즈</p></li>
+	                                <li style="margin-left: 50px;"><p>240</p></li>
+	                                <li style="margin-left: 14px;"><p>250</p></li>
+	                                <li style="margin-left: 14px;"><p>260</p></li>
+	                                <li style="margin-left: 14px;"><p>270</p></li>
+	                                <li style="margin-left: 10px;"><p>280</p></li>
+	                            </ul>
+	                            <ul id="flex_ck1">
+	                                <li class="margin-left7"><input type="checkbox" name="pssize" value="240"></li>
+	                                <li class="margin-left7"><input type="checkbox" name="pssize" value="250"></li>
+	                                <li class="margin-left7"><input type="checkbox" name="pssize" value="260"></li>
+	                                <li class="margin-left7"><input type="checkbox" name="pssize" value="270"></li>
+	                                <li class="margin-left7"><input type="checkbox" name="pssize" value="280"></li>
+	                            </ul>
 	                            <ul class="flex_ul">
 	                                <li class="margin-l10r10"><p>가격</p></li>
 	                                <li style="margin-left: 54px;"><input type="text" size="10" name="pprice" value="20000"></li>
@@ -296,6 +346,11 @@
 	                            <ul class="flex_ul">
 	                                <li class="margin-l10r10"><p>포인트</p></li>
 	                                <li style="margin-left: 40px;"><input type="text" size="10" name="ppoint" value="200"></li>
+	                            </ul>
+	                            
+	                            <ul class="flex_ul">
+	                                <li class="margin-l10r10"><p>수량</p></li>
+	                                <li style="margin-left: 40px;"><input type="text" size="10" name="pcount" value="150"></li>
 	                            </ul>
 	                        </div>
 	                        <input type="hidden" name="pdate" value="2020-10-15">

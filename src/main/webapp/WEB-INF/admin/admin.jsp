@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="<c:url value="/resources/css/common.css" />">
     <link rel="stylesheet" href="<c:url value="/resources/css/main_style.css" />">
     <link rel="stylesheet" href="<c:url value="/resources/css/best.css"/>">
-    <link rel="stylesheet" href="<c:url value="/resources/css/adminpage.css"/>">
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200&display=swap" rel="stylesheet">
@@ -22,21 +21,7 @@
     <title>Document</title>
 </head>
 <body>
-    <header>
-        <div id="menu">
-            <ul class="left_side_logo">
-                <li><img src="<c:url value="/resources/images/logo3.png" />" alt="no"/></li>
-            </ul>
-            <ul class="left_side"> 
-                <li><a href="productinsert.prd">상품 등록</a></li>
-                <li><a href="productselect.prd">상품 조회</a></li>
-                <li><a href="memberselect.me">회원 관리</a></li>
-                <li><a href="deliverystate1.ord">배송 관리</a></li>
-                <li><a href="index.me">홈페이지 바로가기</a></li>
-            </ul>
-        </div>
-        <p>version 1.10.0.1</p>
-    </header>
+    <%@ include file="../admin_header.jsp" %>
     <div id="admin_page">
         <div id="first_top">
             <div class="more_btn">
@@ -72,7 +57,7 @@
         </div>
         <div id="QA_border">
             <div class="more_btn">
-                <a href="#">MORE</a>
+                <a href="list.bd">MORE</a>
             </div>
             <div class="order" id="QA_bar">
                 <p>Q &amp;  A 상품문의</p>
@@ -108,9 +93,9 @@
                     <li><img src="<c:url value="/resources/images/shipping3.PNG"/>" alt="no"><p>배송완료</p></li>
                 </ul>
                 <ul id="shipping_list_num">
-                    <li>${cnt}</li>
-                    <li>${cnt2}</li>
-                    <li>${cnt3}</li>
+                    <li>${cnt }</li>
+                    <li>${cnt2 }</li>
+                    <li>${cnt3 }</li>
                 </ul>
 
             </div>

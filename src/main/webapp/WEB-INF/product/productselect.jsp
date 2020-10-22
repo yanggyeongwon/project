@@ -52,8 +52,10 @@
                             </tr>
                             <c:forEach items="${lists }" var="product">
                             <tr id="select_data">
-                                <td><p>${product.pnum }</p></td>    
-                                <td><img src="<%=request.getContextPath() %>/resources/${product.pimage }" width="50px" height="50px"></td>
+                                <td><p>${product.pnum }</p></td>
+                                <td>
+                                <img src="<%=request.getContextPath() %>/resources/${product.pimage }" width="40px" height="40px">
+                                </td>
                                 <td><p>${product.pname }</p></td>
                                 <td><p>${product.pbest }</p></td>
                                 <td><p>${product.pdate }</p></td>

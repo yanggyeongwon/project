@@ -1,3 +1,5 @@
+
+
 .flex_ul{
     display:flex;
     margin-top : 40px;
@@ -7,11 +9,13 @@
     margin-left: 10px;
     display: flex;
 }
+
 #flex_ck1{
     margin-top: 15px;
     margin-left: 100px;
     display: flex;
 }
+
 .margin-l10r10{
     margin-left : 10px;
     margin-right : 10px;
@@ -22,11 +26,13 @@
 .margin-left7{
     margin-right : 7px;
 }
+
 #p_title{
     font-size: 1.5rem;
     position: relative;
     margin: 10px;
 }
+
 #first_box{
     border: 1px solid #000;
     height: 935px;
@@ -35,13 +41,16 @@
     box-sizing: border-box;
     position: relative;
 }
+
 #second_box{
     border : 1px solid #000;
     height : 800px;
     width : 85%;
     margin: 0 auto;
     margin-top: 5%;
+
 }
+
 #third_box{
     border : 1px solid #000;
     height : 700px;
@@ -49,18 +58,21 @@
     margin: 0 auto;
     margin-top: 2%;
 }
+
 #left_box{
     height : 600px;
     width : 50%;
     float: left;
     position: relative;
 }
+
 #right_box{
     height : 600px;
     width : 50%;
     float: left;
     position: relative;
 }
+
 .top_box{
     border : 1px solid #000;
     height : 600px;
@@ -71,15 +83,18 @@
     margin-left: 5%;
     margin-top: 5%;
 }
+
 .input_box{
     width : 90%;
     float: left;
     margin-left: 5%;
     margin-top: 5%;
 }
+
 #input_img_btn{
     position: relative;
 }
+
 #image_view{
     height : 40%;
     width : 100%;
@@ -91,7 +106,7 @@
 }
 #text_box{
     border : 1px solid #000;
-    height : 450px;
+	padding : 25px 5px;
     width : 90%;
     float: left;
     position: relative;
@@ -99,11 +114,17 @@
     margin-left: 5%;
     margin-top: 5%;
 }
+
 #input_p_btn{
     display: flex;
     margin-top: 40px;
     margin-left: 50px;
     position: relative;
+}
+.cate{
+	padding: 5px 100px;
+	font-family: 'Raleway', sans-serif;
+	font-size:0.7em;
 }
 #p_btn_margin{
     margin-left : 25px;
