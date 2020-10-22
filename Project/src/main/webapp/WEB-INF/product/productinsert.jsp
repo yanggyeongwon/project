@@ -309,7 +309,7 @@
 	                                <li class="ch_bla" ><input type="checkbox" name="pcolor" value="black"></li>
 	                            </ul>
 	                            <ul id="flex_ck">
-	                                <li><p>사이즈</p></li>
+	                                <li><p>옷 사이즈</p></li>
 	                                <li style="margin-left: 50px;"><p>S</p></li>
 	                                <li style="margin-left: 14px;"><p>M</p></li>
 	                                <li style="margin-left: 14px;"><p>L</p></li>
@@ -322,6 +322,21 @@
 	                                <li class="margin-left7"><input type="checkbox" name="psize" value="l"></li>
 	                                <li class="margin-left7"><input type="checkbox" name="psize" value="xl"></li>
 	                                <li class="margin-left7"><input type="checkbox" name="psize" value="free"></li>
+	                            </ul>
+	                            <ul id="flex_ck">
+	                                <li><p>신발사이즈</p></li>
+	                                <li style="margin-left: 50px;"><p>240</p></li>
+	                                <li style="margin-left: 14px;"><p>250</p></li>
+	                                <li style="margin-left: 14px;"><p>260</p></li>
+	                                <li style="margin-left: 14px;"><p>270</p></li>
+	                                <li style="margin-left: 10px;"><p>280</p></li>
+	                            </ul>
+	                            <ul id="flex_ck1">
+	                                <li class="margin-left7"><input type="checkbox" name="pssize" value="240"></li>
+	                                <li class="margin-left7"><input type="checkbox" name="pssize" value="250"></li>
+	                                <li class="margin-left7"><input type="checkbox" name="pssize" value="260"></li>
+	                                <li class="margin-left7"><input type="checkbox" name="pssize" value="270"></li>
+	                                <li class="margin-left7"><input type="checkbox" name="pssize" value="280"></li>
 	                            </ul>
 	                            <ul class="flex_ul">
 	                                <li class="margin-l10r10"><p>가격</p></li>

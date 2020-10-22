@@ -32,18 +32,31 @@
                             <p>무지 벨벳 반팔티</p>
                             <p>₩21,000</p>
                             <form>
+                            <div>
                                 <span>색상</span>
-                                <select name="items" option_title="색상">
+                                <select id="items" name="items" class="select">
                                     <option value="*">- [필수] 옵션 선택 -</option>
                                     <option value="1">베이지</option>
                                     <option value="2">블루</option>
                                     <option value="3">카키</option>
                                     <option value="4">블랙</option>
                                 </select>
+                            </div>
+                            <div>
+                                <span>사이즈</span>
+                                <select id="items2" name="items2" class="select">
+                                    <option value="*">- [필수] 옵션 선택 -</option>
+                                    <option value="S">S</option>
+                                    <option value="M">M</option>
+                                    <option value="L">L</option>
+                                    <option value="XL">XL</option>
+                                </select>
+                            </div>
                             </form>
                         </div>
                         <div class="items_result">
-                            상품 선택 영역
+                          <p id="items_result_p">               </p>
+                          <p id="items_result_p2">              </p>
                         </div>
                         <div class="btn_buy">
                             <a href="#" id="buy_a">BUY NOW</a>

@@ -67,23 +67,23 @@ $(()=>{
     }
    
 
-    $(".menu").hover(function(){
+    /*$(".menu").hover(function(){
         console.log("메뉴 오버")
         $(this).toggleClass("menu_color")
     })
-
+*/
     $(".images_show").hover(function(){
         $(this).toggleClass("images_scale")
     })
 
-    $(".images_show p").hide();
+    $(".images_show a").hide();
     $(".images_show").on({
         mouseenter: function() {
             const images_index = $(".images_show").index(this);
-            $(".images_show p").eq(images_index).show();
+            $(".images_show a").eq(images_index).show();
         },
         mouseleave: function() {
-            $(".images_show p").hide()
+            $(".images_show a").hide()
         }
     })
     $("#filter").click(function(){
@@ -125,5 +125,23 @@ $(()=>{
         }
         scroll_top = st;
     }
-
+	
+	$('#items').change(function(){
+		let item_selec = $('#items option:selected').text();
+		$('#items_result_p').append("<p>"+item_selec+"</p>")
+	})
+	
+	$('#items2').change(function(){
+		let item_selec = $('#items2 option:selected').text();
+		console.log('item_selec:'+item_sel)
+		let item_includes = $('#items_result_p2 p').text()
+		let i = 1;
+		$('#items_result_p2').append("<p>"+item_selec+"<span id='items_count'></span></p>")
+		if(item_selec.includes(item_includes)){
+			i = i+1;
+			$('#items_count').replaceWith(i)
+			
+		}
+	})
+	
 });

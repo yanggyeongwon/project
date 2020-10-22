@@ -35,41 +35,37 @@
                 <div class="product_items">
                     <div class="images_show" id="best">
                         <img src="<c:url value="/resources/images/best2.jpg"/>" alt="no">
-                        <p>BEST</p>
+                        <a href="best.prd">BEST</a>
                     </div>
                     <div class="images_show" id="top">
                         <img src="<c:url value="/resources/images/top.jpg"/>" alt="no">
-                        <p>TOP</p>
+                        <a href="top.prd">TOP</a>
                     </div>
                     <div class="images_show" id="pants">
-                        <img src="<c:url value="/resources/images/pants.jpg"/>" alt="no">
-                        <p>PANTS</p>
+                         <img src="<c:url value="/resources/images/pants.jpg"/>" alt="no">
+                       <a href="pants.prd">PANTS</a>
                     </div>
                     <div class="images_show" id="outer">
                         <img src="<c:url value="/resources/images/outer.jpg"/>" alt="no">
-                        <p>OUTER</p>
+                        <a href="outer.prd">OUTER</a>
                     </div>
                     <div class="images_show" id="shoes">
-                        <img src="<c:url value="/resources/images/shoes.jpg"/>" alt="no">
-                        <p>SHOES</p>
+                         <img src="<c:url value="/resources/images/shoes.jpg"/>" alt="no">
+                        <a href="shoes.prd">SHOES</a>
                     </div>
                 </div>
             </div>
             <div class="area2">
                 <p class="product_title">BEST</p>
                 <div class="product_items">
-                <%
-                	for(int i=0; i<=11; i++){
-                		%>
-                		 <div class="bottom_product">
-	                        <img src="<c:url value="/resources/images/best.jpg"/>" alt="no">
-	                        <p id="dest_category">BEST</p>
-	                        <p>무지 벨벳 반팔티</p>
-	                        <p>₩21,000</p>
-                  		  </div>
-                		<%
-                	}
-                %>
+	                <c:forEach var="items" items="${lists }" >
+	                	<div class="bottom_product">
+		                    <img src="<c:url value="/resources/images/${items.pimage }"/>" alt="no">
+		                    <p id="dest_category">BEST</p>
+		                    <p>${items.pname }</p>
+		                    <p>₩${items.pprice }</p>
+	                  	</div>
+	                </c:forEach>
                 </div>
             </div>
         </div>

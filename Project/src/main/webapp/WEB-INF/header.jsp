@@ -12,14 +12,14 @@
 	</article>
 	<div class="menu">
 		<div id="logo">
-			<img src="<c:url value="/resources/images/logo3.png"/>" alt="no">
+			<a href="index.me"><img src="<c:url value="/resources/images/logo1.png"/>" alt="no"></a>
 		</div>
 		<div class="join">
-			<a id="basket" href="#"><span>장바구니</span><img
-				src="<c:url value="/resources/images/basket.png" />" alt="no"></a>
-			<a id="mypage" href="#"><span>마이페이지</span><img
-				src="<c:url value="/resources/images/mypage.png" />" alt="no"></a>
-			<a href="#"><span>LOGIN</span></a> <a href="#"><span>JOIN</span></a>
+			<a href="#"><span>NOTICE</span></a>
+			<a href="#"><span>BASKET</span></a>
+			<a href="#"><span>MYPAGE</span></a>
+			<a href="#"><span>LOGIN</span></a>
+			<a href="#"><span>JOIN</span></a>
 		</div>
 		<ul id="ul_id">
 			<li><a href="best.prd">BEST</a></li>

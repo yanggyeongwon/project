@@ -12,15 +12,6 @@
     <script src="<c:url value="/resources/js/script.js" />"></script>
     <title>메인입니다</title>
     <style type="text/css">
-	body {
-		width : 100%;
-		text-align : center;
-	}
-	
-	table {
-		width:700px;
-		margin : 0 auto;
-	}
 	.tdclass{display:none}
 	.aclass{color:black}
 	#result_tr td {padding: 3% 0}

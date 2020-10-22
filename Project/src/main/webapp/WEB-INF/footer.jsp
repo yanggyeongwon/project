@@ -9,7 +9,7 @@
 <body>
         <footer>
             <div id="footer_img">
-                <img src="<c:url value="/resources/images/logo2.png"/>" alt="no">
+                <img src="<c:url value="/resources/images/logo.png"/>" alt="no">
                 <ul id="footer_top">
                     <li><a href="#">이용약관</a></li>
                     <li><a href="#">개인정보처리방침</a></li>
