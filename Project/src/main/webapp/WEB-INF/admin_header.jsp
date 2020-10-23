@@ -22,7 +22,7 @@
                 <li><a href="#">상품 주문 내역</a></li>
                 <li><a href="#">공지 사항</a></li>
                 <li><a href="#">후기 관리</a></li>
-                <li><a href="index.me">홈페이지 바로가기</a></li>
+                <li><a href="index.ad">홈페이지 바로가기</a></li>
             </ul>
         </div>
         <p>version 1.10.0.1</p>

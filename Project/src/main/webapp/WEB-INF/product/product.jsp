@@ -24,22 +24,23 @@
             <div id="product_page">
                 <div id="image_purchase">
                     <div id="image">
-                        <img src="<c:url value="resources/images/best.jpg"/>">
+                        <img src="<c:url value="resources/${product.pimage }"/>">
                     </div>
+                    
                     <div id="purchase">
                         <div class="purchase_text_area">
                             <p class="dest_category">BEST</p>
-                            <p>무지 벨벳 반팔티</p>
-                            <p>₩21,000</p>
+                            <p class="product_pname">${product.pname}</p>
+                            <p>₩${product.pprice }</p>
                             <form>
                             <div>
                                 <span>색상</span>
                                 <select id="items" name="items" class="select">
                                     <option value="*">- [필수] 옵션 선택 -</option>
-                                    <option value="1">베이지</option>
-                                    <option value="2">블루</option>
-                                    <option value="3">카키</option>
-                                    <option value="4">블랙</option>
+                                    <option value="베이지">베이지</option>
+                                    <option value="블루">블루</option>
+                                    <option value="카키">카키</option>
+                                    <option value="블랙">블랙</option>
                                 </select>
                             </div>
                             <div>
@@ -50,13 +51,15 @@
                                     <option value="M">M</option>
                                     <option value="L">L</option>
                                     <option value="XL">XL</option>
+                                    <option value="FREE">FREE</option>
                                 </select>
                             </div>
                             </form>
                         </div>
                         <div class="items_result">
-                          <p id="items_result_p">               </p>
-                          <p id="items_result_p2">              </p>
+                          <div id="items_result_p">
+                          
+                          </div>
                         </div>
                         <div class="btn_buy">
                             <a href="#" id="buy_a">BUY NOW</a>
@@ -64,8 +67,12 @@
                         </div> 
                     </div>
                 </div>
+                <div class="sub_image">
+                    <div><img src="<c:url value="resources/${product.pimage1 }"/>">
+							 <img src="<c:url value="resources/${product.pimage2 }"/>"></div>
+                </div>
                 <div id="porduct_detail_page">
-                        
+                       <img src="<c:url value="resources/${product.pimage3 }"/>">
                 </div>
             </div>
         </section>

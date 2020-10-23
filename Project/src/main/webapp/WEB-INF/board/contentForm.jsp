@@ -34,7 +34,7 @@ table {
 	<tr>
 		<td width="125"  align="center" bgcolor="<%=value_c %>" >글번호 </td>
 		<td width="125"  align="center">${bean.num }</td>  
-		<td width="125"  align="center" bgcolor="<%=value_c %>">조회수 </td>
+		<td width="125"  align="center" bgcolor="<%=value_c %>">조회수 </xtd>
 		<td width="125"  align="center">${bean.readcount }</td>
 		
 	</tr>

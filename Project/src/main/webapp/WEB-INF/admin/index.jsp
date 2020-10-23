@@ -14,6 +14,21 @@
     <script src="<c:url value="/resources/js/jquery-3.5.1.min.js" />"></script>
     <script src="<c:url value="/resources/js/script.js" />"></script>
     <title>메인입니다</title>
+    <script>
+    $(document).ready(function(){
+    	
+    	
+		$('.bottom_product').on({
+			
+			click : function(){
+				let thisIndex = $(this).index();
+			    let items_pnum = $('input[name="pnum"]').eq(thisIndex).val();
+				location.href="product.prd?pnum="+items_pnum;
+			}
+		});
+    })
+	
+    </script>
 </head>
 <body>
     <section>
@@ -58,12 +73,15 @@
             <div class="area2">
                 <p class="product_title">BEST</p>
                 <div class="product_items">
+                
 	                <c:forEach var="items" items="${lists }" >
+	               
 	                	<div class="bottom_product">
-		                    <img src="<c:url value="/resources/images/${items.pimage }"/>" alt="no">
+	                	 <input type="hidden" name="pnum" value=${items.pnum }>
+		                    <p class="imgoveflow"><img src="<c:url value="/resources/${items.pimage }"/>" alt="no"><p>
 		                    <p id="dest_category">BEST</p>
 		                    <p>${items.pname }</p>
-		                    <p>₩${items.pprice }</p>
+		                    <p>₩ ${items.pprice }</p>
 	                  	</div>
 	                </c:forEach>
                 </div>

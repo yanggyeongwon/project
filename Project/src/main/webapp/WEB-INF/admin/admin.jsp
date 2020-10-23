@@ -93,9 +93,9 @@
                     <li><img src="<c:url value="/resources/images/shipping3.PNG"/>" alt="no"><p>배송완료</p></li>
                 </ul>
                 <ul id="shipping_list_num">
-                    <li>33</li>
-                    <li>24</li>
-                    <li>66</li>
+                    <li>${cnt }</li>
+                    <li>${cnt2 }</li>
+                    <li>${cnt3 }</li>
                 </ul>
 
             </div>

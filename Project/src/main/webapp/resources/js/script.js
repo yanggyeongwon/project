@@ -2,7 +2,7 @@ $(()=>{
 
     mainpage_effect();
 
-
+	
     $(document).ready(function(){
         $(window).scroll(function(){
           if($(this).scrollTop() > 200 ){
@@ -32,16 +32,11 @@ $(()=>{
 
 		
      });
-
-	$('.bottom_product').on({
-		click : function(){
-			location.href="product.prd";
-		}
-	});
 	
     $("#mypage span").hide();
     $("#mypage").on({
         mouseenter: function() {
+	
             $("#mypage span").show();
         },
         mouseleave: function() {
@@ -67,11 +62,11 @@ $(()=>{
     }
    
 
-    /*$(".menu").hover(function(){
+    $(".menu").hover(function(){
         console.log("메뉴 오버")
         $(this).toggleClass("menu_color")
     })
-*/
+
     $(".images_show").hover(function(){
         $(this).toggleClass("images_scale")
     })
@@ -125,23 +120,23 @@ $(()=>{
         }
         scroll_top = st;
     }
-	
-	$('#items').change(function(){
-		let item_selec = $('#items option:selected').text();
-		$('#items_result_p').append("<p>"+item_selec+"</p>")
-	})
-	
-	$('#items2').change(function(){
-		let item_selec = $('#items2 option:selected').text();
-		console.log('item_selec:'+item_sel)
-		let item_includes = $('#items_result_p2 p').text()
-		let i = 1;
-		$('#items_result_p2').append("<p>"+item_selec+"<span id='items_count'></span></p>")
-		if(item_selec.includes(item_includes)){
-			i = i+1;
-			$('#items_count').replaceWith(i)
+
+		
 			
-		}
-	})
-	
+		$('#items2').change(function(){
+			let i= 1;
+			
+			let name = $('.product_pname').text();
+			let items_selec1 = $('#items option:selected').val();
+			let items_selec2 = $('#items2 option:selected').val();
+			const compare = items_selec1+"/"+items_selec2;
+			const compare2 = $('#compare').text();
+
+
+			$('#items_result_p').append("<div class='wrap'><div><div class='place'><span>"+name+" - </span><span class='compare'>"+items_selec1+"/"+items_selec2+"</span></div><span class='wraps'><input type='text' name='stock' value='"+i+"'><a class='up_btn'></a><a class='do_btn'></a></span></div></div>")
+			
+			if($.contains(compare2,compare)){
+				console.log("야 임마 너 똑같은거야");
+			}
+		})
 });

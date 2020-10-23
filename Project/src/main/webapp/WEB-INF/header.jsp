@@ -12,7 +12,7 @@
 	</article>
 	<div class="menu">
 		<div id="logo">
-			<a href="index.me"><img src="<c:url value="/resources/images/logo1.png"/>" alt="no"></a>
+			<a href="index.ad"><img src="<c:url value="/resources/images/logo1.png"/>" alt="no"></a>
 		</div>
 		<div class="join">
 			<a href="#"><span>NOTICE</span></a>

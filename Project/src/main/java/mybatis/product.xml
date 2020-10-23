@@ -59,7 +59,7 @@
 	<update id="updateProduct">
 		update product set pimage=#{pimage}, pimage1=#{pimage1}, pimage2=#{pimage2}, pimage3=#{pimage3}, pname=#{pname}, pbest=#{pbest}, pcolor=#{pcolor}, psize=#{psize}, pssize=#{pssize}, pprice=#{pprice}, ppoint=#{ppoint}, pcount=#{pcount} where pnum=#{pnum}
 	</update>
-	<select id="selectMain">
-		select * from product where pbest = 1 and pbest = 0 order by desc
+	<select id="selectMain" resultType="MyProduct">
+		select * from product where pbest = 1 or pbest = 0 order by pnum desc
 	</select>
 </mapper>

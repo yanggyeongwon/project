@@ -17,6 +17,7 @@ button {background: 0;border: 0;padding: 0;cursor: pointer}
   border-radius:5px;
   background:#fff
 }
+.imgoveflow{position:relative; overflow:hidden;height: 640px;}
 .totop_arrow1:before{left:21px;transform:translateY(-50%) rotate(45deg)}
 .totop_arrow1:after{right:21px;transform:translateY(-50%) rotate(-45deg)}
 .menu{
@@ -96,7 +97,6 @@ button {background: 0;border: 0;padding: 0;cursor: pointer}
   overflow:hidden
 }
 .bottom_product{width: 500px;
-  height:700px;
   background-color: aliceblue;
   float:left;
   margin: 20px 50px;
