@@ -1,6 +1,41 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="member.model.Member">
 
+<mapper namespace="member.model.Member">
+	<insert id="InsertData">
+		insert into member(mnum,mname,mid,mpw,memail,maddr) 
+		values(mseq.nextval,#{mname},#{mid},#{mpw},#{memail},#{maddr})
+	</insert>
+	<select id="GetData" resultType="MyMember">
+		select * from member
+		where mnum=#{mnum}
+	</select>
+	
+	
 </mapper>
+
+	<!-- <update id="UpdateData">
+		update member set
+		mpw=#{mpw} , maddr=#{maddr} 
+		where mnum=#{mnum}
+	</update> -->
+<!-- 회원탈퇴
+<delete id="Withdraw">
+	delete from member
+	where mid = #{mid}
+	  and mpw=#{mpw}
+</delete> -->
+
+
+
+
+
+
+
+
+
+
+
+
+

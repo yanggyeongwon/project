@@ -83,8 +83,8 @@ body {
         <div class="form-group">
             <button type="submit" class="btn btn-dark btn-lg btn-block">Sign in</button>
          </div>
-        <a href="findId">아이디찾기 /</a>
-        <a href="findPW">비밀번호찾기</a>
+        <a href="findId.me">아이디찾기 /</a>
+        <a href="findPw.me">비밀번호찾기</a>
     </form>
     <p style="color:black;" class="text-center small">Don't have an account? <a href="register.me" style="color:black;">Sign up here!</a></p>
 </div>

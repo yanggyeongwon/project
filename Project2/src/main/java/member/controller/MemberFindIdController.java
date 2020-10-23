@@ -17,11 +17,11 @@ import member.model.MemberDao;
 
 
 @Controller
-public class MemberLoginController {
+public class MemberFindIdController {
 
-	final String command = "/login.me";
-	final String getPage = "login";
-	final String gotoPage = "/index";
+	final String command = "/findId.me";
+	final String getPage = "findId";
+	final String gotoPage = "/login";
 	
 	@Autowired
 	MemberDao memberDao;
@@ -46,16 +46,21 @@ public class MemberLoginController {
 		if(dbMember == null) {
 			
 			pw.println("<script type='text/javascript'>");
-			pw.println("alert('존재하지 않는 아이디입니다.');");
+			pw.println("alert('존재하지 않는 회원입니다.');");
 			pw.println("</script>");
 			pw.flush();
-			return new ModelAndView(getPage);
-			
+			return new ModelAndView(getPage);		
 		}
+		
 		else {
 			
-			if(member.getMpw().equals(dbMember.getMpw())) {
-				session.setAttribute("loginInfo",dbMember);
+			if(member.getMname().equals(dbMember.getMname()) && member.getMemail().equals(dbMember.getMemail())) {
+				
+				
+				pw.println("<script type='text/javascript'>");
+				pw.println("alert('아이디는"+dbMember.getMid()+" 입니다.');");				
+				pw.println("</script>");
+				pw.flush();
 				
 				return new ModelAndView(gotoPage); 
 			}

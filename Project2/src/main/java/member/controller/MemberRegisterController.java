@@ -15,7 +15,7 @@ import member.model.Member;
 public class MemberRegisterController {
 	final String command = "register.me";
 	final String getPage = "register";
-	final String gotoPage = "redirect:/index.jsp"; 
+	final String gotoPage = "redirect:/login.me"; 
 	
 	@Autowired
 	member.model.MemberDao memberDao;
@@ -42,6 +42,6 @@ public class MemberRegisterController {
 		mav.setViewName(gotoPage);
 		return mav;
 	}
-}
+	}
 
 

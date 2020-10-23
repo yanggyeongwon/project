@@ -1,6 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<%@include file="../common.jsp" %>   
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -62,7 +60,7 @@ body {
 	position: relative;
 	top: 1px;
 }
-.signup-form .btn1 {        
+.signup-form .btn {        
 	font-size: 16px;
 	font-weight: bold;
 	background: black;
@@ -88,97 +86,42 @@ body {
 .signup-form form a:hover {
 	text-decoration: underline;
 }
-
-	.err{
-	font-size: 9pt;
-	color: red;
-	font-weight: bold;
-	}
 </style>
 </head>
 <body>
 <div class="signup-form">
-	<form:form commandName="member" method="post" class="form-horizontal" action="register.me">
+    <form action="/examples/actions/confirmation.php" method="post" class="form-horizontal">
       	<div class="row">
         	<div class="col-8 offset-4">
-				<h2>Sign Up</h2>
+				<h2>Find PW</h2>
 			</div>	
-      	</div>		
-      	<div class="form-group row">
+      	</div>			
+        <div class="form-group row">
 			<label class="col-form-label col-4">Username</label>
 			<div class="col-8">
-                <input type="text" class="form-control" name="mname">
-            	<form:errors cssClass="err" path="mname" />
+                <input type="text" class="form-control" name="username" required="required">
             </div>        	
-        </div>	
+        </div>
         <div class="form-group row">
 			<label class="col-form-label col-4">ID</label>
-			<div class="col-5">
-                <input type="text" style="width:190px;" class="form-control" name="mid">
-                <form:errors cssClass="err" path="mid" />
-            </div>        	
-			<div class="col-3">
-                <button id="duplicate_check" style="height:30px; font:굴림; font-size:9pt;" class="btn btn-secondary" type="button" onclick="check();">중복체크</button>
+			<div class="col-8">
+                <input type="text" class="form-control" name="id" required="required">
             </div>        	
         </div>
 		<div class="form-group row">
-			<label class="col-form-label col-4">Password</label>
-			<div class="col-8">
-                <input type="password" class="form-control" name="mpw">
-                <form:errors cssClass="err" path="mpw" />
-            </div>        	
-        </div>
-		<div class="form-group row">
-			<label class="col-form-label col-4">Confirm Password</label>
-			<div class="col-8">
-                <input type="password" class="form-control" name="confirm_password">
-            </div>        	
-        </div>
-        <div class="form-group row">
 			<label class="col-form-label col-4">Email Address</label>
 			<div class="col-8">
-                <input type="email" class="form-control" name="memail">
-                <form:errors cssClass="err" path="memail" />
-                
-                <input type="hidden" class="form-control" name="maddr">
+                <input type="email" class="form-control" name="email" required="required">
             </div>        	
         </div>
+		
 		<div class="form-group row">
 			<div class="col-8 offset-4">
-				<p><label class="form-check-label"><input type="checkbox"> I accept the <a href="#">Terms of Use</a> &amp; <a href="#">Privacy Policy</a>.</label></p>
-				<button type="submit" class="btn1 btn-dark btn-lg">Sign Up</button>
+				
+				<button type="submit" class="btn btn-dark btn-lg">Find</button>
 			</div>  
 		</div>		      
-    </form:form>
-	<div class="text-center">Already have an account? <a href="login.me">Login here</a></div>
+    </form>
 </div>
 </body>
-<script>
-function check(){
-	id = $("#user_id").val();
-	
-	$.ajax({
-	    url: 'ID_Check',
-	    type: 'POST',
-	    dataType: 'text', //서버로부터 내가 받는 데이터의 타입
-	    contentType : 'text/plain; charset=utf-8;',//내가 서버로 보내는 데이터의 타입
-	    data: id ,
-
-	    success: function(data){
-	         if(data == 0){
-	         console.log("아이디 없음");
-	         alert("사용하실 수 있는 아이디입니다.");
-	         }else{
-	         	console.log("아이디 있음");
-	         	alert("중복된 아이디가 존재합니다.");
-	         }
-	    },
-	    error: function (){        
-	                      
-	    }
-	  });
-
-
-}
-</script>
 </html>

@@ -21,14 +21,17 @@ public class MemberDao {
 		member = sqlSessionTemplate.selectOne(namespace+".GetData",mnum);
 		return member;
 	}
-
-	public int updateData(Member member) {
+	
+	/*
+	public int updateData(Member member){
 		int cnt = sqlSessionTemplate.update(namespace + ".UpdateData",member);
 		return cnt;
 	}
-	public void deleteData(int mnum) {
-		sqlSessionTemplate.delete(namespace+".DeleteData",mnum);
-	}
+	//È¸¿øÅ»Åð
+	 public void deleteData(int mnum) {
+		 sqlSessionTemplate.delete(namespace+".Withdraw",mnum);
+	 }
+	*/
 }
 
   
