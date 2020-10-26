@@ -64,6 +64,13 @@ public class ProductDAO {
 		return lists;
 	}
 
+	public List<Product> selectTop() {
+		// TODO Auto-generated method stub
+		List<Product> lists = new ArrayList<Product>();
+		lists = sqlSessionTemplate.selectList(namespace+".selectTop");
+		return lists;
+	}
+
 
 
 }

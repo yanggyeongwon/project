@@ -143,24 +143,28 @@ $(()=>{
 				let items_selec2 = $('#items2 option:selected').val();
 				let items_price = $('#product_price').text();
 				let wrap_len = $('.wrap').length;
-				let price_relace = items_price.replace(/(\d)(?=(?:\d{3})+(?!\d))/g, '$1,')
 				
 				
 				const compare = items_selec1+"/"+items_selec2;
 				
 				let aa = $('.compare').text() // 블랙/L블루/M
 				if($('#items_result_p').text() == ""){
-					$('#items_result_p').append("<div class='wrap'><div><div class='place'><span>"+name+" - </span><div class='compare'>"+items_selec1+"/"+items_selec2+"</div></div><div class='wraps'><input type='text' name='stock' value='"+i+"'><a class='up_btn'></a><a class='do_btn'></a></div><div class='price'><p>"+price_relace+"<a class='remove_tag'></a></p></div></div></div>")
+					$('#items_result_p').append("<div class='wrap'><div><div class='place'><span>"+name+" - </span><div class='compare'>"+items_selec1+"/"+items_selec2+"</div></div><div class='wraps'><input type='text' name='stock' value='"+i+"'><a class='up_btn'></a><a class='do_btn'></a></div><div class='price'><p>"+items_price+"<a class='remove_tag'></a></p></div></div></div>")
 					$('.items_price').append("\\<p>"+items_price+"</p>")
 				}else{
+					
 					if(aa.includes(compare)){
 						 alert('이미 선택한 상품입니다.')
 						 $('#items').find('option:first').prop('selected', 'selected');
 					 	 $('#items2').find('option:first').prop('selected', 'selected');
 					}else{
-						$('#items_result_p').append("<div class='wrap'><div><div class='place'><span>"+name+" - </span><span class='compare'>"+items_selec1+"/"+items_selec2+"</span></div><div class='wraps'><input type='text' name='stock' value='"+i+"'><a class='up_btn'></a><a class='do_btn'></a></div><div class='price'><p>"+price_relace+"<a class='remove_tag'></a></p></div></div></div>")
+						
+						$('#items_result_p').append("<div class='wrap'><div><div class='place'><span>"+name+" - </span><span class='compare'>"+items_selec1+"/"+items_selec2+"</span></div><div class='wraps'><input type='text' name='stock' value='"+i+"'><a class='up_btn'></a><a class='do_btn'></a></div><div class='price'><p>"+items_price+"<a class='remove_tag'></a></p></div></div></div>")
 					}
 				}
+				
+				sumthingjustlikethis()
+
 			}
 			
 			
@@ -193,6 +197,7 @@ $(()=>{
 			let wraps = $('.do_btn').index(this);
 			let stock_value = $('input[name="stock"]').eq(wraps).val()
 			if($('input[name="stock"]').eq(wraps).val() <= 1){
+
 				alert('최소갯수는 1개 입니다.')
 				$('input[name="stock"]').eq(wraps).val("1");
 			}else{
@@ -207,16 +212,17 @@ $(()=>{
 		})
 		
 		function sumthingjustlikethis(){
+			console.log("들어왔다")
 			let sumthing = 0 ;
 			let items_price = $('#product_price').text();
 			for(let i=0; i<$('.wrap').length;i++){
 				sumthing += parseInt($('input[name="stock"]').eq(i).val());
 			}
 			let sum = sumthing * items_price
-			$('.items_price p').html(sum)
+			$('.items_price p').html(sum+"<span>("+sumthing+"개)</span>")
 		
 		}
-	
+	 	
 		
 		
 		

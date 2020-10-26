@@ -19,12 +19,7 @@
 	<script src="<c:url value="/resources/js/script.js" />"></script>
     <title>Document</title>
     
-    <script>
-  /*   $(document).ready(function(){
-    	
-    	$('#product_price').replace(/(\d)(?=(?:\d{3})+(?!\d))/g, '$1,')
-    }) */
-    </script>
+
     </head>
     <body>
         <section>

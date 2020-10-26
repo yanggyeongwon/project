@@ -62,4 +62,7 @@
 	<select id="selectMain" resultType="MyProduct">
 		select * from product where pbest = 1 or pbest = 0 order by pnum desc
 	</select>
+	<select id="selectTop" resultType="MyProduct">
+		select * from product where pbest = 2 order by pnum desc
+	</select>
 </mapper>

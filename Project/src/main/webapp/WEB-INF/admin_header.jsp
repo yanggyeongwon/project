@@ -11,7 +11,7 @@
 <header>
         <div id="menu">
             <ul class="left_side_logo">
-                <li><a href="admin.ad"><img src="<c:url value="/resources/images/logo1.png" />" alt="no"/></a></li>
+                <li><a href="admin.ad"><img src="<c:url value="/resources/images/logo2.png" />" alt="no"/></a></li>
             </ul>
             <ul class="left_side"> 
                 <li><a href="productinsert.prd">상품 등록</a></li>

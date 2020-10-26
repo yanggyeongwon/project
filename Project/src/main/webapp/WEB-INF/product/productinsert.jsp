@@ -292,7 +292,8 @@
 	                                <li style="margin-left: 26px;"><input type="text" size="10" name="pbest" value="1"></li>
 	                            </ul>
 	                            <div class="cate">
-	                           		<p>* 1 : BEST</p>
+	                           		<p>* 0 : BEST-TOP</p>
+	                           		<p>* 1 : BEST-SHOSE</p>
 	                                <p>* 2 : TOP</p>
 	                                <p>* 3 : BOTTOM</p>
 	                                <p>* 4 : OUTER</p>

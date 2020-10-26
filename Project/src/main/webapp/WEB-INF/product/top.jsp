@@ -16,6 +16,21 @@
 <script src="<c:url value="/resources/js/jquery-3.5.1.min.js" />"></script>
 <script src="<c:url value="/resources/js/script.js" />"></script>
 <title>Document</title>
+<!--     <script>
+    $(document).ready(function(){
+
+    	
+		$('.bottom_product').on({
+			
+			click : function(){
+				let thisIndex = $(this).index();
+			    let items_pnum = $('input[name="pnum"]').eq(thisIndex).val();
+				location.href="product.prd?pnum="+items_pnum;
+			}
+		});
+    })
+	
+    </script> -->
 </head>
 <body>
 	<section>
@@ -33,18 +48,22 @@
 			</div>
 
 			<div class="product_items">
-				<%
-					for (int i = 0; i <= 11; i++) {
-				%>
-				<div class="bottom_product">
-					<img src="<c:url value="/resources/images/best.jpg" />" alt="no">
-					<p id="dest_category">TOP</p>
-					<p>무지 벨벳 반팔티</p>
-					<p>₩21,000</p>
+			<c:if test="${empty lists}">
+				<style>
+					#filter{display:none;}
+				</style>
+				<div class="empty">
+					<p>상품이 없습니다.</p>
 				</div>
-				<%
-					}
-				%>
+			</c:if>
+				<c:forEach var="items" items="${lists }">
+					<div class="bottom_product">
+						<p class="imgoveflow"><img src="<c:url value="/resources/${items.pimage }"/>" alt="no"><p>
+						<p id="dest_category">TOP</p>
+						<p>${items.pname }</p>
+						<p>₩ ${items.pprice }</p>
+					</div>
+				</c:forEach>
 			</div>
 		</div>
 	</section>
