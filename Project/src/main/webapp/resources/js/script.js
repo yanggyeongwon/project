@@ -1,3 +1,4 @@
+
 $(()=>{
 
 	    mainpage_effect();

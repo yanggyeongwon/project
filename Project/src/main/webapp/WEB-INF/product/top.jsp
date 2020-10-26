@@ -16,21 +16,18 @@
 <script src="<c:url value="/resources/js/jquery-3.5.1.min.js" />"></script>
 <script src="<c:url value="/resources/js/script.js" />"></script>
 <title>Document</title>
-<!--     <script>
+	<script>
     $(document).ready(function(){
-
-    	
 		$('.bottom_product').on({
-			
 			click : function(){
 				let thisIndex = $(this).index();
 			    let items_pnum = $('input[name="pnum"]').eq(thisIndex).val();
-				location.href="product.prd?pnum="+items_pnum;
+				location.href="top2.prd?pnum="+items_pnum;
 			}
 		});
     })
 	
-    </script> -->
+    </script>
 </head>
 <body>
 	<section>
@@ -58,8 +55,9 @@
 			</c:if>
 				<c:forEach var="items" items="${lists }">
 					<div class="bottom_product">
+					<input type="hidden" name="pnum" value=${items.pnum }>
 						<p class="imgoveflow"><img src="<c:url value="/resources/${items.pimage }"/>" alt="no"><p>
-						<p id="dest_category">TOP</p>
+						<p>TOP</p>
 						<p>${items.pname }</p>
 						<p>₩ ${items.pprice }</p>
 					</div>
