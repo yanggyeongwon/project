@@ -14,10 +14,14 @@
 #purchase{width: 40%;float: right;padding: 50px;}
 .btnclass{position:relative;width:15.5%}
 .up_btn{display:block; position:absolute; right:0; top:0; width:15px; height:15px;  color:#2e2e2e; border:1px solid #2e2e2e; cursor:pointer}
-.wrap{margin: 10px 0; border-bottom: 1px solid #2e2e2e; width:290px;position:relative;}
-.wraps{margin-left:120px}
+.wrap{margin: 10px 0; border-bottom: 1px solid #2e2e2e; width:300px;height:40px;}
+.wraps{position:relative; width:17%; float:left;}
+#product_price{font-size: 1.5rem}
 .place{float: left; width: 40%;}
+.price{float: right; width: 20%; padding: 5px;}
 .place span{padding:5px}
+.remove_tag{padding:5px; position:relative;}
+.remove_tag:before{ content: 'X'; position: absolute; left: 30%; top: 30%; color: #000; font-size: 0.5rem; cursor: pointer; font-weight: bold; background-color: #c3c1c1;}
 .up_btn:before{
 	content: '△';
 	font-size:0.6rem;

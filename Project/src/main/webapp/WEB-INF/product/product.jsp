@@ -1,3 +1,4 @@
+<%@page import="java.text.DecimalFormat"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
@@ -16,7 +17,14 @@
 	<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap"rel="stylesheet">
 	<script src="<c:url value="/resources/js/jquery-3.5.1.min.js" />"></script>
 	<script src="<c:url value="/resources/js/script.js" />"></script>
-        <title>Document</title>
+    <title>Document</title>
+    
+    <script>
+  /*   $(document).ready(function(){
+    	
+    	$('#product_price').replace(/(\d)(?=(?:\d{3})+(?!\d))/g, '$1,')
+    }) */
+    </script>
     </head>
     <body>
         <section>
@@ -31,7 +39,8 @@
                         <div class="purchase_text_area">
                             <p class="dest_category">BEST</p>
                             <p class="product_pname">${product.pname}</p>
-                            <p>₩${product.pprice }</p>
+
+                            <p>₩<span id="product_price">${product.pprice }</span></p>
                             <form>
                             <div>
                                 <span>색상</span>
@@ -57,10 +66,9 @@
                             </form>
                         </div>
                         <div class="items_result">
-                          <div id="items_result_p">
-                          
-                          </div>
+                          <div id="items_result_p"></div>
                         </div>
+                        <div class="items_price"></div>
                         <div class="btn_buy">
                             <a href="#" id="buy_a">BUY NOW</a>
                             <a href="#" id="cart_a">ADD TO CART</a>
