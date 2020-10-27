@@ -22,7 +22,6 @@
 </div>
 <div>
 <form id="myForm" action="update.me" method="post">
-<input type="hidden" id="num" name="mnum" readonly value="${ member.mnum }">
 <p>
 <label>이름</label>
 <input class="w3-input" type="text" id="name" name="mname" readonly value="${ member.mname }">
@@ -34,7 +33,6 @@
 <p>
 <label>비밀번호</label>
 <input class="w3-input" id="pw" name="mpw" type="password" value="${member.mpw }">
-<input class="w3-input" id="pw" name="mpw" type="hidden" value="${member.mpw2 }">
 </p>
 <p>
 <label>Email</label>

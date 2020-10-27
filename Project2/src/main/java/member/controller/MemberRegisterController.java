@@ -34,7 +34,7 @@ public class MemberRegisterController {
 		return getPage;
 	}
 	
-	
+	 
 	@RequestMapping(value=command, method=RequestMethod.POST) 
 	public ModelAndView doAction(@Valid Member member,
 							BindingResult result) {

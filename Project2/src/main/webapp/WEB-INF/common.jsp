@@ -8,5 +8,5 @@
 <%@taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 
-접속자 아이디 : ${ sessionScope.loginInfo.id } <br>  
+<%-- 접속자 아이디 : ${ sessionScope.loginInfo.id } <br>   --%>
 

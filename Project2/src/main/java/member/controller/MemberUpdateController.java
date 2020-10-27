@@ -33,14 +33,24 @@ public class MemberUpdateController {
 	@RequestMapping(value=command , method=RequestMethod.GET)
 	public String doAction(@RequestParam(value="mid",required=true) String mid,
 							Model model, HttpSession session) {
-		
-		System.out.println(session.getAttribute("loginInfo"));
-		
-		
 		Member member = memberDao.getData(mid);
 		model.addAttribute("member", member);
 		
-		return getPage;
+
+		
+		if(session.getAttribute("loginInfo") == null) {
+	
+			
+			return "redirect:/login.me";
+		}
+		else {
+			return getPage;
+		}
+		
+			
+		
+		
+		//return getPage;
 	}
 	
 	@RequestMapping(value=command , method=RequestMethod.POST)

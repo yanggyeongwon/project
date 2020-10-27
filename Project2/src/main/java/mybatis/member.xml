@@ -10,7 +10,7 @@
 	<select id="GetData" resultType="MyMember">
 		select * from member
 		where mid=#{mid}
-	</select>
+	</select> 
 
 	<update id="UpdateData">
 		update member set 
