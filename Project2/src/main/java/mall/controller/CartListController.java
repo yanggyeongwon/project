@@ -48,12 +48,12 @@ public class CartListController { // CartAddController¿¡¼­ ³Ñ¾î¿È
 			
 			ShoppingInfo shopInfo = new ShoppingInfo();
 			shopInfo.setPnum(pnum);
-			shopInfo.setPname(bean.getName());
+			shopInfo.setPname(bean.getPname());
 			shopInfo.setQty(oqty);
-			shopInfo.setPrice(bean.getPrice());
-			shopInfo.setAmount(bean.getPrice() * oqty);
+			shopInfo.setPrice(bean.getPprice());
+			shopInfo.setAmount(bean.getPprice() * oqty);
 			
-			totalAmount += bean.getPrice() * oqty;
+			totalAmount += bean.getPprice() * oqty;
 			
 			shoplists.add(shopInfo);
 		}

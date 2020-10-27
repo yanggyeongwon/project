@@ -90,7 +90,7 @@ body {
 </head>
 <body>
 <div class="signup-form">
-    <form action="/examples/actions/confirmation.php" method="post" class="form-horizontal">
+    <form action="findPw.me" method="post" class="form-horizontal">
       	<div class="row">
         	<div class="col-8 offset-4">
 				<h2>Find PW</h2>
@@ -99,19 +99,19 @@ body {
         <div class="form-group row">
 			<label class="col-form-label col-4">Username</label>
 			<div class="col-8">
-                <input type="text" class="form-control" name="username" required="required">
+                <input type="text" class="form-control" name="mname" required="required">
             </div>        	
         </div>
         <div class="form-group row">
 			<label class="col-form-label col-4">ID</label>
 			<div class="col-8">
-                <input type="text" class="form-control" name="id" required="required">
+                <input type="text" class="form-control" name="mid" required="required">
             </div>        	
         </div>
 		<div class="form-group row">
 			<label class="col-form-label col-4">Email Address</label>
 			<div class="col-8">
-                <input type="email" class="form-control" name="email" required="required">
+                <input type="email" class="form-control" name="memail" required="required">
             </div>        	
         </div>
 		

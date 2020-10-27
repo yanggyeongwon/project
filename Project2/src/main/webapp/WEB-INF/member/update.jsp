@@ -11,11 +11,7 @@
 <link rel="stylesheet" href="css/common.css" type="css/style">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script src="http://code.jquery.com/jquery-latest.js"></script>
-<script type="text/javascript">
-	function delete(){
-		alert(1);
-	}
-</script>
+
 <title>마이페이지</title>
 </head>
 <body>
@@ -38,12 +34,13 @@
 <p>
 <label>비밀번호</label>
 <input class="w3-input" id="pw" name="mpw" type="password" value="${member.mpw }">
+<input class="w3-input" id="pw" name="mpw" type="hidden" value="${member.mpw2 }">
 </p>
 <p>
 <label>Email</label>
 <input class="w3-input" type="text" id="email" name="memail" value="${ member.memail }">
 </p>
-<button type="button" onClick="delete()">회원탈퇴</button>
+<button type="button" onClick="">회원탈퇴</button>
 <p class="w3-center">
 <button type="submit" class="w3-button w3-block w3-black w3-ripple w3-margin-top w3-round">회원정보 변경</button>
 </p>

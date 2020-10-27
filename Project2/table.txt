@@ -30,7 +30,8 @@ select * from member;
 
 
 
-//二쇰Ц�궡�뿭 �뀒�씠釉�
+
+//주문내역 테이블
 
 drop sequence odseq;
 create sequence odseq
@@ -42,15 +43,18 @@ drop table orderdetails;
 
 create table orderdetails(
   onum number primary key,
-  opname varchar2(30) not null,
-  oorder varchar2(20) not null,
-  opreceive varchar2(20) not null,
+  opname varchar2(30) not null, --주문자 닉네임
+  oorder varchar2(20) not null,--주문자 이름
+  opreceive varchar2(20) not null,--수령자
   oprice number not null,
   opcharge number not null,
   opdate varchar2(20) not null,
   oinvoice varchar2(20) not null
 );
-//�긽�뭹�뀒�씠釉�
+
+insert into orderdetails values(odseq.nextval, '닉네임', '주문자', '수령자', 30000, 2500 ,sysdate, '송장번호');
+
+--상품테이블
 
 drop sequence pseq;
 create sequence pseq
@@ -62,19 +66,20 @@ drop table product;
 
 create table product(
   pnum number primary key,
-  pbest varchar2(30) not null,
+  pbest number not null,
   pname varchar2(20) not null,
   pcolor varchar2(20) not null,
   psize varchar2(10) not null,
+  pprice number not null,
   ppoint number not null
 );
 
-insert into product values(pseq.nextval,'best�긽�뭹','�샇�몢怨쇱옄','�깋源�','�궗�씠利�',2500);
+insert into product values(pseq.nextval,1,'호두과자','색깔','사이즈',30000,2500);
 
 
 select * from product;
 
-//怨듭��궗�빆
+//공지사항
 
 drop sequence nseq;
 create sequence nseq
@@ -91,12 +96,12 @@ create table notice(
   ndate varchar2(20) not null
 );
 
-insert into notice values(nseq.nextval,'臾몄쓽�궡�슜50�옄','�옉�꽦�옄','�궇吏�');
+insert into notice values(nseq.nextval,'문의내용50자','작성자','날짜');
 
 
 select * from notice;
 
-//�긽�뭹臾몄쓽
+//상품문의
 
 drop sequence piseq;
 create sequence piseq
@@ -113,8 +118,6 @@ create table productinq(
   pidate varchar2(20) not null
 );
 
-insert into productinq values(piseq.nextval,'臾몄쓽�궡�슜50�옄','�옉�꽦�옄','�궇吏�');
+insert into productinq values(piseq.nextval,'문의내용50자','작성자','날짜');
 
 select * from productinq;
-
-
