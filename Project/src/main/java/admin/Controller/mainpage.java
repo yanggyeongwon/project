@@ -26,7 +26,6 @@ public class mainpage {
 		
 		lists = dao.selectMain();
 		System.out.println(lists.size());
-		System.out.println(lists.get(0).getPprice());
 		ModelAndView mav = new ModelAndView();
 		mav.addObject("lists",lists);
 		mav.setViewName(getPage);

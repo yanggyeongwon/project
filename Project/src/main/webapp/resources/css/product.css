@@ -67,4 +67,5 @@ input[name='stock']{width:15px;padding: 7px; text-align: right;}
 #cart_a {margin-top: 10px;background-color: #fff;border: 1px solid #25211e;color: #25211e;}
 
 #porduct_detail_page{width: 100%;}
+#porduct_detail_page img{width:100%}
 

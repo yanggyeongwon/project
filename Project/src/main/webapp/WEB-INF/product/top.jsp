@@ -20,8 +20,10 @@
     $(document).ready(function(){
 		$('.bottom_product').on({
 			click : function(){
-				let thisIndex = $(this).index();
+				let thisIndex = $(this).index()-1;
+				console.log(thisIndex)
 			    let items_pnum = $('input[name="pnum"]').eq(thisIndex).val();
+			    console.log(items_pnum)
 				location.href="top2.prd?pnum="+items_pnum;
 			}
 		});
@@ -34,6 +36,9 @@
 		<%@ include file="../header.jsp"%>
 		<div class="area2">
 			<p class="product_title">TOP</p>
+			
+
+			<div class="product_items">
 			<div id="filter">
 				<span class="product_list_btn_hover"> 필터&nbsp; </span>
 				<ul id="product_list_btn">
@@ -43,11 +48,11 @@
 					<li><a href="#">높은가격</a></li>
 				</ul>
 			</div>
-
-			<div class="product_items">
 			<c:if test="${empty lists}">
 				<style>
 					#filter{display:none;}
+					.empty p { margin-top: 50%;font-family: 'Nanum Gothic Coding', monospace;}
+					.empty{height:300px;margin: 0 auto}
 				</style>
 				<div class="empty">
 					<p>상품이 없습니다.</p>

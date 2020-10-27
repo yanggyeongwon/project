@@ -16,12 +16,29 @@
 <script src="<c:url value="/resources/js/jquery-3.5.1.min.js" />"></script>
 <script src="<c:url value="/resources/js/script.js" />"></script>
 <title>Document</title>
+<script>
+    $(document).ready(function(){
+		$('.bottom_product').on({
+			click : function(){
+				let thisIndex = $(this).index()-1;
+				console.log(thisIndex)
+			    let items_pnum = $('input[name="pnum"]').eq(thisIndex).val();
+			    console.log(items_pnum)
+				location.href="top2.prd?pnum="+items_pnum;
+			}
+		});
+    })
+	
+    </script>
 </head>
 <body>
 	<section>
 		<%@ include file="../header.jsp"%>
 		<div class="area2">
 			<p class="product_title">PANTS</p>
+			
+
+			<div class="product_items">
 			<div id="filter">
 				<span class="product_list_btn_hover"> 필터&nbsp; </span>
 				<ul id="product_list_btn">
@@ -31,20 +48,25 @@
 					<li><a href="#">높은가격</a></li>
 				</ul>
 			</div>
-
-			<div class="product_items">
-				<%
-					for (int i = 0; i <= 11; i++) {
-				%>
-				<div class="bottom_product">
-					<img src="<c:url value="/resources/images/best.jpg" />" alt="no">
-					<p id="dest_category">PANTS</p>
-					<p>무지 벨벳 반팔티</p>
-					<p>₩21,000</p>
+			<c:if test="${empty lists}">
+				<style>
+					#filter{display:none;}
+					.empty p { margin-top: 50%;font-family: 'Nanum Gothic Coding', monospace;}
+					.empty{height:300px;margin: 0 auto}
+				</style>
+				<div class="empty">
+					<p>상품이 없습니다.</p>
 				</div>
-				<%
-					}
-				%>
+			</c:if>
+				<c:forEach var="items" items="${lists }">
+					<div class="bottom_product">
+					<input type="hidden" name="pnum" value=${items.pnum }>
+						<p class="imgoveflow"><img src="<c:url value="/resources/${items.pimage }"/>" alt="no"><p>
+						<p>PANTS</p>
+						<p>${items.pname }</p>
+						<p>₩ ${items.pprice }</p>
+					</div>
+				</c:forEach>
 			</div>
 		</div>
 	</section>

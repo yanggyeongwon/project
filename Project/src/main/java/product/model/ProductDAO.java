@@ -71,6 +71,41 @@ public class ProductDAO {
 		return lists;
 	}
 
+	public List<Product> selectBest() {
+		// TODO Auto-generated method stub
+		List<Product> lists = new ArrayList<Product>();
+		lists = sqlSessionTemplate.selectList(namespace+".selectBest");
+		return lists;
+	}
+
+	public List<Product> selectPants() {
+		// TODO Auto-generated method stub
+		List<Product> lists = new ArrayList<Product>();
+		lists = sqlSessionTemplate.selectList(namespace+".selectPants");
+		return lists;
+	}
+
+	public List<Product> selectOuter() {
+		// TODO Auto-generated method stub
+		List<Product> lists = new ArrayList<Product>();
+		lists = sqlSessionTemplate.selectList(namespace+".selectOuter");
+		return lists;
+	}
+
+	public List<Product> selectShose() {
+		// TODO Auto-generated method stub
+		List<Product> lists = new ArrayList<Product>();
+		lists = sqlSessionTemplate.selectList(namespace+".selectShose");
+		return lists;
+	}
+
+	public List<Product> selectAcc() {
+		// TODO Auto-generated method stub
+		List<Product> lists = new ArrayList<Product>();
+		lists = sqlSessionTemplate.selectList(namespace+".selectAcc");
+		return lists;
+	}
+
 
 
 }

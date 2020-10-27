@@ -65,4 +65,16 @@
 	<select id="selectTop" resultType="MyProduct">
 		select * from product where pbest = 2 order by pnum desc
 	</select>
+	<select id="selectPants" resultType="MyProduct">
+		select * from product where pbest = 3 order by pnum desc
+	</select>
+	<select id="selectOuter" resultType="MyProduct">
+		select * from product where pbest = 4 order by pnum desc
+	</select>
+	<select id="selectShose" resultType="MyProduct">
+		select * from product where pbest = 5 order by pnum desc
+	</select>
+	<select id="selectAcc" resultType="MyProduct">
+		select * from product where pbest = 6 order by pnum desc
+	</select>
 </mapper>

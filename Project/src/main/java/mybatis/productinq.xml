@@ -3,4 +3,10 @@
 	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="productinq.model.Productinq">
 
+	<insert id="inqInsert">
+		insert into productinq values(piseq.nextval, #{pienquiry},#{piwriter},sysdate)
+	</insert>
+	<select id="select" resultType="MyProductinq">
+		select * from productinq where pinum = #{pinum}
+	</select>
 </mapper>

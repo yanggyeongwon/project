@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="<c:url value="/resources/css/common.css" />">
     <link rel="stylesheet" href="<c:url value="/resources/css/main_style.css" />">
+    <link rel="stylesheet" href="<c:url value="/resources/css/best.css" />">
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200&display=swap" rel="stylesheet">
@@ -19,7 +20,6 @@
     	
     	
 		$('.bottom_product').on({
-			
 			click : function(){
 				let thisIndex = $(this).index();
 			    let items_pnum = $('input[name="pnum"]').eq(thisIndex).val();
@@ -73,7 +73,25 @@
             <div class="area2">
                 <p class="product_title">BEST</p>
                 <div class="product_items">
-                
+	                <div id="filter">
+						<span class="product_list_btn_hover"> 필터&nbsp; </span>
+						<ul id="product_list_btn">
+							<li><a href="#">신상품</a></li>
+							<li><a href="#">인기상품</a></li>
+							<li><a href="#">낮은가격</a></li>
+							<li><a href="#">높은가격</a></li>
+						</ul>
+					</div>
+                	<c:if test="${empty lists}">
+	                	<style>
+							#filter{display:none;}
+							.empty p { margin-top: 50%;font-family: 'Nanum Gothic Coding', monospace;}
+							.empty{height:300px;margin: 0 auto}
+						</style>
+                		<div class="empty">
+							<p>상품이 없습니다.</p>
+						</div>
+                	</c:if>
 	                <c:forEach var="items" items="${lists }" >
 	               
 	                	<div class="bottom_product">
