@@ -15,6 +15,7 @@ import org.springframework.web.servlet.ModelAndView;
 import board.model.BoardBean;
 import board.model.BoardDao;
 import productinq.model.Productinq;
+import productinq.model.ProductinqDAO;
 import utility.Paging;
 
 @Controller
@@ -25,7 +26,7 @@ public class BoardListController {
 	
 	@Autowired
 	BoardDao boardDao;
-	
+
 	
 	@RequestMapping(command)
 	public ModelAndView doAction(HttpServletRequest request,
@@ -53,4 +54,6 @@ public class BoardListController {
 		 mav.setViewName(getPage);
 		return mav;
 	} 
+
+	
 }

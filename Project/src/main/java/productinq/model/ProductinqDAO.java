@@ -1,5 +1,7 @@
 package productinq.model;
 
+import java.util.List;
+
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -18,10 +20,11 @@ public class ProductinqDAO {
 		
 	}
 
-	public Productinq select(int pinum) {
+	public List<Productinq> inqselect(int pinum) {
 		// TODO Auto-generated method stub
-		Productinq productinqs = sqlSessionTemplate.selectOne(namespace+".select", pinum);
-		return productinqs;
+		List<Productinq> lists = sqlSessionTemplate.selectList(namespace+".inqselect", pinum);
+		System.out.println("lists 여기는 다오다"+ lists);
+		return lists;
 		
 	}
 }

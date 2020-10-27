@@ -56,5 +56,6 @@ public class BoardDao {
 	    sqlSessionTemplate.update(namespace+".readcountboard", num);
 	    
 	}
+
      
 }

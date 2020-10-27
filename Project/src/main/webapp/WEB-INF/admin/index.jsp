@@ -10,18 +10,17 @@
     <link rel="stylesheet" href="<c:url value="/resources/css/main_style.css" />">
     <link rel="stylesheet" href="<c:url value="/resources/css/best.css" />">
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap"	rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200&display=swap"	rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap"rel="stylesheet">
     <script src="<c:url value="/resources/js/jquery-3.5.1.min.js" />"></script>
     <script src="<c:url value="/resources/js/script.js" />"></script>
     <title>메인입니다</title>
     <script>
     $(document).ready(function(){
-    	
-    	
 		$('.bottom_product').on({
 			click : function(){
-				let thisIndex = $(this).index();
+				let thisIndex = $(this).index()-1;
 			    let items_pnum = $('input[name="pnum"]').eq(thisIndex).val();
 				location.href="product.prd?pnum="+items_pnum;
 			}

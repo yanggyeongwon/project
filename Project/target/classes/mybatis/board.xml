@@ -21,7 +21,7 @@
 			where writer like #{keyword}
 		</if>
 	</select>
-	
+
 	<select id="GetBoardList" resultType="MyBoard">
 		select * from board 
   			<if test="whatColumn=='subject'">

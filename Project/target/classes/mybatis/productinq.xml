@@ -6,7 +6,7 @@
 	<insert id="inqInsert">
 		insert into productinq values(piseq.nextval, #{pienquiry},#{piwriter},sysdate)
 	</insert>
-	<select id="select" resultType="MyProductinq">
+	<select id="inqselect" resultType="MyProductinq">
 		select * from productinq where pinum = #{pinum}
 	</select>
 </mapper>

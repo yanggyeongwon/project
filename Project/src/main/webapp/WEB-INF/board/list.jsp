@@ -16,10 +16,29 @@
 
 			$(document).on('click','.aclass', function(){
 				let idx = $('.aclass').index(this);
-				console.log('idx안: '+idx);
+				$('.review_box').hide();
 				$('.review_box').eq(idx).toggle();	
 				
-/* 				let pinum = $('#number').text(); */
+				$.ajax({
+					type:"GET",
+					url:"insert2.pro",
+					dataType:"json",
+					data:{
+						pinum : $('.flexul2 #number').eq(idx).text()
+					},
+					error:function(error){
+						console.log("에러")
+					},
+					success : function(data) {
+						console.log(data)
+						console.log("idx: "+idx)
+						$('#p_pienquiry').text(data[0].pienquiry)
+						$('#s_piwriter').text(data[0].piwriter)
+						$('#s_pidate').text(data[0].pidate)
+
+					}
+				}) 
+				
 			    const piwriter = "관리자";
 			    
 				$('input[type="submit"]').on('click', function(){
@@ -87,9 +106,9 @@
 		    		<td>${bd.ip }</td> --%>
 		    	</ul>
 		    	<div class="review_box">
-		    		<p></p>
-		    		<span></span>
-		    		<span></span>
+		    		<p id="p_pienquiry"></p>
+		    		<span id="s_piwriter"></span>
+		    		<span id="s_pidate"></span>
 			    	<ul class="tdclass">
 			    		<li><textarea rows="5" cols="60" placeholder="내용을 입력하세요"></textarea></li>
 			    		<li style="padding-top: 30px"><input type="submit" value="등록하기"></li>
