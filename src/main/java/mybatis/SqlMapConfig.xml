@@ -13,6 +13,7 @@
 		<typeAlias type="product.model.Product" alias="MyProduct"/>
 		<typeAlias type="productinq.model.Productinq" alias="MyProductinq"/>
 		<typeAlias type="board.model.BoardBean" alias="MyBoard" />
+		
 	</typeAliases>
 	<mappers>
 		<mapper resource="mybatis/member.xml"/>

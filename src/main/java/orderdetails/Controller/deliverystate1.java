@@ -42,7 +42,6 @@ public class deliverystate1 {
 		
 		List<Orderdetails> lists = dao.getSelectdelivery(pageInfo,map);
 	
-		System.out.println("onumssssss:"+request.getParameter("onums"));
 		ModelAndView mav = new ModelAndView();
 		mav.addObject("lists",lists);
 		mav.addObject("pageInfo", pageInfo);

@@ -98,7 +98,6 @@
 		<servlet-name>orderdetails</servlet-name>
 		<url-pattern>*.ord</url-pattern>
 	</servlet-mapping>
-	
 
 	<!-- 상품 -->
 	<servlet>

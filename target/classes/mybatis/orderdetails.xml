@@ -6,6 +6,14 @@
 	
 	</parameterMap>
 
+	<select id="getSelectOrder" resultType="MyOrderdetails">
+		select * from orderdetails
+	</select>
+	
+	<select id="getData" resultType="MyOrderdetails">
+		select * from orderdetails where onum = #{onum}
+	</select>
+	
 	<select id="getTotalCount" parameterType="map"  resultType="int">
 		select count(*) 
 		from orderdetails

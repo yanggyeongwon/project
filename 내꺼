@@ -25,23 +25,28 @@ start with 1
 nocycle;
 drop table orderdetails;
 create table orderdetails(
-  onum number primary key,
-  opname varchar2(30) not null, --주문자 닉네임
-  oorder varchar2(20) not null,--주문자 이름
-  opreceive varchar2(20) not null,--수령자
-  oprice number not null,
-  opcharge number not null,
-  opdate date default sysdate,
-  oinvoice varchar2(20) not null,
-  state number
+  onum number primary key, --주문번호
+  opname varchar2(30), --주문상품이름
+  opprice number, -- 주문상품금액
+  opcount number, -- 주문상품수량
+  oppoint number, -- 주문상품포인트
+  opcharge number, -- 주문상품배송비
+  opop varchar2(20), -- 주문상품배송정보
+  oid varchar2(30), --주문자 ID
+  oname varchar2(20),--주문자 이름
+  oprename varchar2(20), --수령자 이름
+  opdate date default sysdate, --주문일자
+  oinvoice varchar2(30) , --송장번호
+  state number -- 배송상태
 );
 
 
-insert into orderdetails values(odseq.nextval, '닉네임', '주문자', '수령자', 30000, 2500 ,sysdate, '송장번호',1);
-insert into orderdetails values(odseq.nextval, '닉네임', '주문자', '수령자', 30000, 2500 ,'2020-10-15', '송장번호',1);
+insert into orderdetails (onum,opname,opprice,opcount,oppoint,opcharge,opop,oid,opdate,oinvoice,state)
+values(odseq.nextval, '청바지', 30000, 1, 300, 2500 , '택배' , 'kim' , sysdate,'2000',1);
 
 select * from orderdetails;
 commit;
+
 
 //상품테이블
 drop sequence pseq;

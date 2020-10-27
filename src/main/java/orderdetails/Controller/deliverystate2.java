@@ -39,7 +39,6 @@ public class deliverystate2 {
 		
 		ModelAndView mav = new ModelAndView();
 		
-		System.out.println("dto.getOnums(): "+dto.getOnums());
 		Map<String,Object> map = new HashMap<String,Object>();
 		map.put("state", 2);
 		

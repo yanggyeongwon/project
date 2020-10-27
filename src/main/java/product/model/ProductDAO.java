@@ -44,4 +44,40 @@ public class ProductDAO {
 		// TODO Auto-generated method stub
 		sqlSessionTemplate.update(namespace+".updateProduct", product);
 	}
+	public List<Product> getSelectBest(Paging paging, Map<String, String> map) {
+		List<Product> lists = new ArrayList<Product>();
+		RowBounds rowBounds = new RowBounds(paging.getOffset(),paging.getLimit());
+		lists = sqlSessionTemplate.selectList(namespace + ".getSelectBest",map,rowBounds);
+		return lists;
+	}
+	public List<Product> getSelectTop(Paging paging, Map<String, String> map) {
+		List<Product> lists = new ArrayList<Product>();
+		RowBounds rowBounds = new RowBounds(paging.getOffset(),paging.getLimit());
+		lists = sqlSessionTemplate.selectList(namespace + ".getSelectTop",map,rowBounds);
+		return lists;
+	}
+	public List<Product> getSelectPants(Paging paging, Map<String, String> map) {
+		List<Product> lists = new ArrayList<Product>();
+		RowBounds rowBounds = new RowBounds(paging.getOffset(),paging.getLimit());
+		lists = sqlSessionTemplate.selectList(namespace + ".getSelectPants",map,rowBounds);
+		return lists;
+	}
+	public List<Product> getSelectOuter(Paging paging, Map<String, String> map) {
+		List<Product> lists = new ArrayList<Product>();
+		RowBounds rowBounds = new RowBounds(paging.getOffset(),paging.getLimit());
+		lists = sqlSessionTemplate.selectList(namespace + ".getSelectOuter",map,rowBounds);
+		return lists;
+	}
+	public List<Product> getSelectShoes(Paging paging, Map<String, String> map) {
+		List<Product> lists = new ArrayList<Product>();
+		RowBounds rowBounds = new RowBounds(paging.getOffset(),paging.getLimit());
+		lists = sqlSessionTemplate.selectList(namespace + ".getSelectShoes",map,rowBounds);
+		return lists;
+	}
+	public List<Product> getSelectAcc(Paging paging, Map<String, String> map) {
+		List<Product> lists = new ArrayList<Product>();
+		RowBounds rowBounds = new RowBounds(paging.getOffset(),paging.getLimit());
+		lists = sqlSessionTemplate.selectList(namespace + ".getSelectAcc",map,rowBounds);
+		return lists;
+	}
 }

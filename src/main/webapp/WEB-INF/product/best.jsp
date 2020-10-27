@@ -33,18 +33,14 @@
 			</div>
 
 			<div class="product_items">
-				<%
-					for (int i = 0; i <= 11; i++) {
-				%>
+				<c:forEach items="${lists }" var="best">
 				<div class="bottom_product">
-					<img src="<c:url value="/resources/images/best.jpg" />" alt="no">
+					<img src="<%=request.getContextPath() %>/resources/${best.pimage }">
 					<p id="dest_category">BEST</p>
-					<p>무지 벨벳 반팔티</p>
-					<p>₩21,000</p>
+					<p>${best.pname }</p>
+					<p>${best.pprice }</p>
 				</div>
-				<%
-					}
-				%>
+				</c:forEach>
 			</div>
 		</div>
 	</section>

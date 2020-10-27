@@ -97,10 +97,10 @@
                             <tr id="list_box_bottom">
                             	<td><input type="checkbox" class="ab" name="chk" value="${orderdetails.onum }"></td>
                                 <td><p>${orderdetails.onum }</p></td>
-                                <td><p>${orderdetails.opname }</p></td>
-                                <td><p>${orderdetails.oorder }</p></td>
-                                <td><p>${orderdetails.opreceive }</p></td>
-                                <td><p>${orderdetails.oprice }</p></td>
+                                <td><p>${orderdetails.oid }</p></td>
+                                <td><p>${orderdetails.oname }</p></td>
+                                <td><p>${orderdetails.oprename }</p></td>
+                                <td><p>${orderdetails.opprice }</p></td>
                                 <td><p>${orderdetails.opcharge }</p></td>
                                 <td><p>${orderdetails.opdate }</p></td>
                             </tr>

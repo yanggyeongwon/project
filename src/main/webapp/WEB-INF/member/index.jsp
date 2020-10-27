@@ -3,6 +3,17 @@
     <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="ko">
+  <script>
+    $(document).ready(function(){
+		$('.bottom_product').on({
+			click : function(){
+				let thisIndex = $(this).index();
+			    let items_pnum = $('input[name="pnum"]').eq(thisIndex).val();
+				location.href="product.prd?pnum="+items_pnum;
+			}
+		});
+    })
+    </script>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
