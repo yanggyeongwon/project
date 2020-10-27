@@ -12,7 +12,7 @@ import member.model.MemberDao;
 @Controller
 public class MemberDeleteController {
 	final String command = "/delete.me";
-	final String gotoPage = "redirect:/index.jsp";
+	final String gotoPage = "index";
 	
 	@Autowired
 	MemberDao memberDao;

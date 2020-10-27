@@ -1,4 +1,5 @@
 eclipse.preferences.version=1
+encoding//src/main/java/member/controller/MemberCheckController.java=UTF-8
 encoding//src/main/java/member/controller/MemberFindIdController.java=UTF-8
 encoding//src/main/java/member/controller/MemberLoginController.java=UTF-8
 encoding/table.txt=UTF-8

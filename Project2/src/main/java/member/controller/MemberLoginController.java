@@ -36,8 +36,14 @@ public class MemberLoginController {
 							HttpServletResponse response,
 							HttpSession session) throws IOException{
 		
+
+		System.out.println(getClass() + " POST"); 
 		
-		Member dbMember = memberDao.getData(member.getMnum()); 
+		System.out.println(" num:"+member.getMnum());
+		System.out.println(" id:"+member.getMid());
+		System.out.println(" password:" + member.getMpw());
+		
+		Member dbMember = memberDao.getData(member.getMid()); 
 		
 		PrintWriter pw = response.getWriter();
 		
@@ -60,7 +66,11 @@ public class MemberLoginController {
 				return new ModelAndView(gotoPage); 
 			}
 			else {
-				
+				pw.println("<script type='text/javascript'>");
+				pw.println("alert('비밀번호가 일치하지 않습니다.');");
+				pw.println("</script>");
+				pw.flush();
+
 				return new ModelAndView(getPage);
 			}
 		}

@@ -31,17 +31,13 @@ public class MemberUpdateController {
 	ServletContext servletContext;
 	
 	@RequestMapping(value=command , method=RequestMethod.GET)
-	public String doAction(@RequestParam(value="mnum",required=true) int mnum,
+	public String doAction(@RequestParam(value="mid",required=true) String mid,
 							Model model, HttpSession session) {
 		
 		System.out.println(session.getAttribute("loginInfo"));
 		
-		if(session.getAttribute("loginInfo") == null) {
-			session.setAttribute("destination", "redirect:/update.me?num="+mnum);
-			return "redirect:/login.me";
-		}
 		
-		Member member = memberDao.getData(mnum);
+		Member member = memberDao.getData(mid);
 		model.addAttribute("member", member);
 		
 		return getPage;

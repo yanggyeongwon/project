@@ -4,29 +4,25 @@
 
 <mapper namespace="member.model.Member">
 	<insert id="InsertData">
-		insert into member(mnum,mname,mid,mpw,memail,maddr) 
-		values(mseq.nextval,#{mname},#{mid},#{mpw},#{memail},#{maddr})
+		insert into member(mnum,mname,mid,mpw,mpw2,memail) 
+		values(mseq.nextval,#{mname},#{mid},#{mpw},#{mpw2},#{memail})
 	</insert>
 	<select id="GetData" resultType="MyMember">
 		select * from member
-		where mnum=#{mnum}
+		where mid=#{mid}
 	</select>
-	
-	
-</mapper>
 
-	<!-- <update id="UpdateData">
-		update member set
-		mpw=#{mpw} , maddr=#{maddr} 
+	<update id="UpdateData">
+		update member set 
+		mname=#{mname},mid=#{mid}, mpw=#{mpw} , mpw2=#{mpw2}, memail=#{memail}
 		where mnum=#{mnum}
-	</update> -->
-<!-- 회원탈퇴
-<delete id="Withdraw">
+	</update>
+<delete id="DeleteData">
 	delete from member
-	where mid = #{mid}
-	  and mpw=#{mpw}
-</delete> -->
+	where mnum = #{mnum}
+</delete> 
 
+</mapper>
 
 
 

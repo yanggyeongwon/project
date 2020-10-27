@@ -13,6 +13,35 @@
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+    $(function(){
+        $("#alert-success").hide();
+        $("#alert-danger").hide();
+        $("input").keyup(function(){
+            var pwd1=$("#mpw").val();
+            var pwd2=$("#mpw2").val();
+            if(pwd1 != "" || pwd2 != ""){
+                if(pwd1 == pwd2){
+                    $("#alert-success").show();
+                    $("#alert-danger").hide();
+                    $("#submit").removeAttr("disabled");
+                }else{
+                    $("#alert-success").hide();
+                    $("#alert-danger").show();
+                    $("#submit").attr("disabled", "disabled");
+                }    
+            }
+        });
+    });
+
+</script>
+<script type="text/javascript">
+
+function idcheck(){
+	location.href("idcheck.me")
+}
+</script>​
 <style>
 body {
 	color: #999;
@@ -107,40 +136,44 @@ body {
       	<div class="form-group row">
 			<label class="col-form-label col-4">Username</label>
 			<div class="col-8">
-                <input type="text" class="form-control" name="mname">
+                <input type="text" class="form-control" name="mname" value="${member.mname }">
             	<form:errors cssClass="err" path="mname" />
             </div>        	
         </div>	
         <div class="form-group row">
 			<label class="col-form-label col-4">ID</label>
 			<div class="col-5">
-                <input type="text" style="width:190px;" class="form-control" name="mid">
+                <input type="text" style="width:190px;" class="form-control" id="mid" name="mid" value="${member.mid }">
                 <form:errors cssClass="err" path="mid" />
             </div>        	
 			<div class="col-3">
-                <button id="duplicate_check" style="height:30px; font:굴림; font-size:9pt;" class="btn btn-secondary" type="button" onclick="check();">중복체크</button>
+            <input onClick="idcheck()" style="height:30px; font:굴림; font-size:9pt;" class="btn btn-secondary" type="button" value="중복체크"><br>
+								<span id="id_span"></span>
+								<span id="id_span_fail"></span>
             </div>        	
         </div>
 		<div class="form-group row">
 			<label class="col-form-label col-4">Password</label>
 			<div class="col-8">
-                <input type="password" class="form-control" name="mpw">
+                <input type="password" class="form-control" name="mpw" id="mpw" value="${member.mpw }">
                 <form:errors cssClass="err" path="mpw" />
             </div>        	
         </div>
 		<div class="form-group row">
 			<label class="col-form-label col-4">Confirm Password</label>
 			<div class="col-8">
-                <input type="password" class="form-control" name="confirm_password">
+                <input type="password" class="form-control" name="mpw2" id="mpw2">
+            <div class="alert alert-success" id="alert-success">비밀번호가 일치합니다.</div>
+            <div class="alert alert-danger" id="alert-danger">비밀번호가 일치하지 않습니다.</div>
             </div>        	
+
         </div>
         <div class="form-group row">
 			<label class="col-form-label col-4">Email Address</label>
 			<div class="col-8">
-                <input type="email" class="form-control" name="memail">
+                <input type="email" class="form-control" name="memail" value="${member.memail }">
                 <form:errors cssClass="err" path="memail" />
                 
-                <input type="hidden" class="form-control" name="maddr">
             </div>        	
         </div>
 		<div class="form-group row">
@@ -153,32 +186,4 @@ body {
 	<div class="text-center">Already have an account? <a href="login.me">Login here</a></div>
 </div>
 </body>
-<script>
-function check(){
-	id = $("#user_id").val();
-	
-	$.ajax({
-	    url: 'ID_Check',
-	    type: 'POST',
-	    dataType: 'text', //서버로부터 내가 받는 데이터의 타입
-	    contentType : 'text/plain; charset=utf-8;',//내가 서버로 보내는 데이터의 타입
-	    data: id ,
-
-	    success: function(data){
-	         if(data == 0){
-	         console.log("아이디 없음");
-	         alert("사용하실 수 있는 아이디입니다.");
-	         }else{
-	         	console.log("아이디 있음");
-	         	alert("중복된 아이디가 존재합니다.");
-	         }
-	    },
-	    error: function (){        
-	                      
-	    }
-	  });
-
-
-}
-</script>
 </html>

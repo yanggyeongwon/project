@@ -1,5 +1,11 @@
 package member.controller;
 
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,11 +26,14 @@ public class MemberRegisterController {
 	@Autowired
 	member.model.MemberDao memberDao;
 	
+	
+	
 	@RequestMapping(value=command, method=RequestMethod.GET)
 	public String doAction() {
 		
 		return getPage;
 	}
+	
 	
 	@RequestMapping(value=command, method=RequestMethod.POST) 
 	public ModelAndView doAction(@Valid Member member,

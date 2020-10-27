@@ -10,15 +10,16 @@ nocycle;
 drop table member;
 
 create table member(
-  mnum number primary key,
+  mnum number not null,
   mname varchar2(20) not null,
   mid varchar2(20) not null,
   mpw varchar2(30) not null,
+  mpw2 varchar2(30) not null,
   memail varchar2(30) not null,
-  maddr varchar2(50)
+  PRIMARY KEY(mnum,mid,memail )
 );
 
-insert into member values(mseq.nextval,'경원','ruddnjs25',1234,'ruddnjs25@naver.com','서울시 마포구');
+insert into member values(mseq.nextval,'경원','ruddnjs25','1234','1234','ruddnjs25@naver.com');
 
 col mname for a9
 col mid for a8

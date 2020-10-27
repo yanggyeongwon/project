@@ -16,22 +16,22 @@ public class MemberDao {
 	public void insertData(Member member){
 		sqlSessionTemplate.insert(namespace+".InsertData",member);
 	}
-	public Member getData(int mnum){
+	public Member getData(String mid){
 		Member member = null;
-		member = sqlSessionTemplate.selectOne(namespace+".GetData",mnum);
+		member = sqlSessionTemplate.selectOne(namespace+".GetData",mid);
 		return member;
 	}
 	
-	/*
+	
 	public int updateData(Member member){
 		int cnt = sqlSessionTemplate.update(namespace + ".UpdateData",member);
 		return cnt;
 	}
+	 
 	//È¸¿øÅ»Åð
 	 public void deleteData(int mnum) {
-		 sqlSessionTemplate.delete(namespace+".Withdraw",mnum);
+		 sqlSessionTemplate.delete(namespace+".DeleteData",mnum);
 	 }
-	*/
 }
 
   
