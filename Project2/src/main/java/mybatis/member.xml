@@ -21,7 +21,7 @@
 	delete from member
 	where mnum = #{mnum}
 </delete> 
-
+ 
 </mapper>
 
 
