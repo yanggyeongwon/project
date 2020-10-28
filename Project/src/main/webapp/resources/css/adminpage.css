@@ -9,6 +9,7 @@ header p{position: absolute; bottom: 0;left: 25%;font-family: 'Inconsolata', mon
 #admin_page{width: 100%;height: 935px;}
 p{font-family: 'Nanum Myeongjo', serif}
 .left_side li, .left_side_logo li{font-family: 'Nanum Myeongjo', serif;font-weight: 300;padding: 20px;margin: 5px 0;text-align: center;font-size: 1.1rem;}
+.left_side_logo img{width:100%}
 .left_side li:hover  {animation: li_hover 1s forwards;color: #000;}
 .left_side li:hover a{color: #000;font-weight: bold;}
 @keyframes li_hover{

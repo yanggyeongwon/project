@@ -107,7 +107,7 @@
 		</servlet-class>
 		<init-param>
 			<param-name>contextConfigLocation</param-name>
-			<param-value>/WEB-INF/spring/appServlet/prodcutinq-servlet.xml
+			<param-value>/WEB-INF/spring/appServlet/productinq-servlet.xml
 			</param-value>
 		</init-param>
 	</servlet>
@@ -153,4 +153,22 @@
 		<url-pattern>*.ad</url-pattern>
 	</servlet-mapping>
 	
+<<<<<<< HEAD
+=======
+	<!-- 게시판 -->
+	<servlet>
+		<servlet-name>board</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>/WEB-INF/spring/appServlet/board-servlet.xml</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>board</servlet-name>
+		<url-pattern>*.bd</url-pattern>
+	</servlet-mapping>
+	
+>>>>>>> yyanggang
 </web-app>

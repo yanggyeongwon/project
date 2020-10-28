@@ -13,7 +13,10 @@
     <link rel="stylesheet" href="<c:url value="/resources/css/common.css" />">
     <link rel="stylesheet" href="<c:url value="/resources/css/main_style.css" />">
     <link rel="stylesheet" href="<c:url value="/resources/css/best.css"/>">
+<<<<<<< HEAD
     <link rel="stylesheet" href="<c:url value="/resources/css/adminpage.css"/>">
+=======
+>>>>>>> yyanggang
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200&display=swap" rel="stylesheet">
@@ -58,7 +61,11 @@
         </div>
         <div id="QA_border">
             <div class="more_btn">
+<<<<<<< HEAD
                 <a href="#">MORE</a>
+=======
+                <a href="list.bd">MORE</a>
+>>>>>>> yyanggang
             </div>
             <div class="order" id="QA_bar">
                 <p>Q &amp;  A 상품문의</p>
@@ -94,9 +101,15 @@
                     <li><img src="<c:url value="/resources/images/shipping3.PNG"/>" alt="no"><p>배송완료</p></li>
                 </ul>
                 <ul id="shipping_list_num">
+<<<<<<< HEAD
                     <li>22</li>
                     <li>24</li>
                     <li>66</li>
+=======
+                    <li>${cnt }</li>
+                    <li>${cnt2 }</li>
+                    <li>${cnt3 }</li>
+>>>>>>> yyanggang
                 </ul>
 
             </div>

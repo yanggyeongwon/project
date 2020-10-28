@@ -117,7 +117,11 @@
 
 #text_box{
     border : 1px solid #000;
+<<<<<<< HEAD
     height : 450px;
+=======
+	padding : 25px 5px;
+>>>>>>> yyanggang
     width : 90%;
     float: left;
     position: relative;
@@ -136,7 +140,15 @@
 #p_btn_margin{
     margin-left : 25px;
 }
+<<<<<<< HEAD
 
+=======
+.cate{
+	padding: 5px 100px;
+	font-family: 'Raleway', sans-serif;
+	font-size:0.7em;
+}
+>>>>>>> yyanggang
 
 .color_black{width:20px; height: 20px; background-color:#000; border-radius:500px; display:inline-block;margin-left:11px ;border: solid 2px #e4e4e4;}
 .color_white{width:20px; height: 20px; background-color:#e4e4e4; border-radius:500px; display:inline-block;border: solid 2px #e4e4e4;margin-left:11px ;}

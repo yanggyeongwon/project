@@ -15,7 +15,7 @@ small, strike, strong, sub, sup, tt, var,
 b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
+/* table, */ caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed, 
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
@@ -53,11 +53,11 @@ q:before, q:after {
     content: none;
 }
 
-table {
+/* table {
     border-collapse: collapse;
     border-spacing: 0;
 
-}
+} */
 a{
     color:#fff;
     text-decoration: none;

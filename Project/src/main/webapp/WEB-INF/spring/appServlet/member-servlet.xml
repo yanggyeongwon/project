@@ -14,11 +14,15 @@
 	<mvc:annotation-driven/>	
 	
 	<context:component-scan base-package="member"/>	
+<<<<<<< HEAD
 	<context:component-scan base-package="notice"/>	
 	<context:component-scan base-package="orderdetails"/>	
 	<context:component-scan base-package="productinq"/>	
 	<context:component-scan base-package="product"/>	
 	<context:component-scan base-package="admin"/>	
+=======
+
+>>>>>>> yyanggang
 	
 	
 	<bean id="internalResourceViewResolver"

@@ -17,32 +17,36 @@ button {background: 0;border: 0;padding: 0;cursor: pointer}
   border-radius:5px;
   background:#fff
 }
+.imgoveflow{position:relative; overflow:hidden;height: 640px;}
 .totop_arrow1:before{left:21px;transform:translateY(-50%) rotate(45deg)}
 .totop_arrow1:after{right:21px;transform:translateY(-50%) rotate(-45deg)}
 .menu{
   position: fixed;
   text-align: center;
   width: 100%;
-  height: 150px;
   background: linear-gradient(to bottom,#25211e 0,rgba(37,33,30,0) 100%);
   background: -webkit-linear-gradient(top,#25211e 0,rgba(37,33,30,0) 100%);
   transition: all .2s ease-out;z-index: 5;
 }
 .menu_color{background: #25211e;}
 
-#logo    {width: 100%;height: 50px;margin-top: 20px;}
+#logo    {width: 100%;margin: 10px 0;}
+#logo a img{width:20%}
+
+.join       { position: absolute;right: 5%; top: 50px;z-index: 999;}
+.join a{position:relative}
+.join a:hover:before{content:'';position:absolute;bottom:-5px;background-color:#fff; width:100%; height:2px;}
 
 
-.join       { position: absolute;right: 0; top: 50px;z-index: 999;}
 .join span  {margin: 0 10px;color: #fff;font-family: 'Raleway', sans-serif;}
-.join img   {vertical-align: middle;width: 4%;}
+
 #mypage span{font-size: 0.5rem;position: absolute;top: -20px;left: 38%;}
 #basket span{font-size: 0.5rem;position: absolute; top: -20px; left: 34%;}
 
-#ul_id      {width: 100%; margin-top:45px}
-#ul_id li   {width:15%;display: inline-block;cursor: pointer;padding: 10px 0;font-family: 'Raleway', sans-serif;}
-#ul_id li:hover  {animation: a_hover 1s forwards;}
-#ul_id li:hover a{color:#25211e; font-weight:bold}
+#ul_id      {width: 100%; padding: 20px 0;}
+#ul_id li   {width:15%;display: inline-block;cursor: pointer;font-family: 'Raleway', sans-serif;}
+#ul_id a{padding:20px 100px}
+#ul_id li:hover a{color:#25211e; font-weight:bold;animation: a_hover 1s forwards;}
 @keyframes a_hover{
     0%{}
     100%{background-color:aliceblue}
@@ -57,7 +61,7 @@ button {background: 0;border: 0;padding: 0;cursor: pointer}
 
 #main2_image  {width:100%;}
 .area1, .area2{width: 100%;margin-top: 100px;}
-.product_items{width: 100%;display: flex;flex-wrap: wrap;justify-content: center;}
+.product_items{width: 100%;display: flex;flex-wrap: wrap;justify-content: center;position:relative;}
 .product_title{text-align: center;padding: 0;font-family: 'Inconsolata', monospace;font-size: 3rem;position: relative;}
 .product_title:before{
   content: '';
@@ -92,7 +96,6 @@ button {background: 0;border: 0;padding: 0;cursor: pointer}
   overflow:hidden
 }
 .bottom_product{width: 500px;
-  height:700px;
   background-color: aliceblue;
   float:left;
   margin: 20px 50px;
@@ -103,7 +106,8 @@ button {background: 0;border: 0;padding: 0;cursor: pointer}
 
 
 #dest_category{color:#ff0000;font-family: 'Raleway', sans-serif;}
-.images_show p{
+.images_show a{
+  display:block;
   position:absolute;top:0%;
   left:0%;
   font-size:2rem;
@@ -127,6 +131,7 @@ footer li {margin: 0 5px;display: inline;}
 footer b  {font-weight: bold;}
 
 #footer_img {text-align:center;}
+#footer_img img{width:15%}
 #footer_text{width: 100%;height: 100%;margin-top: 50px;}
 
 .text1   {width: 40%;margin-left:80px; float: left;}

@@ -13,7 +13,11 @@ create table member(
   mnum number primary key,
   mname varchar2(20) not null,
   mid varchar2(20) not null,
+<<<<<<< HEAD
   mpw number not null,
+=======
+  mpw varchar2(20) not null,
+>>>>>>> yyanggang
   memail varchar2(30) not null
 );
 
@@ -40,9 +44,16 @@ create table orderdetails(
   opcharge number not null,
   opdate varchar2(20) not null,
   oinvoice varchar2(20) not null
+<<<<<<< HEAD
 );
 
 insert into orderdetails values(odseq.nextval, '닉네임', '주문자', '수령자', 30000, 2500 ,sysdate, '송장번호');
+=======
+  state number
+);
+
+insert into orderdetails values(odseq.nextval, '닉네임', '주문자', '수령자', 30000, 2500 ,sysdate, '송장번호',1);
+>>>>>>> yyanggang
 
 //상품테이블
 
@@ -59,12 +70,28 @@ create table product(
   pbest number not null,
   pname varchar2(20) not null,
   pcolor varchar2(20) not null,
+<<<<<<< HEAD
   psize varchar2(10) not null,
   pprice number not null,
   ppoint number not null
 );
 
 insert into product values(pseq.nextval,1,'호두과자','색깔','사이즈',30000,2500);
+=======
+  psize varchar2(20),
+  pssize varchar2(20),
+  pprice number not null,
+  ppoint number not null,
+  pimage varchar2(30) not null,
+  pimage1 varchar2(30) not null,
+  pimage2 varchar2(30) not null,
+  pimage3 varchar2(30) not null,
+  pcount number not null,
+  pdate date
+);
+
+insert into product values(pseq.nextval,1,'호두과자','색깔','사이즈',30000,2500,'best.jpg','best1.jpg','best2.jpg','best3.jpg', 150,sysdate);
+>>>>>>> yyanggang
 
 
 select * from product;
@@ -105,7 +132,11 @@ create table productinq(
   pinum number primary key,
   pienquiry varchar2(50) not null,
   piwriter varchar2(20) not null,
+<<<<<<< HEAD
   pidate varchar2(20) not null
+=======
+  pidate varchar2(20) default sysdate
+>>>>>>> yyanggang
 );
 
 insert into productinq values(piseq.nextval,'문의내용50자','작성자','날짜');
@@ -113,4 +144,60 @@ insert into productinq values(piseq.nextval,'문의내용50자','작성자','날
 select * from productinq;
 
 
+<<<<<<< HEAD
 
+=======
+//게시판
+
+drop table board;
+create table board(
+	num number not null primary key,
+	writer varchar2(10) not null,
+	email varchar2(10),
+	subject varchar2(20) not null,
+	passwd varchar2(12) not null,
+	reg_date date default sysdate,
+	readcount int default 0,
+	ref number not null,
+	re_step number not null,
+	re_level number not null,
+	content varchar2(20) not null,
+	ip varchar2(15) not null
+);
+drop sequence board_seq;
+create sequence board_seq
+  increment by 1
+  start with 1
+  minvalue 1
+  maxvalue 10000
+  nocache;
+insert into board(num,writer,email,subject,passwd,reg_date,ref,re_step,re_level,content,ip)
+values(board_seq.nextval,'a1','a1','a1','1234',sysdate,1,0,0,'safdas1','127.0.0.1');
+insert into board(num,writer,email,subject,passwd,reg_date,ref,re_step,re_level,content,ip)
+values(board_seq.nextval,'a2','a2','a2','1234','2019-1-1',2,0,0,'sdfasdf2','127.0.0.1');
+insert into board(num,writer,email,subject,passwd,reg_date,ref,re_step,re_level,content,ip)
+values(board_seq.nextval,'a21','a21','a21','1234','2019-1-1',2,4,1,'qwetdsfs21','127.0.0.1');
+insert into board(num,writer,email,subject,passwd,reg_date,ref,re_step,re_level,content,ip)
+values(board_seq.nextval,'a22','a22','a22','1234','2019-1-1',2,1,1,'qewqwr22','127.0.0.1');
+insert into board(num,writer,email,subject,passwd,reg_date,ref,re_step,re_level,content,ip)
+values(board_seq.nextval,'a221','a221','a221','1234','2019-1-1',2,3,2,'sdfa221','127.0.0.1');
+insert into board(num,writer,email,subject,passwd,reg_date,ref,re_step,re_level,content,ip)
+values(board_seq.nextval,'a222','a222','a222','1234','2019-1-1',2,2,2,'sd22d','127.0.0.1');
+insert into board(num,writer,email,subject,passwd,reg_date,ref,re_step,re_level,content,ip)
+values(board_seq.nextval,'a3','a3','a3','1234','2019-1-1',7,0,0,'bbdaer3','127.0.0.1');
+insert into board(num,writer,email,subject,passwd,reg_date,ref,re_step,re_level,content,ip)
+values(board_seq.nextval,'a31','a31','a31','1234','2019-1-1',7,6,1,'asdfasdfas31','127.0.0.1');
+insert into board(num,writer,email,subject,passwd,reg_date,ref,re_step,re_level,content,ip)
+values(board_seq.nextval,'a311','a311','a311','1234','2019-1-1',7,7,2,'dsfsb311','127.0.0.1');
+insert into board(num,writer,email,subject,passwd,reg_date,ref,re_step,re_level,content,ip)
+values(board_seq.nextval,'a32','a32','a32','1234','2019-1-1',7,2,1,'aaasd32','127.0.0.1');
+insert into board(num,writer,email,subject,passwd,reg_date,ref,re_step,re_level,content,ip)
+values(board_seq.nextval,'a321','a321','a321','1234','2019-1-1',7,5,2,'bb321','127.0.0.1');
+insert into board(num,writer,email,subject,passwd,reg_date,ref,re_step,re_level,content,ip)
+values(board_seq.nextval,'a322','a322','a322','1234','2019-1-1',7,3,2,'sfdsadf322','127.0.0.1');
+insert into board(num,writer,email,subject,passwd,reg_date,ref,re_step,re_level,content,ip)
+values(board_seq.nextval,'a3221','a3221','a3221','1234','2019-1-1',7,4,3,'asdfa243','127.0.0.1');
+insert into board(num,writer,email,subject,passwd,reg_date,ref,re_step,re_level,content,ip)
+values(board_seq.nextval,'a33','a33','a33','1234','2019-1-1',7,1,1,'sasdf11','127.0.0.1');
+commit;
+>>>>>>> yyanggang

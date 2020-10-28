@@ -1,4 +1,16 @@
 
+<<<<<<< HEAD
+=======
+#left-side, #right-side{float:left;}
+#left-side li{margin:30px 10px;}
+#right-side{width: 50%;margin-left:10%}
+#right-side input{height:25px}
+.flex-box{display:flex; justify-content:space-around}
+.margin-box25{margin:25px 0 0 0;}
+.margin-box10{margin:10px 0 0 0;}
+.margin-box15{margin:15px 0 0 0;}
+.margin-box20{margin:20px 0 0 0;}
+>>>>>>> yyanggang
 
 .flex_ul{
     display:flex;
@@ -12,7 +24,11 @@
 
 #flex_ck1{
     margin-top: 15px;
+<<<<<<< HEAD
     margin-left: 100px;
+=======
+    margin-left: 120px;
+>>>>>>> yyanggang
     display: flex;
 }
 
@@ -75,7 +91,11 @@
 
 .top_box{
     border : 1px solid #000;
+<<<<<<< HEAD
     height : 500px;
+=======
+    height : 600px;
+>>>>>>> yyanggang
     width : 90%;
     float: left;
     position: relative;
@@ -85,33 +105,52 @@
 }
 
 .input_box{
+<<<<<<< HEAD
     border : 1px solid #000;
     height : 100px;
     width : 90%;
     float: left;
     position: relative;
     margin: 0 auto;
+=======
+    width : 90%;
+    float: left;
+>>>>>>> yyanggang
     margin-left: 5%;
     margin-top: 5%;
 }
 
 #input_img_btn{
+<<<<<<< HEAD
     margin-top: 40px;
     margin-left: 45px;
+=======
+>>>>>>> yyanggang
     position: relative;
 }
 
 #image_view{
+<<<<<<< HEAD
     height : 50%;
     width : 100%;
     margin: 0 auto;
+=======
+    height : 40%;
+    width : 100%;
+    margin: 0 auto;
+    margin-top:10px;
+>>>>>>> yyanggang
     text-align: center;
     position:relative;
     overflow:hidden;
 }
 #text_box{
     border : 1px solid #000;
+<<<<<<< HEAD
     height : 450px;
+=======
+	padding : 25px 5px;
+>>>>>>> yyanggang
     width : 90%;
     float: left;
     position: relative;
@@ -126,15 +165,33 @@
     margin-left: 50px;
     position: relative;
 }
+<<<<<<< HEAD
 
+=======
+#cate{font-family: 'Raleway', sans-serif;font-size:0.7em;}
+>>>>>>> yyanggang
 #p_btn_margin{
     margin-left : 25px;
 }
 #blah{height: 100%; text-align: center;}
+<<<<<<< HEAD
 #image_sun_view{float:left;width: 100%; height: 50px; margin: 0 auto; margin-top: 10px;text-align: center;}
 #thumbnailImgs img{padding:5px ; border:1px solid #2e2e2e}
 
 .ch_red{background-color:red; margin-left:50px}
+=======
+#image_sun_view{
+    width: 80%;
+    height: 50px;
+    margin: 0 auto;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+#image_sun_view img{padding:5px ; border:1px solid #2e2e2e}
+#thumbnailImgs,#thumbnailImgs1,#thumbnailImgs2,#thumbnailImgs3{float:left}
+.ch_red{background-color:red;}
+>>>>>>> yyanggang
 .ch_blu{background-color:blue}
 .ch_yeo{background-color:yellow}
 .ch_gre{background-color:green}
