@@ -14,8 +14,8 @@
 
 	<update id="UpdateData">
 		update member set 
-		mname=#{mname},mid=#{mid}, mpw=#{mpw} , mpw2=#{mpw2}, memail=#{memail}
-		where mnum=#{mnum}
+		 mpw=#{mpw} , memail=#{memail}
+		where mid=#{mid}
 	</update>
 <delete id="DeleteData">
 	delete from member

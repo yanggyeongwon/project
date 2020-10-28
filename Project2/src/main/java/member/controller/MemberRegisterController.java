@@ -1,11 +1,6 @@
 package member.controller;
 
 
-import java.io.IOException;
-import java.io.PrintWriter;
-
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,11 +12,13 @@ import org.springframework.web.servlet.ModelAndView;
 
 import member.model.Member;
 
+
 @Controller
 public class MemberRegisterController {
 	final String command = "register.me";
 	final String getPage = "register";
 	final String gotoPage = "redirect:/login.me"; 
+	
 	
 	@Autowired
 	member.model.MemberDao memberDao;

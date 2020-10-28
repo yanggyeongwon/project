@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@include file="../common.jsp" %>
 <!DOCTYPE html>
 
 <html>
@@ -21,7 +22,7 @@
 <h3>회원정보</h3>
 </div>
 <div>
-<form id="myForm" action="update.me" method="post">
+<form:form commandName="member" id="myForm" action="update.me" method="post" enctype="multipart/form-data">
 <p>
 <label>이름</label>
 <input class="w3-input" type="text" id="name" name="mname" readonly value="${ member.mname }">
@@ -42,7 +43,7 @@
 <p class="w3-center">
 <button type="submit" class="w3-button w3-block w3-black w3-ripple w3-margin-top w3-round">회원정보 변경</button>
 </p>
-</form>
+</form:form>
 </div>
 </div>
 </div>

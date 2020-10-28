@@ -1,6 +1,7 @@
 package member.model;
 
 
+import org.apache.ibatis.session.SqlSession;
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -12,6 +13,10 @@ public class MemberDao {
 	
 	@Autowired
 	SqlSessionTemplate sqlSessionTemplate;
+	
+	@Autowired
+	SqlSession sqlsession;
+
 	
 	public void insertData(Member member){
 		sqlSessionTemplate.insert(namespace+".InsertData",member);
@@ -27,6 +32,7 @@ public class MemberDao {
 		int cnt = sqlSessionTemplate.update(namespace + ".UpdateData",member);
 		return cnt;
 	}
+
 	 
 	//È¸¿øÅ»Åð
 	 public void deleteData(int mnum) {

@@ -33,14 +33,7 @@
                 }    
             }
         });
-    });
-
-</script>
-<script type="text/javascript">
-
-function idcheck(){
-	location.href("idcheck.me")
-}
+    });	
 </script>​
 <style>
 body {
@@ -127,7 +120,7 @@ body {
 </head>
 <body>
 <div class="signup-form">
-	<form:form commandName="member" method="post" class="form-horizontal" action="register.me">
+	<form:form commandName="member" id="rgForm" method="post" class="form-horizontal" action="register.me">
       	<div class="row">
         	<div class="col-8 offset-4">
 				<h2>Sign Up</h2>
@@ -136,21 +129,17 @@ body {
       	<div class="form-group row">
 			<label class="col-form-label col-4">Username</label>
 			<div class="col-8">
+                <input type="hidden" class="form-control" name="mnum" value="${member.mnum }">
                 <input type="text" class="form-control" name="mname" value="${member.mname }">
             	<form:errors cssClass="err" path="mname" />
             </div>        	
         </div>	
         <div class="form-group row">
 			<label class="col-form-label col-4">ID</label>
-			<div class="col-5">
-                <input type="text" style="width:190px;" class="form-control" id="mid" name="mid" value="${member.mid }">
+			<div class="col-8">
+                <input type="text" class="form-control" id="mid" name="mid" value="${member.mid }">
                 <form:errors cssClass="err" path="mid" />
-            </div>        	
-			<div class="col-3">
-            <input onClick="idcheck()" style="height:30px; font:굴림; font-size:9pt;" class="btn btn-secondary" type="button" value="중복체크"><br>
-								<span id="id_span"></span>
-								<span id="id_span_fail"></span>
-            </div>        	
+            </div>	
         </div>
 		<div class="form-group row">
 			<label class="col-form-label col-4">Password</label>
@@ -179,7 +168,7 @@ body {
 		<div class="form-group row">
 			<div class="col-8 offset-4">
 				<p><label class="form-check-label"><input type="checkbox"> I accept the <a href="#">Terms of Use</a> &amp; <a href="#">Privacy Policy</a>.</label></p>
-				<button type="submit" class="btn1 btn-dark btn-lg">Sign Up</button>
+				<input type="submit" class="btn1 btn-dark btn-lg" value="Sign Up">
 			</div>  
 		</div>		      
     </form:form>
