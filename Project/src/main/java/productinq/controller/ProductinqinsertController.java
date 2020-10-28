@@ -26,10 +26,22 @@ public class ProductinqinsertController {
 	
 	
 	@RequestMapping(value=command)
-	public String doAction(Productinq productinq) {
-		System.out.println("인설트 옴");
+	public String doAction(Productinq productinq, HttpServletRequest request) {
+		int pinum = Integer.parseInt(request.getParameter("pinum"));
+		List<Productinq> productinq_list = dao.inqselect(pinum);
 		
-		dao.inqInsert(productinq); 
+		int size = productinq_list.size()+1;
+		
+		for(int i=0; i<size;i++) {
+			if(productinq_list.size() != 0 ) {
+				if(productinq_list.get(i).getPinum() == pinum) {
+					dao.inqUpdate(productinq);
+					break;
+				}
+			}else {
+				dao.inqInsert(productinq); 			
+			}
+		}
 		return getPage;
 	}
 	
@@ -39,6 +51,7 @@ public class ProductinqinsertController {
 		System.out.println("리스트 옴");
 		int pinum = Integer.parseInt(request.getParameter("pinum"));
 		System.out.println("pinum: "+pinum);
+		
 		List<Productinq> productinq = dao.inqselect(pinum); 
 		if(productinq.size() == 0) {
 			System.out.println("야 아냐");

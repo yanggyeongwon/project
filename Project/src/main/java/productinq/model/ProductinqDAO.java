@@ -27,4 +27,10 @@ public class ProductinqDAO {
 		return lists;
 		
 	}
+
+	public void inqUpdate(Productinq productinq) {
+		// TODO Auto-generated method stub
+		sqlSessionTemplate.update(namespace+".inqUpdate", productinq);
+		
+	}
 }

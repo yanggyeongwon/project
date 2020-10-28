@@ -27,14 +27,14 @@
 						pinum : $('.flexul2 #number').eq(idx).text()
 					},
 					error:function(error){
-						console.log("에러")
+						console.log("답글이 없습니다.")
 					},
 					success : function(data) {
 						console.log(data)
-						console.log("idx: "+idx)
-						$('#p_pienquiry').text(data[0].pienquiry)
-						$('#s_piwriter').text(data[0].piwriter)
-						$('#s_pidate').text(data[0].pidate)
+						console.log("data[0].pienquiry: "+data[0].pienquiry)
+						$('.review_box #p_pienquiry').eq(idx).text(data[0].pienquiry)
+						$('.review_box #s_piwriter').eq(idx).text(data[0].piwriter)
+						$('.review_box #s_pidate').eq(idx).text(data[0].pidate)
 
 					}
 				}) 
@@ -44,7 +44,7 @@
 				$('input[type="submit"]').on('click', function(){
 					let pienquiry = $('.tdclass textarea').eq(idx).val();
 					console.log("안"+pienquiry)
-					location.href ="insert.pro?pienquiry="+pienquiry+"&piwriter="+piwriter;
+					location.href ="insert.pro?pienquiry="+pienquiry+"&piwriter="+piwriter+"&pinum="+$('.flexul2 #number').eq(idx).text();
 				}) 
 			})
 		
@@ -106,9 +106,11 @@
 		    		<td>${bd.ip }</td> --%>
 		    	</ul>
 		    	<div class="review_box">
-		    		<p id="p_pienquiry"></p>
-		    		<span id="s_piwriter"></span>
-		    		<span id="s_pidate"></span>
+			    	<div class="result_area">
+			    		<p id="s_piwriter"></p>
+			    		<p id="p_pienquiry"></p>
+			    		<p id="s_pidate"> </p>
+			    	</div>
 			    	<ul class="tdclass">
 			    		<li><textarea rows="5" cols="60" placeholder="내용을 입력하세요"></textarea></li>
 			    		<li style="padding-top: 30px"><input type="submit" value="등록하기"></li>
