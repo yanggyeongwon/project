@@ -1,5 +1,6 @@
 @charset "UTF-8";
 
+body{background-color:aliceblue}
 .review_box{display:none;}
 .tdclass{display: flex; justify-content: space-evenly}
 .aclass{color:black}

@@ -5,8 +5,15 @@ public class Productinq {
 	private String pienquiry;
 	private String piwriter;
 	private String pidate;
+	private int numnum;
 	
 	
+	public int getNumnum() {
+		return numnum;
+	}
+	public void setNumnum(int numnum) {
+		this.numnum = numnum;
+	}
 	public int getPinum() {
 		return pinum;
 	}

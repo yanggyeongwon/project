@@ -4,7 +4,6 @@
     margin: 10px;
 }
 #first_box{
-    border: 1px solid #000;
     height: 935px;
     width: 80%;
     float: left;
@@ -12,7 +11,6 @@
     position: relative;
 }
 #second_box{
-    border : 1px solid #000;
     height : 800px;
     width : 85%;
     margin: 0 auto;
@@ -47,13 +45,19 @@
     margin-left :11px;
 }
 
-.page_a a{
+.page_a{
+	text-align:center;
+	margin-top:50px;
 	color: black;
 }
 #select_data a{
 	color: black;
 }
+.td_class{width:15%; text-align:center;}
+#select_data img{width:45%}
 
-table { border:1px solid #000; width:100%}
+table { width:100%}
 table p {text-align:center}
-tr,td {border-bottom:1px solid #000; padding: 10px}
+tr,td { padding: 10px}
+
+td{ vertical-align: middle; text-align: center;}

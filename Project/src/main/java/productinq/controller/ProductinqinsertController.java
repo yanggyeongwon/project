@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import productinq.model.Productinq;
@@ -28,18 +28,26 @@ public class ProductinqinsertController {
 	@RequestMapping(value=command)
 	public String doAction(Productinq productinq, HttpServletRequest request) {
 		int pinum = Integer.parseInt(request.getParameter("pinum"));
+		System.out.println("pinum: "+pinum);
+		
 		List<Productinq> productinq_list = dao.inqselect(pinum);
+		
 		
 		int size = productinq_list.size()+1;
 		
 		for(int i=0; i<size;i++) {
 			if(productinq_list.size() != 0 ) {
-				if(productinq_list.get(i).getPinum() == pinum) {
+				if(productinq_list.get(i).getNumnum() == pinum) {
+					System.out.println("pinum과 겟pinum은 같아 업뎃");
 					dao.inqUpdate(productinq);
 					break;
 				}
 			}else {
-				dao.inqInsert(productinq); 			
+				System.out.println("인설트 ㄲ");
+				System.out.println(productinq.getPiwriter());
+				System.out.println(productinq.getNumnum());
+				dao.inqInsert(productinq); 	
+
 			}
 		}
 		return getPage;

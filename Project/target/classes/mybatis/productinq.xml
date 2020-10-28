@@ -4,12 +4,13 @@
 <mapper namespace="productinq.model.Productinq">
 
 	<insert id="inqInsert">
-		insert into productinq values(piseq.nextval, #{pienquiry},#{piwriter},sysdate)
+		insert into productinq values(piseq.nextval, #{pienquiry},#{piwriter},sysdate,#{pinum})
 	</insert>
 	<select id="inqselect" resultType="MyProductinq">
-		select * from productinq where pinum = #{pinum}
+		select * from productinq where numnum = #{pinum}
 	</select>
 	<update id="inqUpdate">
-		update productinq set pienquiry = #{pienquiry} where pinum = #{pinum}
+		update productinq set pienquiry = #{pienquiry} where numnum = #{pinum}
 	</update>
+
 </mapper>

@@ -113,7 +113,8 @@ create table productinq(
   pinum number primary key,
   pienquiry varchar2(50) not null,
   piwriter varchar2(20) not null,
-  pidate varchar2(20) default sysdate
+  pidate varchar2(20) default sysdate,
+  numnum number
 );
 
 insert into productinq values(piseq.nextval,'문의내용50자','작성자','날짜');

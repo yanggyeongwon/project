@@ -11,14 +11,19 @@
     <link rel="stylesheet" href="<c:url value="/resources/css/border_list.css" />">
     <script src="<c:url value="/resources/js/jquery-3.5.1.min.js" />"></script>
     <script src="<c:url value="/resources/js/script.js" />"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap"	rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200&display=swap"	rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap"rel="stylesheet">
     <title>메인입니다</title>
+
 	<script>
 
 			$(document).on('click','.aclass', function(){
 				let idx = $('.aclass').index(this);
 				$('.review_box').hide();
 				$('.review_box').eq(idx).toggle();	
-				
+				console.log($('.flexul2 #number').eq(idx).text())
 				$.ajax({
 					type:"GET",
 					url:"insert2.pro",
@@ -30,12 +35,10 @@
 						console.log("답글이 없습니다.")
 					},
 					success : function(data) {
-						console.log(data)
-						console.log("data[0].pienquiry: "+data[0].pienquiry)
+
 						$('.review_box #p_pienquiry').eq(idx).text(data[0].pienquiry)
 						$('.review_box #s_piwriter').eq(idx).text(data[0].piwriter)
 						$('.review_box #s_pidate').eq(idx).text(data[0].pidate)
-
 					}
 				}) 
 				
@@ -43,7 +46,6 @@
 			    
 				$('input[type="submit"]').on('click', function(){
 					let pienquiry = $('.tdclass textarea').eq(idx).val();
-					console.log("안"+pienquiry)
 					location.href ="insert.pro?pienquiry="+pienquiry+"&piwriter="+piwriter+"&pinum="+$('.flexul2 #number').eq(idx).text();
 				}) 
 			})
@@ -97,7 +99,7 @@
 			<div class="result">
 				<c:forEach items ="${lists }" var ="bd">
 		    	<ul class="flexul2">
-		    	
+		  	  		
 		    		<li id="number">${bd.num }</li>
 		    		<li id="subject"><a class="aclass" href="#">${bd.subject }</a></li><%-- content.bd?num=${bd.num} --%>
 		    		<li id="writer">${bd.writer }</li>

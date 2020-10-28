@@ -67,19 +67,14 @@
                     <li>작성자</li>
                     <li>날짜</li>
                 </ul>
-                	<%
-                    	for(int i=0; i< 5; i++){
-                    		%>
-                    		<ul class="order_list result_list">
-			                    <li>1</li>
-			                    <li>이거왜 이래요ddddd</li>
-			                    <li>양경원</li>
-			                    <li>2020 / 10 / 07</li>
-			                </ul>
-                    		<%
-                    	}
-                    %>
-              
+                <c:forEach var="items" items="${boardlist }">
+                	<ul class="order_list result_list">
+		                    <li>${items.num }</li>
+		                    <li>${items.subject }</li>
+		                    <li>${items.writer }</li>
+		                    <li>${items.regdate }</li>
+		                </ul>
+                </c:forEach>
             </div>
         </div>
         <div id="shipping_border">
@@ -118,17 +113,17 @@
                     <li>날짜</li>
                 </ul>
                 <%
-                   	for(int i=0; i< 4; i++){
-                   		%>
-                   		<ul class="order_list result_list">
-		                    <li>1</li>
-		                    <li>이거왜 이래요</li>
-		                    <li>양경원</li>
-		                    <li>2020 / 10 / 07</li>
-		                </ul>
-                   		<%
-                   	}
-                %>
+                    	for(int i=0; i< 4; i++){
+                    		%>
+                    		<ul class="order_list result_list">
+			                    <li>1</li>
+			                    <li>이거왜 이래요ddddd</li>
+			                    <li>양경원</li>
+			                    <li>2020 / 10 / 07</li>
+			                </ul>
+                    		<%
+                    	}
+                    %>
             </div>
         </div>
      </div>

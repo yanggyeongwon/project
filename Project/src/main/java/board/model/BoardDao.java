@@ -57,5 +57,11 @@ public class BoardDao {
 	    
 	}
 
+	public List<BoardBean> getBoardList2() {
+		// TODO Auto-generated method stub
+		List<BoardBean> adlists = sqlSessionTemplate.selectList(namespace+".getBoardList2");
+		return adlists;
+	}
+
      
 }

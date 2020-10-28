@@ -33,4 +33,5 @@ public class ProductinqDAO {
 		sqlSessionTemplate.update(namespace+".inqUpdate", productinq);
 		
 	}
+
 }
