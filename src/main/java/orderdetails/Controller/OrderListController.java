@@ -17,9 +17,10 @@ import orderdetails.model.OrderdetailsDao;
 import utility.Paging;
 
 @Controller
-public class deliverystate1 {
-	final String command = "/deliverystate1.ord";
-	final String getPage = "deliverystate1";
+public class OrderListController {
+	
+	final String command = "/orderlist.ord";
+	final String getPage = "orderlist";
 	
 	@Autowired
 	OrderdetailsDao dao;
@@ -34,7 +35,6 @@ public class deliverystate1 {
 			HttpServletRequest request) {
 		
 		Map<String,Object> map = new HashMap<String,Object>();
-		map.put("state", 1);
 		
 		int totalCount = dao.getTotalCount(map);
 		String url = request.getContextPath() + command;
@@ -49,7 +49,6 @@ public class deliverystate1 {
 		mav.addObject("pageInfo", pageInfo);
 		mav.setViewName(getPage);
 		return mav;
-		
 		
 	}
 }

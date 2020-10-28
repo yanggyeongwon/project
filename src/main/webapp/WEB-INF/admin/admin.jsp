@@ -38,20 +38,16 @@
                         <li>구매 금액</li>
                         <li>배송비</li>
                     </ul>
-                    <%
-                    	for(int i=0; i< 5; i++){
-                    		%>
+                    <c:forEach items="${lists }" var="order">
                     		<ul class="order_list order_result_list">
-		                        <li>1</li>
-		                        <li>블랙옷</li>
-		                        <li>양경원</li>
-		                        <li>양경원</li>
-		                        <li>30.000</li>
-		                        <li>2500</li>
+		                        <li>${order.onum }</li>
+		                        <li>${order.opname }</li>
+		                        <li>${order.oname }</li>
+		                        <li>${order.oprename }</li>
+		                        <li>${order.oppricesum }</li>
+		                        <li>${order.opcharge }</li>
 		                    </ul>
-                    		<%
-                    	}
-                    %>
+                    </c:forEach>
                 </div>
             </div>
         </div>

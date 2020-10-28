@@ -15,11 +15,11 @@
 			<img src="<c:url value="/resources/images/logo3.png"/>" alt="no">
 		</div>
 		<div class="join">
-			<a id="basket" href="#"><span>장바구니</span><img
+			<a id="basket" href="list.mall"><span>장바구니</span><img
 				src="<c:url value="/resources/images/basket.png" />" alt="no"></a>
-			<a id="mypage" href="#"><span>마이페이지</span><img
+			<a id="mypage" href="update.me"><span>마이페이지</span><img
 				src="<c:url value="/resources/images/mypage.png" />" alt="no"></a>
-			<a href="#"><span>LOGIN</span></a> <a href="#"><span>JOIN</span></a>
+			<a href="login.me"><span>LOGIN</span></a> <a href="register.me"><span>JOIN</span></a>
 		</div>
 		<ul id="ul_id">
 			<li><a href="best.prd">BEST</a></li>
@@ -29,6 +29,7 @@
 			<li><a href="shoes.prd">SHOES</a></li>
 			<li><a href="acc.prd">ACC</a></li>
 		</ul>
+
 	</div>
 </body>
 </html>

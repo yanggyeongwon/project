@@ -10,6 +10,7 @@ create table member(
   mname varchar2(20) not null,
   mid varchar2(20) not null,
   mpw varchar2(20) not null,
+  mpw2 varchar2(20) not null,
   memail varchar2(30) not null
 );
 insert into member values(mseq.nextval,'경원','ruddnjs25',1234,'ruddnjs25@naver.com');
@@ -27,22 +28,41 @@ drop table orderdetails;
 create table orderdetails(
   onum number primary key, --주문번호
   opname varchar2(30), --주문상품이름
-  opprice number, -- 주문상품금액
-  opcount number, -- 주문상품수량
-  oppoint number, -- 주문상품포인트
-  opcharge number, -- 주문상품배송비
-  opop varchar2(20), -- 주문상품배송정보
-  oid varchar2(30), --주문자 ID
-  oname varchar2(20),--주문자 이름
-  oprename varchar2(20), --수령자 이름
+  opprice number, --주문상품금액
+  opcount number, --주문상품수량
+  oppoint number, --주문상품포인트
+  opop varchar2(30), --주문상품배송정보
+  opcharge number, --주문상품배송비
+  oppricesum number, --주문총금액
+  oid varchar2(30), --주문자ID
+  oname varchar2(20),--주문자이름
+  postcode number, -- 주문자우편번호
+  roadaddress varchar2(50), --주문자도로명주소
+  jibunaddress varchar2(50), --주문자지번주소
+  detailaddress varchar2(50), --주문자상세주소
+  ophone number, --핸드폰앞자리
+  ophone2 number, --핸드폰중간자리
+  ophone3 number, --핸드폰뒷자리
+  oemail varchar2(30), --주문자이메일 앞자리
+  oemail2 varchar2(30), --주문자이메일 뒷자리
+  oprename varchar2(20), --수령자이름
+  repostcode number, --수령우편주소
+  reroadaddress varchar2(50), --수령도로명주소
+  rejibunaddress varchar2(50), --수령지번주소
+  redetailaddress varchar2(50), --수령상세주소
+  dphone number, --수령자핸드폰앞자리
+  dphone2 number, --수령자핸드폰중간자리
+  dphone3 number, --수령자핸드폰뒷자리
+  dms varchar2(50), --배송메세지
+  ordermethod varchar2(20), --결재방법
   opdate date default sysdate, --주문일자
   oinvoice varchar2(30) , --송장번호
-  state number -- 배송상태
+  state number default 1 -- 배송상태
 );
 
 
-insert into orderdetails (onum,opname,opprice,opcount,oppoint,opcharge,opop,oid,opdate,oinvoice,state)
-values(odseq.nextval, '청바지', 30000, 1, 300, 2500 , '택배' , 'kim' , sysdate,'2000',1);
+insert into orderdetails (onum,opname,opprice,opcount,oppoint,opcharge,opop,oid,opdate,oinvoice)
+values(odseq.nextval, '청바지', 30000, 1, 300, 2500 , '택배' , 'kim' , sysdate,'2000');
 
 select * from orderdetails;
 commit;

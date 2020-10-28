@@ -10,9 +10,10 @@
 		select * from orderdetails
 	</select>
 	
-	<select id="getData" resultType="MyOrderdetails">
-		select * from orderdetails where onum = #{onum}
-	</select>
+	<insert id="getInsertOrderdetails">
+		insert into orderdetails(onum,opname,oid,oname,oprename,oppricesum,opcharge) 
+		values(odseq.nextval,#{opname},#{oid},#{oname},#{oprename},#{oppricesum},#{opcharge})
+	</insert>
 	
 	<select id="getTotalCount" parameterType="map"  resultType="int">
 		select count(*) 
@@ -53,7 +54,7 @@
 		<if test="state==4">
 		where state=4
 		AND opdate &lt; sysdate - 3
-		</if>	
+		</if> 	
 	</select>
 	
 	<select id="delivery" resultType="int">

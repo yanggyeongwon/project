@@ -14,7 +14,7 @@ import orderdetails.model.OrderdetailsDao;
 public class OrderPageSelect {
 	
 	final String command = "/orderpage.ord";
-	final String getPage = "orders";
+	final String getPage = "orderinsert";
 	
 	@Autowired
 	OrderdetailsDao dao;

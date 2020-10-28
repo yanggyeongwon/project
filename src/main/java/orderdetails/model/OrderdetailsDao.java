@@ -30,9 +30,9 @@ public class OrderdetailsDao {
 		return lists1;
 	}	
 	
-	public Orderdetails getData(int onum) {
-		Orderdetails orderdetails = sqlSessionTemplate.selectOne(namespace + ".getData" , onum);
-		return orderdetails;
+	public void getInsertOrderdetails(Orderdetails orderdetails) {
+		sqlSessionTemplate.insert(namespace+".getInsertOrderdetails",orderdetails);
+		
 	}
 	
 	public List<Orderdetails> getSelectdelivery(Paging paging, Map<String, Object> map) {
@@ -62,6 +62,8 @@ public class OrderdetailsDao {
 		 int cnt3 = sqlSessionTemplate.selectOne(namespace +".delivery3"); 
 		 return cnt3; 
 	 }
+
+	
 
 
 	 

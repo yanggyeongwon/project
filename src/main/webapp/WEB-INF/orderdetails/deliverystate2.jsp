@@ -98,7 +98,7 @@
                                 <td><p>${orderdetails.oid }</p></td>
                                 <td><p>${orderdetails.oname }</p></td>
                                 <td><p>${orderdetails.oprename }</p></td>
-                                <td><p>${orderdetails.opprice }</p></td>
+                                <td><p>${orderdetails.oppricesum }</p></td>
                                 <td><p>${orderdetails.opcharge }</p></td>
                                 <td><p>${orderdetails.opdate }</p></td>
                             </tr>
