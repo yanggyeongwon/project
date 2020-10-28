@@ -175,10 +175,8 @@ $(()=>{
 		})
 	
 		$(document).on("click", ".remove_tag", function(){
-			
 			let remove_tag = $('.remove_tag').index(this);
 			console.log('wrap: '+remove_tag)
-
 			$('.wrap').eq(remove_tag).remove();
 		})
 		

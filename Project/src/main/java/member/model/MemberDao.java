@@ -19,6 +19,11 @@ public class MemberDao {
 	
 	@Autowired
 	SqlSessionTemplate sqlSessionTemplate;
+	
+	public void insertData(Member member){
+		sqlSessionTemplate.insert(namespace+".InsertData",member);
+	}
+	
 
 	public int getTotalCount(Map<String, String> map) {
 		int cnt = sqlSessionTemplate.selectOne(namespace + ".getTotalCount",map);
@@ -36,6 +41,12 @@ public class MemberDao {
 		sqlSessionTemplate.delete(namespace + ".deleteMember" , mnum);
 		
 	}
+	
+	public int updateData(Member member){
+		int cnt = sqlSessionTemplate.update(namespace + ".UpdateData",member);
+		return cnt;
+	}
+	
 
 	public Member getData(int mnum) {
 		Member member = null;
@@ -43,6 +54,12 @@ public class MemberDao {
 		return member;
 	}
 
+
+	public Member getDataMember(String mid) {
+		Member member = null;
+		member = sqlSessionTemplate.selectOne(namespace+".GetDataMember",mid);
+		return member;
+	}
 	
 	
 }

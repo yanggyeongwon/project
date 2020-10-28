@@ -2,6 +2,16 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="member.model.Member">
+
+	<insert id="InsertData">
+		insert into member(mnum,mname,mid,mpw,mpw2,memail) 
+		values(mseq.nextval,#{mname},#{mid},#{mpw},#{mpw2},#{memail})
+	</insert>
+	
+	<select id="GetDataMember" resultType="MyMember">
+		select * from member where mid=#{mid}
+	</select> 
+	
 	<select id="getTotalCount"  resultType="int">
 		select count(*) from member
 		<if test="whatColumn=='mnum'">
@@ -14,7 +24,7 @@
 		<if test="whatColumn=='mid'">
 			where mid like #{keyword}
 		</if>
-	</select>
+	</select>	
 	
 	<select id="getSelectMember" resultType="MyMember">
 		select * from member
@@ -36,7 +46,7 @@
 	</delete>
 	
 	<select id="getMember" resultType="MyMember">
-	select * from member where mnum = #{mnum}
+		select * from member where mnum = #{mnum}
 	</select>
 	
 </mapper>

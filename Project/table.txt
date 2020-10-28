@@ -1,49 +1,74 @@
 //회원 테이블
-
 drop sequence mseq;
 create sequence mseq
 increment by 1
 start with 1
 nocycle;
-
-
 drop table member;
-
 create table member(
   mnum number primary key,
   mname varchar2(20) not null,
   mid varchar2(20) not null,
   mpw varchar2(20) not null,
+  mpw2 varchar2(20) not null,
   memail varchar2(30) not null
 );
-
 insert into member values(mseq.nextval,'경원','ruddnjs25',1234,'ruddnjs25@naver.com');
-
+insert into member values(mseq.nextval,'범규','qjarb',12,'ruddnjs25@naver.com');
 select * from member;
 
-//주문내역 테이블
+commit;
 
+
+//주문내역 테이블
 drop sequence odseq;
 create sequence odseq
 increment by 1
 start with 1
 nocycle;
-
 drop table orderdetails;
-
 create table orderdetails(
-  onum number primary key,
-  opname varchar2(30) not null, --주문자 닉네임
-  oorder varchar2(20) not null,--주문자 이름
-  opreceive varchar2(20) not null,--수령자
-  oprice number not null,
-  opcharge number not null,
-  opdate varchar2(20) not null,
-  oinvoice varchar2(20) not null
-  state number
+  onum number primary key, --주문번호
+  opname varchar2(30), --주문상품이름
+  opprice number, --주문상품금액
+  opcount number, --주문상품수량
+  oppoint number, --주문상품포인트
+  opop varchar2(30), --주문상품배송정보
+  opcharge number, --주문상품배송비
+  oppricesum number, --주문총금액
+  oid varchar2(30), --주문자ID
+  oname varchar2(20),--주문자이름
+  postcode number, -- 주문자우편번호
+  roadaddress varchar2(50), --주문자도로명주소
+  jibunaddress varchar2(50), --주문자지번주소
+  detailaddress varchar2(50), --주문자상세주소
+  ophone number, --핸드폰앞자리
+  ophone2 number, --핸드폰중간자리
+  ophone3 number, --핸드폰뒷자리
+  oemail varchar2(30), --주문자이메일 앞자리
+  oemail2 varchar2(30), --주문자이메일 뒷자리
+  oprename varchar2(20), --수령자이름
+  repostcode number, --수령우편주소
+  reroadaddress varchar2(50), --수령도로명주소
+  rejibunaddress varchar2(50), --수령지번주소
+  redetailaddress varchar2(50), --수령상세주소
+  dphone number, --수령자핸드폰앞자리
+  dphone2 number, --수령자핸드폰중간자리
+  dphone3 number, --수령자핸드폰뒷자리
+  dms varchar2(50), --배송메세지
+  ordermethod varchar2(20), --결재방법
+  opdate date default sysdate, --주문일자
+  oinvoice varchar2(30) , --송장번호
+  state number default 1 -- 배송상태
 );
 
-insert into orderdetails values(odseq.nextval, '닉네임', '주문자', '수령자', 30000, 2500 ,sysdate, '송장번호',1);
+
+insert into orderdetails (onum,opname,opprice,opcount,oppoint,opcharge,opop,oid,opdate,oinvoice)
+values(odseq.nextval, '청바지', 30000, 1, 300, 2500 , '택배' , 'kim' , sysdate,'2000');
+
+select * from orderdetails;
+commit;
+
 
 //상품테이블
 

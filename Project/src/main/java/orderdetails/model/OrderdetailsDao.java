@@ -24,6 +24,17 @@ public class OrderdetailsDao {
 		return cnt;
 	}
 	
+	public List<Orderdetails> getSelectOrder() {
+		List<Orderdetails> lists1 = new ArrayList<Orderdetails>();
+		lists1 = sqlSessionTemplate.selectList(namespace + ".getSelectOrder"); 
+		return lists1;
+	}	
+	
+	public void getInsertOrderdetails(Orderdetails orderdetails) {
+		sqlSessionTemplate.insert(namespace+".getInsertOrderdetails",orderdetails);
+		
+	}
+	
 	public List<Orderdetails> getSelectdelivery(Paging paging, Map<String, Object> map) {
 		List<Orderdetails> lists = new ArrayList<Orderdetails>();
 		RowBounds rowBounds = new RowBounds(paging.getOffset(),paging.getLimit());
@@ -51,10 +62,4 @@ public class OrderdetailsDao {
 		 int cnt3 = sqlSessionTemplate.selectOne(namespace +".delivery3"); 
 		 return cnt3; 
 	 }
-	 
-
-
-	
-	
-	
 }

@@ -25,7 +25,7 @@
     <div id="admin_page">
         <div id="first_top">
             <div class="more_btn">
-                <a href="#">MORE</a>
+                <a href="orderlist.ord">MORE</a>
             </div>
             <div id="Order_History">
                 <div class="order">
@@ -38,20 +38,16 @@
                         <li>구매 금액</li>
                         <li>배송비</li>
                     </ul>
-                    <%
-                    	for(int i=0; i< 5; i++){
-                    		%>
-                    		<ul class="order_list order_result_list">
-		                        <li>1</li>
-		                        <li>블랙옷</li>
-		                        <li>양경원</li>
-		                        <li>양경원</li>
-		                        <li>30.000</li>
-		                        <li>2500</li>
-		                    </ul>
-                    		<%
-                    	}
-                    %>
+                    <c:forEach items="${lists }" var="order">
+                   		<ul class="order_list order_result_list">
+	                        <li>${order.onum }</li>
+	                        <li>${order.opname }</li>
+	                        <li>${order.oname }</li>
+	                        <li>${order.oprename }</li>
+	                        <li>${order.oppricesum }</li>
+	                        <li>${order.opcharge }</li>
+	                    </ul>
+                    </c:forEach>
                 </div>
             </div>
         </div>
@@ -79,7 +75,7 @@
         </div>
         <div id="shipping_border">
             <div class="more_btn">
-                <a href="#">MORE</a>
+                <a href="deliverystate1.ord">MORE</a>
             </div>
             <div id="shipping">
                 <ul id="shipping_list">

@@ -16,10 +16,10 @@
 		</div>
 		<div class="join">
 			<a href="#"><span>NOTICE</span></a>
-			<a href="#"><span>BASKET</span></a>
-			<a href="#"><span>MYPAGE</span></a>
-			<a href="#"><span>LOGIN</span></a>
-			<a href="#"><span>JOIN</span></a>
+			<a href="list.mall"><span>BASKET</span></a>
+			<a href="update.me"><span>MYPAGE</span></a>
+			<a href="login.me"><span>LOGIN</span></a>
+			<a href="register.me"><span>JOIN</span></a>
 		</div>
 		<ul id="ul_id">
 			<li><a href="best.prd">BEST</a></li>
