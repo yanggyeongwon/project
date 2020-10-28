@@ -33,7 +33,19 @@ $(()=>{
 	
 			
 	     });
-	
+		const real_img = $("#image img").attr('src')
+		$('.sub_image img').on({
+			mouseenter:function(){
+				let img_index = $(this).index();
+				console.log(img_index)
+				let change_img = $('.sub_image img').eq(img_index).attr('src');
+				$("#image img").attr('src', change_img);
+			},
+			mouseleave: function(){
+				$("#image img").attr('src', real_img);
+				
+			}
+		})
 	    $("#mypage span").hide();
 	    $("#mypage").on({
 	        mouseenter: function() {
@@ -133,7 +145,6 @@ $(()=>{
 					 $('#items2').find('option:first').prop('selected', 'selected');
 				}
 		})
-		
 		$('#items2').change(function(){
 			if($('#items').val() == "*"){
 				alert("색상을 선택하세요")
@@ -144,34 +155,25 @@ $(()=>{
 				let items_selec2 = $('#items2 option:selected').val();
 				let items_price = $('#product_price').text();
 				let wrap_len = $('.wrap').length;
-				
-				
 				const compare = items_selec1+"/"+items_selec2;
-				
+		
 				let aa = $('.compare').text() // 블랙/L블루/M
 				if($('#items_result_p').text() == ""){
 					$('#items_result_p').append("<div class='wrap'><div><div class='place'><span>"+name+" - </span><div class='compare'>"+items_selec1+"/"+items_selec2+"</div></div><div class='wraps'><input type='text' name='stock' value='"+i+"'><a class='up_btn'></a><a class='do_btn'></a></div><div class='price'><p>"+items_price+"<a class='remove_tag'></a></p></div></div></div>")
 					$('.items_price').append("\\<p>"+items_price+"</p>")
 				}else{
-					
 					if(aa.includes(compare)){
 						 alert('이미 선택한 상품입니다.')
 						 $('#items').find('option:first').prop('selected', 'selected');
 					 	 $('#items2').find('option:first').prop('selected', 'selected');
 					}else{
-						
 						$('#items_result_p').append("<div class='wrap'><div><div class='place'><span>"+name+" - </span><span class='compare'>"+items_selec1+"/"+items_selec2+"</span></div><div class='wraps'><input type='text' name='stock' value='"+i+"'><a class='up_btn'></a><a class='do_btn'></a></div><div class='price'><p>"+items_price+"<a class='remove_tag'></a></p></div></div></div>")
 					}
 				}
-				
 				sumthingjustlikethis()
-
 			}
-			
-			
 		})
-		
-		
+	
 		$(document).on("click", ".remove_tag", function(){
 			
 			let remove_tag = $('.remove_tag').index(this);

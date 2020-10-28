@@ -18,7 +18,6 @@
 	<script src="<c:url value="/resources/js/jquery-3.5.1.min.js" />"></script>
 	<script src="<c:url value="/resources/js/script.js" />"></script>
     <title>Document</title>
-    
 
     </head>
     <body>
@@ -37,25 +36,23 @@
 
                             <p>₩<span id="product_price">${product.pprice }</span></p>
                             <form>
+                            
                             <div>
                                 <span>색상</span>
                                 <select id="items" name="items" class="select">
                                     <option value="*">- [필수] 옵션 선택 -</option>
-                                    <option value="베이지">베이지</option>
-                                    <option value="블루">블루</option>
-                                    <option value="카키">카키</option>
-                                    <option value="블랙">블랙</option>
+		                            <c:forEach var="items" items="${product.pcolor }">
+		                            	<option value="${items}">${items}</option>
+		                            </c:forEach>
                                 </select>
                             </div>
                             <div>
                                 <span>사이즈</span>
                                 <select id="items2" name="items2" class="select">
                                     <option value="*">- [필수] 옵션 선택 -</option>
-                                    <option value="S">S</option>
-                                    <option value="M">M</option>
-                                    <option value="L">L</option>
-                                    <option value="XL">XL</option>
-                                    <option value="FREE">FREE</option>
+                                    <c:forEach var="items" items="${product.psize }">
+		                            	<option value="${items}">${items}</option>
+		                            </c:forEach>
                                 </select>
                             </div>
                             </form>

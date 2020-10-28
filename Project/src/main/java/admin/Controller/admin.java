@@ -29,7 +29,7 @@ public class admin {
 	
 	@RequestMapping(command)
 	public String doAction(Model model) {
-		
+		//배송
 		int cnt = dao.delivery();
 		int cnt2 = dao.delivery2();
 		int cnt3 = dao.delivery3();
@@ -39,12 +39,17 @@ public class admin {
 		model.addAttribute("cnt3",cnt3);
 		System.out.println("cnt:"+cnt);
 		
+		
+		//상품문의
 		List<BoardBean> boardlist = boardDao.getBoardList2();
 		System.out.println("boardlist getSubject: "+ boardlist.get(0).getSubject());
 		System.out.println("boardlist getNum: "+ boardlist.get(0).getNum());
 		System.out.println("boardlist getRegdate: "+ boardlist.get(0).getRegdate());
 		
 		model.addAttribute("boardlist",boardlist);
+		
+		//주문내역
+		
 		return getPage;
 	}
 }

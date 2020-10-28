@@ -4,9 +4,9 @@
 /* font-family: 'Inconsolata', monospace; 타이틀 영어 */
 
 #product_page{width: 70%; margin: 0 auto;margin-top: 200px;font-family: 'Nanum Myeongjo', serif;}
-#image_purchase{width: 100%;height: 750px;}
+#image_purchase{width: 100%;}
 
-.sub_image{text-align:center;margin: 10% 0; width: 50%;}
+.sub_image{text-align:center;margin: 10% 0; }
 .sub_image img{width:10%}
 
 #image{width:50%; float: left;}
