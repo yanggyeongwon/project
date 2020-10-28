@@ -59,22 +59,26 @@ public class MemberLoginController {
 			
 		}
 		else {
-			
-			if(member.getMpw().equals(dbMember.getMpw())) {
-				session.setAttribute("loginInfo",dbMember);
-				
-				return new ModelAndView(gotoPage); 
+			if(member.getMid() == "admin"|| member.getMid().equals("admin")) {
+				System.out.println("어드민이다");
+				session.setAttribute("admin", member.getMid());
+			}else {
+				if(member.getMpw().equals(dbMember.getMpw())) {
+					session.setAttribute("loginInfo",dbMember);
+					
+					return new ModelAndView(gotoPage); 
+				}
+				else {
+					pw.println("<script type='text/javascript'>");
+					pw.println("alert('비밀번호가 일치하지 않습니다.');");
+					pw.println("</script>");
+					pw.flush();
+	 
+					return new ModelAndView(getPage);
+				}
 			}
-			else {
-				pw.println("<script type='text/javascript'>");
-				pw.println("alert('비밀번호가 일치하지 않습니다.');");
-				pw.println("</script>");
-				pw.flush();
- 
-				return new ModelAndView(getPage);
-			}
+			return new ModelAndView(getPage);
 		}
-		
 	}
 }
 

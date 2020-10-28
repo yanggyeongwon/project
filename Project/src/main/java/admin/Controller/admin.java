@@ -14,8 +14,6 @@ import board.model.BoardBean;
 import board.model.BoardDao;
 import orderdetails.model.Orderdetails;
 import orderdetails.model.OrderdetailsDao;
-import productinq.model.Productinq;
-import productinq.model.ProductinqDAO;
 
 
 @Controller

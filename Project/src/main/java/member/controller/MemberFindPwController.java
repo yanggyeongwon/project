@@ -33,11 +33,12 @@ public class MemberFindPwController {
 
 	@RequestMapping(value=command , method=RequestMethod.POST)
 	public ModelAndView doAction(Member member, 
-							HttpServletResponse response,
-							HttpSession session) throws IOException{
+							HttpServletResponse response) throws IOException{
 		
-		
-		Member dbMember = memberDao.getDataMember(member.getMid()); 
+		System.out.println(member.getMid());
+		System.out.println(member.getMname());
+		System.out.println(member.getMemail());
+		Member dbMember = memberDao.getDataMember(member.getMname()); 
 		
 		PrintWriter pw = response.getWriter();
 		

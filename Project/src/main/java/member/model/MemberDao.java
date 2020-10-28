@@ -55,9 +55,9 @@ public class MemberDao {
 	}
 
 
-	public Member getDataMember(String mid) {
+	public Member getDataMember(String mname) {
 		Member member = null;
-		member = sqlSessionTemplate.selectOne(namespace+".GetDataMember",mid);
+		member = sqlSessionTemplate.selectOne(namespace+".GetDataMember",mname);
 		return member;
 	}
 	

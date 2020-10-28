@@ -9,7 +9,7 @@
 	</insert>
 	
 	<select id="GetDataMember" resultType="MyMember">
-		select * from member where mid=#{mid}
+		select * from member where mname=#{mname}
 	</select> 
 	
 	<select id="getTotalCount"  resultType="int">

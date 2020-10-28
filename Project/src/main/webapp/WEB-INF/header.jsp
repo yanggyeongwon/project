@@ -20,19 +20,18 @@
 			<a href="update.me"><span>MYPAGE</span></a>
 			<%
 			Object login = session.getAttribute("loginInfo");
+			
 			if(login == "" || login == null || login == "null"){
 				%>
 				<a href="login.me"><span>LOGIN</span></a>
-				
+				<a href="register.me"><span>JOIN</span></a>
 				<%
 			}else{
 				%>
-				<a href="#"><span>LOGOUT</span></a>
+				<a href="logout.me"><span>LOGOUT</span></a>
 				<%
 			}
 			%>
-			
-			<a href="register.me"><span>JOIN</span></a>
 		</div>
 		<ul id="ul_id">
 			<li><a href="best.prd">BEST</a></li>

@@ -35,8 +35,9 @@
 	            }
 	        });
 	    });	
-	</script>​
+	</script>
 	<style>
+	
 		body {
 			color: #999;
 			background: #f3f3f3;
@@ -121,7 +122,8 @@
 </head>
 <body>
 <div class="signup-form">
-	<form:form commandName="member" id="rgForm" method="post" class="form-horizontal" action="register.me">
+<!-- commandName="member" -->
+	<form  id="rgForm" method="post" class="form-horizontal" action="register.me">
       	<div class="row">
         	<div class="col-8 offset-4">
 				<h2>Sign Up</h2>
@@ -132,21 +134,21 @@
 			<div class="col-8">
                 <input type="hidden" class="form-control" name="mnum" value="${member.mnum }">
                 <input type="text" class="form-control" name="mname" value="${member.mname }">
-            	<form:errors cssClass="err" path="mname" />
+            	<%-- <form:errors cssClass="err" path="mname" /> --%>
             </div>        	
         </div>	
         <div class="form-group row">
 			<label class="col-form-label col-4">ID</label>
 			<div class="col-8">
                 <input type="text" class="form-control" id="mid" name="mid" value="${member.mid }">
-                <form:errors cssClass="err" path="mid" />
+                <%-- <form:errors cssClass="err" path="mid" /> --%>
             </div>	
         </div>
 		<div class="form-group row">
 			<label class="col-form-label col-4">Password</label>
 			<div class="col-8">
                 <input type="password" class="form-control" name="mpw" id="mpw" value="${member.mpw }">
-                <form:errors cssClass="err" path="mpw" />
+                <%-- <form:errors cssClass="err" path="mpw" /> --%>
             </div>        	
         </div>
 		<div class="form-group row">
@@ -162,7 +164,7 @@
 			<label class="col-form-label col-4">Email Address</label>
 			<div class="col-8">
                 <input type="email" class="form-control" name="memail" value="${member.memail }">
-                <form:errors cssClass="err" path="memail" />
+                <%-- <form:errors cssClass="err" path="memail" /> --%>
                 
             </div>        	
         </div>
@@ -172,7 +174,7 @@
 				<input type="submit" class="btn1 btn-dark btn-lg" value="Sign Up">
 			</div>  
 		</div>		      
-    </form:form>
+    </form>
 	<div class="text-center">Already have an account? <a href="login.me">Login here</a></div>
 </div>
 </body>

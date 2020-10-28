@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
+
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -33,12 +33,11 @@ public class MemberFindIdController {
 
 	@RequestMapping(value=command , method=RequestMethod.POST)
 	public ModelAndView doAction(Member member, 
-							HttpServletResponse response,
-							HttpSession session) throws IOException{
+							HttpServletResponse response) throws IOException{
 		
-		
-		Member dbMember = memberDao.getDataMember(member.getMid()); 
-		
+
+		Member dbMember = memberDao.getDataMember(member.getMname()); 
+
 		PrintWriter pw = response.getWriter();
 		
 		response.setContentType("text/html;charset=UTF-8");
