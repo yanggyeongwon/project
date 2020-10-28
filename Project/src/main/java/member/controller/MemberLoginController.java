@@ -21,7 +21,7 @@ public class MemberLoginController {
 
 	final String command = "/login.me";
 	final String getPage = "login";
-	final String gotoPage = "index";
+	final String gotoPage = "redirect:/index.ad";
 	
 	@Autowired
 	MemberDao memberDao;

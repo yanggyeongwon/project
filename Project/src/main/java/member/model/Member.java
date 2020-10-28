@@ -18,6 +18,10 @@ public class Member {
 	/* @NotEmpty(message = "이메일은 필수입니다") */
 	private String memail;
 
+	
+	
+	
+	
 	public String getMpw2() {
 		return mpw2;
 	}

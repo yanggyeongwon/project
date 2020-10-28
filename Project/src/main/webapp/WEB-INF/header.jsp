@@ -18,7 +18,20 @@
 			<a href="#"><span>NOTICE</span></a>
 			<a href="list.mall"><span>BASKET</span></a>
 			<a href="update.me"><span>MYPAGE</span></a>
-			<a href="login.me"><span>LOGIN</span></a>
+			<%
+			Object login = session.getAttribute("loginInfo");
+			if(login == "" || login == null || login == "null"){
+				%>
+				<a href="login.me"><span>LOGIN</span></a>
+				
+				<%
+			}else{
+				%>
+				<a href="#"><span>LOGOUT</span></a>
+				<%
+			}
+			%>
+			
 			<a href="register.me"><span>JOIN</span></a>
 		</div>
 		<ul id="ul_id">
