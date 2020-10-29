@@ -187,81 +187,79 @@
 	<%@ include file="../header.jsp" %>
 
 	<div style="padding: 200px 0">
+	
     <div class="Buy_Top_Box">
+    <h2>주문서작성</h2> 
         <div class="Buy_Top_Box1">
-            <div class="Buy_Top_Box2">
-           
-                    <h2>주문서작성</h2> 
-                <ul class="order_info">
-                   <li>상품의 옵션 및 수량 변경은 상품상세 또는 장바구니에서 가능합니다.</li>
-                </ul>
-            <p>배송상품 주문내역</p>
-                <ul id="Buy_Top_title">
-                     <li>상품이름</li>
-                     <li>판매가</li>
-                     <li>수량</li>
-                     <li>포인트</li>
-                     <li>배송구분</li> 
-                     <li>배송비</li> 
-                     <li>합계</li> 
-                </ul>
-                <form action="orderinsert.ord" name="myform" id="myform" method="get"> 
-                <c:forEach items="${lists1 }" var="order">
-                	<input type="hidden" name="onum" value="${order.onum }">
-                	<input type="hidden" name="opname" value="${order.opname }">
-                	<input type="hidden" name="oid" value="${order.oid }">
-                	<input type="hidden" name="opcharge" value="${order.opcharge }">
-                	<input type="hidden" name="oppricesum" value="${order.opprice * order.opcount + order.opcharge}">
-                <ul id="Buy_Top_menu">
-                    <li><input type="text" name="opname" value="${order.opname }" disabled="disabled"></li>                   
-                    <li><input type="text" id="price" name="opprice" value="${order.opprice }" disabled="disabled"></li>                    
-                    <li><input type="text" name="opcount" value="${order.opcount }" disabled="disabled"></li>                   
-                    <li><input type="text" name="oppoint" value="${order.oppoint }" disabled="disabled"></li>                
-                    <li><input type="text" name="opop" value="${order.opop }" disabled="disabled"></li>
-                    <li><input type="text" id="charge"name="opcharge"value="${order.opcharge }" disabled="disabled"></li>
-                    <li><input type="text" id="totalprice"name="oppricesum" value="${order.opprice * order.opcount + order.opcharge}" disabled="disabled"></li>
-                </ul>
-                </c:forEach>
-                <ul id ="Buy_Top_price">
-                    <li>상품구매금액 </li>
-                </ul>
-                <ul class="order_info">
-                    <li>상품의 옵션 및 수량 변경은 상품상세 또는 장바구니에서 가능합니다.</li>
-                 </ul>
+         	<p>배송상품 주문내역</p>
+            <div class="Buy_Top_Box2"> 
+	            <div class="magin">	
+	                <ul class="order_info">
+	                   <li>상품의 옵션 및 수량 변경은 상품상세 또는 장바구니에서 가능합니다.</li>
+	                </ul>
+	                <ul id="Buy_Top_title">
+	                     <li>상품이름</li>
+	                     <li>판매가</li>
+	                     <li>수량</li>
+	                     <li>포인트</li>
+	                     <li>배송구분</li> 
+	                     <li>배송비</li> 
+	                     <li>합계</li> 
+	                </ul>
+	                <form action="orderinsert.ord" name="myform" id="myform" method="get"> 
+	                <c:forEach items="${lists1 }" var="order">
+	                	<input type="hidden" name="onum" value="${order.onum }">
+	                	<input type="hidden" name="opname" value="${order.opname }">
+	                	<input type="hidden" name="oid" value="${order.oid }">
+	                	<input type="hidden" name="opcharge" value="${order.opcharge }">
+	                	<input type="hidden" name="oppricesum" value="${order.opprice * order.opcount + order.opcharge}">
+	                <ul id="Buy_Top_menu">
+	                    <li><input type="text" class="upload-name" name="opname" value="${order.opname }" disabled="disabled" size="7"></li>                   
+	                    <li><input type="text" class="upload-name" id="price" name="opprice" value="${order.opprice }" disabled="disabled" size="7"></li>                    
+	                    <li><input type="text" class="upload-name" name="opcount" value="${order.opcount }" disabled="disabled" size="7"></li>                   
+	                    <li><input type="text" class="upload-name" name="oppoint" value="${order.oppoint }" disabled="disabled" size="7"></li>                
+	                    <li><input type="text" class="upload-name" name="opop" value="${order.opop }" disabled="disabled" size="7"></li>
+	                    <li><input type="text" class="upload-name" id="charge"name="opcharge"value="${order.opcharge }" disabled="disabled" size="7"></li>
+	                    <li><input type="text" class="upload-name" id="totalprice"name="oppricesum" value="${order.opprice * order.opcount + order.opcharge}" disabled="disabled" size="7"></li>
+	                </ul>
+	                </c:forEach>
+
+                 </div>
             </div>
+           	<p style="margin-top: 50px;">주문 정보</p>
             <div class="Buy_Mid_Box1">
-                <p>주문 정보</p>
                     <ul class="flexshow">
                         <li class="star">주문하시는 분</li>
-                        <li class="star li_height" style="padding-top: 30px;">주소</li>
-                        <li class="star">핸드폰</li> 
-                        <li class="star">이메일</li>
+                        <li class="star li_height" style="padding-top: 60px;">주소</li>
+                        <li class="star" style="padding-top:30px">핸드폰</li> 
+                        <li class="star" style="padding-top:30px">이메일</li>
                     </ul>
                     <ul class="addr">
-                        <li><input type="text" name="oname" value="" placeholder="주문자명"></li>
+                        <li><input type="text" class="upload-name" name="oname" value="" placeholder="주문자명"></li>
                         <li class="addr_st">
-                        	<input type="text" id="sample4_postcode" name="postcode" placeholder="우편번호">
-                        	<input type="button" style="margin-left: 10px;" class="font_myeongjo" onclick="sample4_execDaumPostcode()" value="우편번호 찾기">
-                        	<input type="text" id="sample4_roadAddress" name="roadaddress"placeholder="도로명주소">
+                        	<input type="text"  class="upload-name" id="sample4_postcode" name="postcode" placeholder="우편번호">
+                        	<input type="button"  class="upload-name" style="margin-left: 10px;" class="font_myeongjo" onclick="sample4_execDaumPostcode()" value="우편번호 찾기">
+                        	<input type="text"  class="upload-name" id="sample4_roadAddress" name="roadaddress"placeholder="도로명주소">
                         </li>
                         <li>
-							<input type="text" id="sample4_jibunAddress" name="jibunaddress" placeholder="지번주소">
-							<span id="guide" style="color:#999;display:none"></span>
-							<input type="text" id="sample4_detailAddress" name="detailaddress"placeholder="상세주소">
+							<input type="text"  class="upload-name" id="sample4_jibunAddress" name="jibunaddress" placeholder="지번주소">
+							<span id="guide"  class="upload-name" style="color:#999;display:none"></span>
+							<input type="text"  class="upload-name" id="sample4_detailAddress" name="detailaddress"placeholder="상세주소">
                         </li>
-                        <li style="margin-top:25px">
+                        <li>
                             <select name="ophone">
                                 <option value="010">010</option>
                                 <option value="011">011</option>
                             </select>
-                            <input type="text" name="ophone2" size="4" maxlength="4" value=""> 
-                            <input type="text" name="ophone3" size="4" maxlength="4" value="">
+                            <input type="text"  class="upload-name" name="ophone2" size="4" maxlength="4" value=""> 
+                            <input type="text"  class="upload-name" name="ophone3" size="4" maxlength="4" value="">
                         </li>
-                        <li><input type="text" name="oemail" value="">@<input type="text" name="oemail2" value=""></li>
+                        <li><input type="text"  class="upload-name" name="oemail" value="">@<input type="text"  class="upload-name"  name="oemail2" value=""></li>
                     </ul>
             </div>
+          	 <p style="margin-top: 50px;">배송 정보</p>
             <div class="Buy_Mid_Box1">
-                <p>배송 정보</p>
+                
                     <ul class="flexshow">
                         <li class="star">주문하시는 분</li>
                         <li class="star li_height" style="padding-top: 30px;">주소</li>
@@ -269,41 +267,42 @@
                         <li class="star" style="margin-top: -5px;">배송메세지</li> 
                     </ul>
                     <ul class="addr">
-                        <li><input type="text" name="oprename" value="" placeholder="수령자명"></li>
+                        <li><input type="text" class="upload-name" name="oprename" value="" placeholder="수령자명"></li>
                         <li class="addr_st">
-                        	<input type="text" id="postcode" name="repostcode" placeholder="우편번호">
-                        	<input type="button" style="margin-left: 10px;" class="font_myeongjo" onclick="execDaumPostcode()" value="우편번호 찾기">
-                        	<input type="text" id="roadAddress" name="reroadaddress" placeholder="도로명주소">
+                        	<input type="text"  class="upload-name" id="postcode" name="repostcode" placeholder="우편번호">
+                        	<input type="button"  class="upload-name" style="margin-left: 10px;" class="font_myeongjo" onclick="execDaumPostcode()" value="우편번호 찾기">
+                        	<input type="text"  class="upload-name" id="roadAddress" name="reroadaddress" placeholder="도로명주소">
                         </li>
                         <li>
-							<input type="text" id="jibunAddress" name="rejibunaddress" placeholder="지번주소">
-							<span id="guide" style="color:#999;display:none"></span>
-							<input type="text" id="detailAddress" name="redetailaddress" placeholder="상세주소">
+							<input type="text"  class="upload-name" id="jibunAddress" name="rejibunaddress" placeholder="지번주소">
+							<span id="guide" class="upload-name"  style="color:#999;display:none"></span>
+							<input type="text"  class="upload-name" id="detailAddress" name="redetailaddress" placeholder="상세주소">
                         </li>
                         <li>
                             <select name="dphone">
                                 <option value="010">010</option>
                                 <option value="011">011</option>
                             </select>
-                            <input type="text" name="dphone2" size="4" maxlength="4" value="">
-                            <input type="text" name="dphone3" size="4" maxlength="4" value="">
+                            <input type="text"  class="upload-name" name="dphone2" size="4" maxlength="4" value="">
+                            <input type="text" class="upload-name"  name="dphone3" size="4" maxlength="4" value="">
                         </li>
                         <li>
-                            <textarea maxlength="255" cols="70" name="dms"></textarea>
+                            <textarea maxlength="255" cols="70" name="dms"   class="upload-name" ></textarea>
                         </li>
                     </ul>
             </div>
-                <p>결제 예정 금액</p>
+
                     <div class="Buy_Bottom_Box1">
-                        <ul class="margin-top20">
-                            <li style="padding: 100px;">총 주문 금액</li>
-                            <li style="padding: 100px;">부가결제 금액(배송비)</li>
-                            <li style="padding: 100px;">총 결제예정 금액</li>
+                    <p>결제 예정 금액</p>
+                        <ul class="margin-top20"  style="margin-top: 20px;">
+                            <li>총 주문 금액</li>
+                            <li>부가결제 금액(배송비)</li>
+                            <li>총 결제예정 금액</li>
                         </ul>
-                        <ul style="margin-top: 20px;">
-                            <li style="padding: 160px;">${lists1.get(0).opprice }</li>
-                            <li style="padding: 155px;">${lists1.get(0).opcharge }</li>
-                            <li style="padding: 135px;">${lists1.get(0).opprice * lists1.get(0).opcount + lists1.get(0).opcharge }</li>
+                        <ul class="margin-top20"  style="margin-top: 20px;">
+                            <li>${lists1.get(0).opprice }</li>
+                            <li>${lists1.get(0).opcharge }</li>
+                            <li>${lists1.get(0).opprice * lists1.get(0).opcount + lists1.get(0).opcharge }</li>
                         </ul>
                     </div>
                     <p>결제수단</p>
@@ -320,7 +319,7 @@
 
                         </div>
                         <div class="div_total">
-                            <ul class="margin-top20">
+                            <ul class="margin-top20" style="margin-top: 20px;">
                                 <li>
                                 	최종결제 금액
                                 </li>
@@ -329,14 +328,14 @@
                                 <li>
                                 </li>
                             </ul>
-                            <ul class="margin-top20">
+                            <ul class="margin-top20" style="margin-top: 20px;">
                                 <li>
                                     <input type="checkbox" id="paycheck" name="paycheck">결제정보를 확인하였으며, 구매진행에 동의합니다.
                                 </li>
                             </ul>
-                            <ul class="margin-top20">
+                            <ul class="margin-top20" style="margin-top: 20px;">
                             	<li>
-                                <input type="button" class="font_myeongjo" style="width:250pt;height:100pt;" id="orderbtn" onclick="submitClick()" value="결제하기">
+                                <input type="button" class="upload-name"  class="font_myeongjo" style="width:250pt;height:100pt;" id="orderbtn" onclick="submitClick()" value="결제하기">
                            		</li>
                            		
                             </ul>         
@@ -388,6 +387,7 @@
                            </div> -->
                        </div>
                    </div>
+                   
       		 </div>
    	 	</div>
     </div>

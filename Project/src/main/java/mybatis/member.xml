@@ -12,6 +12,10 @@
 		select * from member where mname=#{mname}
 	</select> 
 	
+	<select id="GetDataMember2" resultType="MyMember">
+		select * from member where mid=#{mid}
+	</select> 
+	
 	<select id="getTotalCount"  resultType="int">
 		select count(*) from member
 		<if test="whatColumn=='mnum'">

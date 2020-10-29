@@ -61,5 +61,10 @@ public class MemberDao {
 		return member;
 	}
 	
+	public Member getDataMember2(String mid) {
+		Member member = null;
+		member = sqlSessionTemplate.selectOne(namespace+".GetDataMember2",mid);
+		return member;
+	}
 	
 }

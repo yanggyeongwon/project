@@ -20,8 +20,8 @@
                 <li><a href="deliverystate1.ord">배송 관리</a></li>
                 <li><a href="list.bd">Q &amp; A 상품문의</a></li>
                 <li><a href="orderlist.ord">상품 주문 내역</a></li>
-                <li><a href="#">공지 사항</a></li>
-                <li><a href="#">후기 관리</a></li>
+                <li><a class="noshow" href="#">공지 사항</a></li>
+                <li><a class="noshow" href="#">후기 관리</a></li>
                 <li><a href="index.ad">홈페이지 바로가기</a></li>
             </ul>
         </div>

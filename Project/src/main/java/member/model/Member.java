@@ -13,16 +13,14 @@ public class Member {
 	@Length(min = 7,max = 10,message = "비밀번호는 7자이상 10자이하로 입력해주세요")
 	private String mpw;
 
-	@NotEmpty(message = "비밀번호 확인은 필수입니다") 
+	
+	@NotEmpty(message = "비밀번호 확인은 필수입니다")
+	   
 	private String mpw2;
 
 	@NotEmpty(message = "이메일은 필수입니다")
 	private String memail;
 
-	
-	
-	
-	
 	public String getMpw2() {
 		return mpw2;
 	}

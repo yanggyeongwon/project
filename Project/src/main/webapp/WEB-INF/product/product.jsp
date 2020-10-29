@@ -53,6 +53,9 @@
                                     <c:forEach var="items" items="${product.psize }">
 		                            	<option value="${items}">${items}</option>
 		                            </c:forEach>
+		                            <c:forEach var="items" items="${product.pssize }">
+		                            	<option value="${items}">${items}</option>
+		                            </c:forEach>
                                 </select>
                             </div>
                             </form>
@@ -62,8 +65,8 @@
                         </div>
                         <div class="items_price"></div>
                         <div class="btn_buy">
-                            <a href="#" id="buy_a">BUY NOW</a>
-                            <a href="#" id="cart_a">ADD TO CART</a>
+                            <a href="orderpage.ord" id="buy_a">BUY NOW</a>
+                            <a href="orderpage.ord" id="cart_a">ADD TO CART</a>
                         </div> 
                     </div>
                 </div>

@@ -38,12 +38,10 @@ public class ProductinqinsertController {
 		for(int i=0; i<size;i++) {
 			if(productinq_list.size() != 0 ) {
 				if(productinq_list.get(i).getNumnum() == pinum) {
-					System.out.println("pinum과 겟pinum은 같아 업뎃");
 					dao.inqUpdate(productinq);
 					break;
 				}
 			}else {
-				System.out.println("인설트 ㄲ");
 				System.out.println(productinq.getPiwriter());
 				System.out.println(productinq.getNumnum());
 				dao.inqInsert(productinq); 	
@@ -56,13 +54,10 @@ public class ProductinqinsertController {
 	@RequestMapping(value=command2)
 	@ResponseBody
 	public List<Productinq> doAction(HttpServletRequest request) {
-		System.out.println("리스트 옴");
 		int pinum = Integer.parseInt(request.getParameter("pinum"));
-		System.out.println("pinum: "+pinum);
 		
 		List<Productinq> productinq = dao.inqselect(pinum); 
 		if(productinq.size() == 0) {
-			System.out.println("야 아냐");
 			return null;
 		}
 		System.out.println("productinq.size(): "+productinq.size());

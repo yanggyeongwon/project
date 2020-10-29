@@ -64,7 +64,7 @@ create table orderdetails(
 
 
 insert into orderdetails (onum,opname,opprice,opcount,oppoint,opcharge,opop,oid,opdate,oinvoice)
-values(odseq.nextval, '청바지', 30000, 1, 300, 2500 , '택배' , 'kim' , sysdate,'2000');
+values(odseq.nextval, '청바지', 45900, 1, 300, 2500 , '택배' , 'ruddnjs25' , sysdate,'200');
 
 select * from orderdetails;
 commit;
@@ -97,10 +97,7 @@ create table product(
   pdate date
 );
 
-insert into product values(pseq.nextval,1,'호두과자','색깔','사이즈',30000,2500,'best.jpg','best1.jpg','best2.jpg','best3.jpg', 150,sysdate);
-
-
-select * from product;
+commit;
 
 //공지사항
 

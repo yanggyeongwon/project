@@ -2,7 +2,9 @@
 $(()=>{
 
 	    mainpage_effect();
-	
+		$('.noshow').on('click',function(){
+			alert("준비중 입니다.")
+		})
 		
 	    $(document).ready(function(){
 	        $(window).scroll(function(){

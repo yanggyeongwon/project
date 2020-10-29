@@ -43,7 +43,7 @@ public class MemberLoginController {
 		System.out.println(" id:"+member.getMid());
 		System.out.println(" password:" + member.getMpw());
 		
-		Member dbMember = memberDao.getDataMember(member.getMid()); 
+		Member dbMember = memberDao.getDataMember2(member.getMid()); 
 		
 		PrintWriter pw = response.getWriter();
 		
@@ -59,11 +59,9 @@ public class MemberLoginController {
 			
 		}
 		else {
-			if(member.getMid() == "admin"|| member.getMid().equals("admin")) {
-				System.out.println("어드민이다");
-				session.setAttribute("admin", member.getMid());
-			}else {
+
 				if(member.getMpw().equals(dbMember.getMpw())) {
+					System.out.println("아이디세션만듬");
 					session.setAttribute("loginInfo",dbMember);
 					
 					return new ModelAndView(gotoPage); 
@@ -77,8 +75,6 @@ public class MemberLoginController {
 					return new ModelAndView(getPage);
 				}
 			}
-			return new ModelAndView(getPage);
-		}
 	}
 }
 

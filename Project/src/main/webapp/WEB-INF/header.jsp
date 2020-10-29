@@ -4,9 +4,12 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<title>메인</title>
 </head>
+
 <body>
+<a id="admin-page" href="admin.ad"></a>
 	<article>
 		<button class="totop_arrow1" type="button">위로 올리기</button>
 	</article>
@@ -15,22 +18,25 @@
 			<a href="index.ad"><img src="<c:url value="/resources/images/logo2.png"/>" alt="no"></a>
 		</div>
 		<div class="join">
-			<a href="#"><span>NOTICE</span></a>
-			<a href="list.mall"><span>BASKET</span></a>
-			<a href="update.me"><span>MYPAGE</span></a>
-			<%
-			Object login = session.getAttribute("loginInfo");
 			
-			if(login == "" || login == null || login == "null"){
-				%>
-				<a href="login.me"><span>LOGIN</span></a>
-				<a href="register.me"><span>JOIN</span></a>
-				<%
-			}else{
-				%>
-				<a href="logout.me"><span>LOGOUT</span></a>
-				<%
-			}
+			<a class="noshow" href="#"><span>NOTICE</span></a>
+			<a class="noshow" href="#"><span>BASKET</span></a>
+			<a class="noshow" href="#"><span>MYPAGE</span></a>
+			<%
+			
+			Object login = session.getAttribute("loginInfo");
+
+				if(login == "" || login == null || login == "null"){
+					%>
+					<a href="login.me"><span>LOGIN</span></a>
+					<a href="register.me"><span>JOIN</span></a>
+					<%
+				}else{
+					%>
+					<a href="logout.me"><span>LOGOUT</span></a>
+					<%
+				}
+			
 			%>
 		</div>
 		<ul id="ul_id">

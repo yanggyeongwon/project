@@ -7,6 +7,8 @@ section{position: relative; overflow: hidden;}
 article{position: fixed;bottom: 2%;right: 2%;z-index: 9999;}
 button {background: 0;border: 0;padding: 0;cursor: pointer}
 
+#admin-page{position:absolute; top:0; left:0; z-index:9999; padding:5px}
+
 .totop_arrow1{width:50px; height:50px; position:relative; background:#25211e; border-radius:50%;text-indent:-9999px;}
 .totop_arrow1:before,.totop_arrow1:after{
   content:'';
