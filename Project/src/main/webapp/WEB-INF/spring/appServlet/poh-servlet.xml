@@ -13,13 +13,13 @@
 	
 	<mvc:annotation-driven/>
 
-	<context:component-scan base-package="product"/>
+	<context:component-scan base-package="orderdetails"/>
 	<context:component-scan base-package="poh"/>
 
 	<bean id="internalResourceViewResolver"
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix">
-			<value>/WEB-INF/product/</value>
+			<value>/WEB-INF/poh/</value>
 		</property>
 		<property name="suffix">
 			<value>.jsp</value>

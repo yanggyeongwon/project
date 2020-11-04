@@ -18,7 +18,12 @@
 	<script src="<c:url value="/resources/js/jquery-3.5.1.min.js" />"></script>
 	<script src="<c:url value="/resources/js/script.js" />"></script>
     <title>Document</title>
+	<script>
+	
+	
 
+
+	</script>
     </head>
     <body>
         <section>
@@ -53,9 +58,7 @@
                                     <c:forEach var="items" items="${product.psize }">
 		                            	<option value="${items}">${items}</option>
 		                            </c:forEach>
-		                            <c:forEach var="items" items="${product.pssize }">
-		                            	<option value="${items}">${items}</option>
-		                            </c:forEach>
+
                                 </select>
                             </div>
                             </form>
@@ -65,7 +68,7 @@
                         </div>
                         <div class="items_price"></div>
                         <div class="btn_buy">
-                            <a href="orderpage.ord" id="buy_a">BUY NOW</a>
+                            <a href="poh." id="buy_a">BUY NOW</a>
                             <a href="orderpage.ord" id="cart_a">ADD TO CART</a>
                         </div> 
                     </div>

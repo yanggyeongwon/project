@@ -38,14 +38,14 @@
                         <li>구매 금액</li>
                         <li>배송비</li>
                     </ul>
-                    <c:forEach items="${lists }" var="order">
+                    <c:forEach items="" var="order">
                    		<ul class="order_list order_result_list">
-	                        <li>${order.onum }</li>
-	                        <li>${order.opname }</li>
-	                        <li>${order.oname }</li>
-	                        <li>${order.oprename }</li>
-	                        <li>${order.oppricesum }</li>
-	                        <li>${order.opcharge }</li>
+	                        <li></li>
+	                        <li></li>
+	                        <li></li>
+	                        <li></li>
+	                        <li></li>
+	                        <li></li>
 	                    </ul>
                     </c:forEach>
                 </div>

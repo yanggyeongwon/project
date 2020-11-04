@@ -18,7 +18,27 @@ insert into member values(mseq.nextval,'범규','qjarb',12,'ruddnjs25@naver.com'
 select * from member;
 
 commit;
+//상품 주문 내역
+drop sequence pohseq;
 
+create sequence pohseq
+increment by 1
+start with 1
+nocycle;
+
+drop table productorderhistory;
+
+create table productorderhistory(
+	name varchar2(30), -- 주문한 상품명
+	items1 varchar2(30), --주문한 색상
+	items2 varchar2(30), --주문한 사이즈
+	price number, --주문한 금액
+	stock number default 0 -- 주문한 수량
+);	
+
+commit;
+
+select * from productorderhistory;
 
 //주문내역 테이블
 drop sequence odseq;
@@ -26,7 +46,9 @@ create sequence odseq
 increment by 1
 start with 1
 nocycle;
+
 drop table orderdetails;
+
 create table orderdetails(
   onum number primary key, --주문번호
   opname varchar2(30), --주문상품이름
@@ -197,3 +219,4 @@ values(board_seq.nextval,'a3221','a3221','a3221','1234','2019-1-1',7,4,3,'asdfa2
 insert into board(num,writer,email,subject,passwd,reg_date,ref,re_step,re_level,content,ip)
 values(board_seq.nextval,'a33','a33','a33','1234','2019-1-1',7,1,1,'sasdf11','127.0.0.1');
 commit;
+

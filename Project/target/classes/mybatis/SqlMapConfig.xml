@@ -13,6 +13,7 @@
 		<typeAlias type="product.model.Product" alias="MyProduct"/>
 		<typeAlias type="productinq.model.Productinq" alias="MyProductinq"/>
 		<typeAlias type="board.model.BoardBean" alias="MyBoard" />
+		<typeAlias type="poh.model.Poh" alias="MyPoh" />		
 	</typeAliases>
 	<mappers>
 		<mapper resource="mybatis/member.xml"/>
@@ -21,6 +22,7 @@
 		<mapper resource="mybatis/productinq.xml"/>
 		<mapper resource="mybatis/product.xml"/>
 		<mapper resource="mybatis/board.xml"/>
+		<mapper resource="mybatis/poh.xml"/>
 	</mappers>
 </configuration>
 

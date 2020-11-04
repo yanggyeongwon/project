@@ -99,7 +99,6 @@
 			<div class="result">
 				<c:forEach items ="${lists }" var ="bd">
 		    	<ul class="flexul2">
-		  	  		
 		    		<li id="number">${bd.num }</li>
 		    		<li id="subject"><a class="aclass" href="#">${bd.subject }</a></li><%-- content.bd?num=${bd.num} --%>
 		    		<li id="writer">${bd.writer }</li>
@@ -107,6 +106,7 @@
 		    		<%-- <td>${bd.readcount }</td>
 		    		<td>${bd.ip }</td> --%>
 		    	</ul>
+
 		    	<div class="review_box">
 			    	<div class="result_area">
 			    		<p id="s_piwriter"></p>

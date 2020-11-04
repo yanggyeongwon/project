@@ -4,10 +4,12 @@ import java.sql.Date;
 
 public class Orderdetails {
 	private int onum;
-	private String opname;
-	private int opprice;
-	private int opcount;
+	private String name;
+	private int price;
+	private int stock;
 	private int oppoint;
+	private String items1;
+	private String items2;	
 	private String opop;
 	private int opcharge;
 	private int oppricesum;
@@ -42,6 +44,18 @@ public class Orderdetails {
 	
 	
 	
+	public String getItems1() {
+		return items1;
+	}
+	public void setItems1(String items1) {
+		this.items1 = items1;
+	}
+	public String getItems2() {
+		return items2;
+	}
+	public void setItems2(String items2) {
+		this.items2 = items2;
+	}
 	public int getOppricesum() {
 		return oppricesum;
 	}
@@ -163,23 +177,23 @@ public class Orderdetails {
 	public void setOnum(int onum) {
 		this.onum = onum;
 	}
-	public String getOpname() {
-		return opname;
+	public String getName() {
+		return name;
 	}
-	public void setOpname(String opname) {
-		this.opname = opname;
+	public void setName(String name) {
+		this.name = name;
 	}
-	public int getOpprice() {
-		return opprice;
+	public int getPrice() {
+		return price;
 	}
-	public void setOpprice(int opprice) {
-		this.opprice = opprice;
+	public void setPrice(int price) {
+		this.price = price;
 	}
-	public int getOpcount() {
-		return opcount;
+	public int getStock() {
+		return stock;
 	}
-	public void setOpcount(int opcount) {
-		this.opcount = opcount;
+	public void setStock(int stock) {
+		this.stock = stock;
 	}
 	public int getOppoint() {
 		return oppoint;

@@ -1,5 +1,18 @@
 
 $(()=>{
+		
+
+		
+		$('#buy_a').on('click',function(){
+			let items1 = $('#items option:selected').val();	
+			let items2 = $('#items2 option:selected').val();	
+			let price = $('.price p').text();
+			let name = $('.product_pname').text()
+			let stock = $('input[name="stock"]').val();
+			
+			location.href="insert.po?items1="+items1+"&items2="+items2+"&price="+price+"&name="+name+"&stock="+stock;
+		})
+
 
 	    mainpage_effect();
 		$('.noshow').on('click',function(){
@@ -101,7 +114,7 @@ $(()=>{
 	        $(".product_list_btn_hover").toggleClass("active")
 	        $("#product_list_btn").slideToggle();
 	
-	    })
+	    })	
 
 
 	    //메뉴 스크롤 이벤트
